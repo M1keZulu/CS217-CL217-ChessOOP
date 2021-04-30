@@ -1,5 +1,10 @@
 #include<iostream>
 #include<vector>
+#include<fstream>
+#include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/Audio.hpp>
 #define GRID 8
 
 using namespace std;
@@ -21,12 +26,20 @@ struct Point{
 	int x;
 	int y;	
 };
+
+struct Detail{
+	int x;
+	int y;
+	Color color;
+	PieceType name;
+};
 //DataTypes
 
 //Forward Decleration for Circular Dependency
 class Cell;
 class Piece;
 class Board;
+class GUI;
 
 //Class Cell
 class Cell{
@@ -61,7 +74,7 @@ class Piece{
 		virtual Color getColor();
 		virtual PieceType getName();
 		virtual void PieceMoved();
-		int inLimits(Point checkPos);
+		int inLimits(Point checkPos); //this function is useless as of latest build
 		virtual void generateMoves(Point currentPos);
 		virtual int isMoveLegal(Point newPos);
 		
@@ -102,6 +115,8 @@ class Pawn:public Piece{
 
 Pawn::Pawn(Color m_color):Piece(m_color, pawn){}
 void Pawn::generateMoves(Point currentPos){
+	ofstream log;
+	log.open("dem.txt");
 	if(color==white){
 		if(inLimits({currentPos.x-1, currentPos.y})){									//(x-1)(y)
 			if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()==NULL){
@@ -122,7 +137,7 @@ void Pawn::generateMoves(Point currentPos){
 	else if(color==black){
 		if(inLimits({currentPos.x+1, currentPos.y})){									//(x+1)(y)
 			if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()==NULL){
-				movesAvailable.push_back({currentPos.x-1, currentPos.y});
+				movesAvailable.push_back({currentPos.x+1, currentPos.y});
 			}
 		}
 		if(inLimits({currentPos.x+1, currentPos.y+1})){									//(x+1)(y+1)
@@ -136,6 +151,7 @@ void Pawn::generateMoves(Point currentPos){
 			}
 		}
 	}
+	log.close();
 }
 //Class Pawn
 
@@ -164,22 +180,28 @@ class Board{
 		Board();
 		void movePiece(Point currentPos, Point newPos);
 		void displayBoard();
+		vector<Detail> getDetails();
 };
 
 Board::Board(){ 
 	Piece *ptr;
 	
+	ptr=new Pawn(black);
+	cells[4][1].setPiece(ptr);
 	ptr=new Knight(white);
-	cells[6][1].setPiece(ptr);
+	cells[4][4].setPiece(ptr);
 	
 	Piece::setCellArray(&cells[0][0]);
-	cells[6][1].getPiece()->generateMoves({6,1});
+	cells[4][4].getPiece()->generateMoves({4,4});
 }
 void Board::movePiece(Point currentPos, Point newPos){
-		cout<<cells[currentPos.x][currentPos.y].getPiece()->movesAvailable.size()<<endl; //only for debugging
-		if(cells[currentPos.x][currentPos.y].getPiece()->isMoveLegal(newPos)){
-			cells[newPos.x][newPos.y].setPiece(cells[currentPos.x][currentPos.y].getPiece());
-			cells[currentPos.x][currentPos.y].setNull();
+		if(currentPos.x>=0&&currentPos.x<8&&currentPos.y>=0&&currentPos.y<8){
+			if(cells[currentPos.x][currentPos.y].getPiece()!=NULL){
+				if(cells[currentPos.x][currentPos.y].getPiece()->isMoveLegal(newPos)){
+					cells[newPos.x][newPos.y].setPiece(cells[currentPos.x][currentPos.y].getPiece());
+					cells[currentPos.x][currentPos.y].setNull();
+				}
+			}
 		}
 }
 void Board::displayBoard(){
@@ -198,12 +220,130 @@ void Board::displayBoard(){
 		cout<<endl;
 	}
 }
+vector<Detail> Board::getDetails(){
+	vector<Detail> data;
+	for(int x=0;x<GRID;x++){
+		for(int y=0;y<GRID;y++){
+			if(cells[x][y].getPiece()!=NULL){
+				data.push_back({x,y,cells[x][y].getPiece()->getColor(),cells[x][y].getPiece()->getName()});
+			}
+		}
+	}
+	return data;
+}
 //Class Board
 
+class GUI{
+	private:
+		Board b;
+		vector<Detail> dat;
+	public:
+		GUI(){
+			  Point curPos;
+			  Point newPos;
+			  sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Game Testing");
+			  sf::Event event;
+			  sf::Image image;
+			  image.create(800, 800, sf::Color::Black);
+			  
+			  bool isBlackPixel = false;
+			  sf::Color blackPixel(241,217,181,255);
+			  sf::Color whitePixel(181,136,99,255);
+			  
+			  for (int y = 0; y < 800; y++){
+			 
+			    for (int x = 0; x < 800; x++){
+			      if (isBlackPixel)
+			        image.setPixel(x, y, blackPixel);
+			      else
+			        image.setPixel(x, y, whitePixel);
+			   
+			      if (!(x % 100))
+			        isBlackPixel = !isBlackPixel;
+			    }
+			    
+			    if(!(y%100))
+			      isBlackPixel = !isBlackPixel;
+			  }
+			  sf::Texture texture;
+			  texture.loadFromImage(image);
+			  sf::Sprite sprite(texture);
+			  while (renderWindow.isOpen()){
+			    while (renderWindow.pollEvent(event)){
+			        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+			    		curPos.x = sf::Mouse::getPosition(renderWindow).x/100;
+			            curPos.y = sf::Mouse::getPosition(renderWindow).y/100;
+			    	}
+			    	if (sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+						newPos.x = sf::Mouse::getPosition(renderWindow).x/100;
+			            newPos.y = sf::Mouse::getPosition(renderWindow).y/100;
+						b.movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
+					}
+			      if (event.type == sf::Event::Closed)
+			            renderWindow.close();
+			    }
+			    renderWindow.clear();
+			    renderWindow.draw(sprite);
+			    dat=b.getDetails();
+			    for(int i=0;i<dat.size();i++){
+			    	if(dat[i].name==pawn&&dat[i].color==white){
+			    		int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_pawn.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==pawn&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_pawn.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==knight&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_knight.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==knight&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_knight.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+				}
+			    renderWindow.display();
+			  }
+		}
+};
+
 int main(){
-	Board b;
-	b.displayBoard();
-	b.movePiece({6,1}, {4,0});
-	cout<<endl;
-	b.displayBoard();
+	GUI g;
 }
