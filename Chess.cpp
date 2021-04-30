@@ -115,8 +115,7 @@ class Pawn:public Piece{
 
 Pawn::Pawn(Color m_color):Piece(m_color, pawn){}
 void Pawn::generateMoves(Point currentPos){
-	ofstream log;
-	log.open("dem.txt");
+	movesAvailable.clear();
 	if(color==white){
 		if(inLimits({currentPos.x-1, currentPos.y})){									//(x-1)(y)
 			if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()==NULL){
@@ -151,7 +150,6 @@ void Pawn::generateMoves(Point currentPos){
 			}
 		}
 	}
-	log.close();
 }
 //Class Pawn
 
@@ -164,13 +162,336 @@ class Knight:public Piece{
 
 Knight::Knight(Color m_color):Piece(m_color, knight){}
 void Knight::generateMoves(Point currentPos){
+	movesAvailable.clear();
 	if(inLimits({currentPos.x-2, currentPos.y-1})){		//(x-2,y-1)
 		if((cell+((currentPos.x-2)*GRID)+(currentPos.y-1))->getPiece()==NULL || (cell+((currentPos.x-2)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
 			movesAvailable.push_back({currentPos.x-2, currentPos.y-1});
 		}
 	}
+	if(inLimits({currentPos.x+2, currentPos.y-1})){		//(x+2,y-1)
+		if((cell+((currentPos.x+2)*GRID)+(currentPos.y-1))->getPiece()==NULL || (cell+((currentPos.x+2)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+2, currentPos.y-1});
+		}
+	}
+	if(inLimits({currentPos.x+2, currentPos.y+1})){		//(x+2,y+1)
+		if((cell+((currentPos.x+2)*GRID)+(currentPos.y+1))->getPiece()==NULL || (cell+((currentPos.x+2)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+2, currentPos.y+1});
+		}
+	}
+	if(inLimits({currentPos.x-2, currentPos.y+1})){		//(x-2,y+1)
+		if((cell+((currentPos.x-2)*GRID)+(currentPos.y+1))->getPiece()==NULL || (cell+((currentPos.x-2)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-2, currentPos.y+1});
+		}
+	}
+	if(inLimits({currentPos.x+1, currentPos.y+2})){		//(x+1,y+2)
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y+2))->getPiece()==NULL || (cell+((currentPos.x+1)*GRID)+(currentPos.y+2))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y+2});
+		}
+	}
+	if(inLimits({currentPos.x+1, currentPos.y-2})){		//(x+1,y-2)
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y-2))->getPiece()==NULL || (cell+((currentPos.x+1)*GRID)+(currentPos.y-2))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y-2});
+		}
+	}
+	if(inLimits({currentPos.x-1, currentPos.y+2})){		//(x-1,y+2)
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y+2))->getPiece()==NULL || (cell+((currentPos.x-1)*GRID)+(currentPos.y+2))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y+2});
+		}
+	}
+	if(inLimits({currentPos.x-1, currentPos.y-2})){		//(x-1,y-2)
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y-2))->getPiece()==NULL || (cell+((currentPos.x-1)*GRID)+(currentPos.y-2))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y-2});
+		}
+	}
 }
 //Class Knight
+
+//Class Rook
+class Rook:public Piece{
+	public:
+		Rook(Color m_color);
+		void generateMoves(Point currentPos);
+};
+
+Rook::Rook(Color m_color):Piece(m_color, rook){}
+void Rook::generateMoves(Point currentPos){
+	movesAvailable.clear();
+	int cx=currentPos.x;
+	int cy=currentPos.y;
+	while(inLimits({currentPos.x-1,currentPos.y})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y});
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x--;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y});
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x++;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x,currentPos.y-1})){
+		if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x, currentPos.y-1});
+			break;
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.y--;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x,currentPos.y+1})){
+		if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x, currentPos.y+1});
+			break;
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.y++;
+	}
+}
+//Class Rook
+
+//Class Bishop
+class Bishop:public Piece{
+	public:
+		Bishop(Color m_color);
+		void generateMoves(Point currentPos);
+};
+
+Bishop::Bishop(Color m_color):Piece(m_color, bishop){}
+void Bishop::generateMoves(Point currentPos){
+	movesAvailable.clear();
+	int cx=currentPos.x;
+	int cy=currentPos.y;
+	while(inLimits({currentPos.x-1,currentPos.y-1})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x--;
+		currentPos.y--;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y+1})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x++;
+		currentPos.y++;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y-1})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x++;
+		currentPos.y--;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x-1,currentPos.y+1})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x--;
+		currentPos.y++;
+	}
+}
+//Class Bishop
+
+//Class Queen
+class Queen:public Piece{
+	public:
+		Queen(Color m_color);
+		void generateMoves(Point currentPos);
+};
+
+Queen::Queen(Color m_color):Piece(m_color, queen){}
+void Queen::generateMoves(Point currentPos){
+	movesAvailable.clear();
+	int cx=currentPos.x;
+	int cy=currentPos.y;
+	while(inLimits({currentPos.x-1,currentPos.y-1})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x--;
+		currentPos.y--;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y+1})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x++;
+		currentPos.y++;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y-1})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x++;
+		currentPos.y--;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x-1,currentPos.y+1})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x--;
+		currentPos.y++;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x-1,currentPos.y})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y});
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x--;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y});
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.x++;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x,currentPos.y-1})){
+		if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x, currentPos.y-1});
+			break;
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.y--;
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x,currentPos.y+1})){
+		if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x, currentPos.y+1});
+			break;
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color){
+			break;
+		}
+		currentPos.y++;
+	}
+}
+//Class Queen
 
 //Class Board
 class Board{
@@ -181,18 +502,19 @@ class Board{
 		void movePiece(Point currentPos, Point newPos);
 		void displayBoard();
 		vector<Detail> getDetails();
+		void newMove();
 };
 
 Board::Board(){ 
 	Piece *ptr;
 	
 	ptr=new Pawn(black);
-	cells[4][1].setPiece(ptr);
-	ptr=new Knight(white);
-	cells[4][4].setPiece(ptr);
+	cells[3][2].setPiece(ptr);
+	ptr=new Queen(white);
+	cells[5][2].setPiece(ptr);
 	
 	Piece::setCellArray(&cells[0][0]);
-	cells[4][4].getPiece()->generateMoves({4,4});
+	newMove();
 }
 void Board::movePiece(Point currentPos, Point newPos){
 		if(currentPos.x>=0&&currentPos.x<8&&currentPos.y>=0&&currentPos.y<8){
@@ -200,6 +522,7 @@ void Board::movePiece(Point currentPos, Point newPos){
 				if(cells[currentPos.x][currentPos.y].getPiece()->isMoveLegal(newPos)){
 					cells[newPos.x][newPos.y].setPiece(cells[currentPos.x][currentPos.y].getPiece());
 					cells[currentPos.x][currentPos.y].setNull();
+					newMove();
 				}
 			}
 		}
@@ -230,6 +553,15 @@ vector<Detail> Board::getDetails(){
 		}
 	}
 	return data;
+}
+void Board::newMove(){
+	for(int x=0;x<GRID;x++){
+		for(int y=0;y<GRID;y++){
+			if(cells[x][y].getPiece()!=NULL){
+				cells[x][y].getPiece()->generateMoves({x,y});
+			}
+		}
+	}
 }
 //Class Board
 
@@ -330,6 +662,110 @@ class GUI{
 			    		int y =dat[i].y;
 			    		sf::Image i;
 			    		i.loadFromFile("b_knight.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==rook&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_rook.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==rook&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_rook.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==bishop&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_bishop.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==bishop&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_bishop.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==queen&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_queen.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(4+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==queen&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_queen.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(4+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==king&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_king.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==king&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_king.png");
 			    		sf::Texture t;
 			    		t.loadFromImage(i);
 			    		sf::Sprite s;
