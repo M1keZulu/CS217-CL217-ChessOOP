@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
+#include<time.h>
 #define GRID 8
 
 using namespace std;
@@ -78,6 +79,8 @@ class Piece{
 		int inLimits(Point checkPos);
 		virtual void generateMoves(Point currentPos);
 		virtual int isMoveLegal(Point newPos);
+		virtual bool isUnderAttack(Point currentPos);
+		virtual void addMove(Point pos);
 		
 };
 
@@ -89,6 +92,258 @@ Color Piece::getColor(){return color;}
 PieceType Piece::getName(){return name;}
 void Piece::PieceMoved(){moveCount++;}
 void Piece::generateMoves(Point currentPos){}
+void Piece::addMove(Point pos){
+	movesAvailable.push_back({pos.x, pos.y});
+}
+bool Piece::isUnderAttack(Point currentPos){
+	int cx=currentPos.x;
+	int cy=currentPos.y;
+	bool flag = true;
+	
+	while(inLimits({currentPos.x-1,currentPos.y})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getName()==queen || (cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getName()==rook){
+				flag=false;
+			}
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getName()!=king){
+			break;
+		}
+		currentPos.x--;	// up
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getName()==queen || (cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getName()==rook){
+				flag=false;
+			}
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getName()!=king){
+			break;
+		}
+		currentPos.x++;	// down
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x,currentPos.y+1})){
+		if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getName()==queen || (cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getName()==rook){
+				flag=false;
+			}
+			break;
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getName()!=king){
+			break;
+		}
+		currentPos.y++;	// right
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x,currentPos.y-1})){
+		if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getName()==queen || (cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getName()==rook){
+				flag=false;
+			}
+			break;
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getName()!=king){
+			break;
+		}
+		currentPos.y--;	// left
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x-1,currentPos.y-1})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()==queen || (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()==bishop){
+				flag=false;
+			}
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()!=king){
+			break;
+		}
+		currentPos.x--;
+		currentPos.y--;	// diagonal 1
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y+1})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()==queen || (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()==bishop){
+				flag=false;
+			}
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()!=king){
+			break;
+		}
+		currentPos.x++;
+		currentPos.y++;	// diagonal 2
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x+1,currentPos.y-1})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()==queen || (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()==bishop){
+				flag=false;
+			}
+			break;
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()!=king){
+			break;
+		}
+		currentPos.x++;
+		currentPos.y--;	// diagonal 3
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	while(inLimits({currentPos.x-1,currentPos.y+1})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()==queen || (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()==bishop){
+				flag=false;
+			}
+			break;
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()!=king){
+			break;
+		}
+		currentPos.x--;
+		currentPos.y++;	// diagonal 4
+	}
+	currentPos.x=cx;
+	currentPos.y=cy;
+	if(color==white){
+		if(inLimits({currentPos.x-1,currentPos.y+1})){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color && (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()==pawn){
+				flag=false;
+			}	
+		}
+		if(inLimits({currentPos.x-1,currentPos.y-1})){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color && (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()==pawn){
+				flag=false;
+			}	
+		}
+	}
+	else if(color==black){
+		if(inLimits({currentPos.x+1,currentPos.y-1})){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color && (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()==pawn){
+				flag=false;
+			}	
+		}
+		if(inLimits({currentPos.x+1,currentPos.y+1})){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color && (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()==pawn){
+				flag=false;
+			}	
+		}
+	}	//pawn special attack case
+	//knight special attack case
+	if(inLimits({currentPos.x-2,currentPos.y-1})){
+			if((cell+((currentPos.x-2)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x-2)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color && (cell+((currentPos.x-2)*GRID)+(currentPos.y-1))->getPiece()->getName()==knight){
+				flag=false;
+			}	
+	}	//(x-2,y-1)
+	if(inLimits({currentPos.x+2,currentPos.y-1})){
+			if((cell+((currentPos.x+2)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x+2)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color && (cell+((currentPos.x+2)*GRID)+(currentPos.y-1))->getPiece()->getName()==knight){
+				flag=false;
+			}	
+	}	//(x+2,y-1)
+	if(inLimits({currentPos.x+2,currentPos.y+1})){
+			if((cell+((currentPos.x+2)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x+2)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color && (cell+((currentPos.x+2)*GRID)+(currentPos.y+1))->getPiece()->getName()==knight){
+				flag=false;
+			}	
+	}	//(x+2,y+1)
+	if(inLimits({currentPos.x-2,currentPos.y+1})){
+			if((cell+((currentPos.x-2)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x-2)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color && (cell+((currentPos.x-2)*GRID)+(currentPos.y+1))->getPiece()->getName()==knight){
+				flag=false;
+			}	
+	}	//(x-2,y+1)
+	if(inLimits({currentPos.x+1,currentPos.y+2})){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y+2))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+2))->getPiece()->getColor()!=color && (cell+((currentPos.x+1)*GRID)+(currentPos.y+2))->getPiece()->getName()==knight){
+				flag=false;
+			}	
+	}	//(x+1,y+2)
+	if(inLimits({currentPos.x+1,currentPos.y-2})){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y-2))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-2))->getPiece()->getColor()!=color && (cell+((currentPos.x+1)*GRID)+(currentPos.y-2))->getPiece()->getName()==knight){
+				flag=false;
+			}	
+	}	//(x+1,y-2)
+	if(inLimits({currentPos.x-1,currentPos.y+2})){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y+2))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+2))->getPiece()->getColor()!=color && (cell+((currentPos.x-1)*GRID)+(currentPos.y+2))->getPiece()->getName()==knight){
+				flag=false;
+			}	
+	}	//(x-1,y+2)
+	if(inLimits({currentPos.x-1,currentPos.y-2})){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y-2))->getPiece()==NULL){
+			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
+			}
+			else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-2))->getPiece()->getColor()!=color && (cell+((currentPos.x-1)*GRID)+(currentPos.y-2))->getPiece()->getName()==knight){
+				flag=false;
+			}	
+	}	//(x-1,y-2)
+		
+	return flag;
+}
 int Piece::isMoveLegal(Point newPos){
 	for(int i=0;i<movesAvailable.size();i++){
 		if(movesAvailable[i].x==newPos.x&&movesAvailable[i].y==newPos.y){
@@ -105,7 +360,11 @@ int Piece::inLimits(Point checkPos){
 		return 0;
 	}
 }
-vector<Point> Piece::getAvailableMoves(){return movesAvailable;}
+vector<Point> Piece::getAvailableMoves(){
+	vector<Point> ret = movesAvailable;
+	movesAvailable.clear();
+	return ret;
+}
 //Class Piece
 
 //Class Pawn
@@ -500,260 +759,9 @@ class King:public Piece{
 	public:
 		King(Color m_color);
 		void generateMoves(Point currentPos);
-		bool isUnderAttack(Point currentPos);
 };
 
 King::King(Color m_color):Piece(m_color, king){}
-bool King::isUnderAttack(Point currentPos){
-	int cx=currentPos.x;
-	int cy=currentPos.y;
-	bool flag = true;
-	
-	while(inLimits({currentPos.x-1,currentPos.y})){
-		if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getName()==queen || (cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getName()==rook){
-				flag=false;
-			}
-			break;
-		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getName()==color){
-			break;
-		}
-		currentPos.x--;	// up
-	}
-	currentPos.x=cx;
-	currentPos.y=cy;
-	while(inLimits({currentPos.x+1,currentPos.y})){
-		if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getName()==queen || (cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getName()==rook){
-				flag=false;
-			}
-			break;
-		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getName()==color){
-			break;
-		}
-		currentPos.x++;	// down
-	}
-	currentPos.x=cx;
-	currentPos.y=cy;
-	while(inLimits({currentPos.x,currentPos.y+1})){
-		if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-		}
-		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
-			if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getName()==queen || (cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getName()==rook){
-				flag=false;
-			}
-			break;
-		}
-		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getName()==color){
-			break;
-		}
-		currentPos.y++;	// right
-	}
-	currentPos.x=cx;
-	currentPos.y=cy;
-	while(inLimits({currentPos.x,currentPos.y-1})){
-		if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-		}
-		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
-			if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getName()==queen || (cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getName()==rook){
-				flag=false;
-			}
-			break;
-		}
-		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getName()==color){
-			break;
-		}
-		currentPos.y--;	// left
-	}
-	currentPos.x=cx;
-	currentPos.y=cy;
-	while(inLimits({currentPos.x-1,currentPos.y-1})){
-		if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()==queen || (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()==bishop){
-				flag=false;
-			}
-			break;
-		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()==color){
-			break;
-		}
-		currentPos.x--;
-		currentPos.y--;	// diagonal 1
-	}
-	currentPos.x=cx;
-	currentPos.y=cy;
-	while(inLimits({currentPos.x+1,currentPos.y+1})){
-		if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()==queen || (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()==bishop){
-				flag=false;
-			}
-			break;
-		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()==color){
-			break;
-		}
-		currentPos.x++;
-		currentPos.y++;	// diagonal 2
-	}
-	currentPos.x=cx;
-	currentPos.y=cy;
-	while(inLimits({currentPos.x+1,currentPos.y-1})){
-		if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()==queen || (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()==bishop){
-				flag=false;
-			}
-			break;
-		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()==color){
-			break;
-		}
-		currentPos.x++;
-		currentPos.y--;	// diagonal 3
-	}
-	currentPos.x=cx;
-	currentPos.y=cy;
-	while(inLimits({currentPos.x-1,currentPos.y+1})){
-		if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()==queen || (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()==bishop){
-				flag=false;
-			}
-			break;
-		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()==color){
-			break;
-		}
-		currentPos.x--;
-		currentPos.y++;	// diagonal 4
-	}
-	currentPos.x=cx;
-	currentPos.y=cy;
-	if(color==white){
-		if(inLimits({currentPos.x-1,currentPos.y+1})){
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color && (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()==pawn){
-				flag=false;
-			}	
-		}
-		if(inLimits({currentPos.x-1,currentPos.y-1})){
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color && (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()==pawn){
-				flag=false;
-			}	
-		}
-	}
-	else if(color==black){
-		if(inLimits({currentPos.x+1,currentPos.y-1})){
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color && (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()==pawn){
-				flag=false;
-			}	
-		}
-		if(inLimits({currentPos.x+1,currentPos.y+1})){
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color && (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()==pawn){
-				flag=false;
-			}	
-		}
-	}	//pawn special attack case
-	if(inLimits({currentPos.x-2,currentPos.y-1})){
-			if((cell+((currentPos.x-2)*GRID)+(currentPos.y-1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x-2)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color && (cell+((currentPos.x-2)*GRID)+(currentPos.y-1))->getPiece()->getName()==knight){
-				flag=false;
-			}	
-	}	//(x-2,y-2)
-	if(inLimits({currentPos.x+2,currentPos.y-1})){
-			if((cell+((currentPos.x+2)*GRID)+(currentPos.y-1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x+2)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color && (cell+((currentPos.x+2)*GRID)+(currentPos.y-1))->getPiece()->getName()==knight){
-				flag=false;
-			}	
-	}	//(x+2,y-1)
-	if(inLimits({currentPos.x+2,currentPos.y+2})){
-			if((cell+((currentPos.x+2)*GRID)+(currentPos.y+2))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x+2)*GRID)+(currentPos.y+2))->getPiece()->getColor()!=color && (cell+((currentPos.x+2)*GRID)+(currentPos.y+2))->getPiece()->getName()==knight){
-				flag=false;
-			}	
-	}	//(x+2,y+2)
-	if(inLimits({currentPos.x-2,currentPos.y+1})){
-			if((cell+((currentPos.x-2)*GRID)+(currentPos.y+1))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x-2)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color && (cell+((currentPos.x-2)*GRID)+(currentPos.y+1))->getPiece()->getName()==knight){
-				flag=false;
-			}	
-	}	//(x-2,y+1)
-	if(inLimits({currentPos.x+1,currentPos.y+2})){
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y+2))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+2))->getPiece()->getColor()!=color && (cell+((currentPos.x+1)*GRID)+(currentPos.y+2))->getPiece()->getName()==knight){
-				flag=false;
-			}	
-	}	//(x+1,y+2)
-	if(inLimits({currentPos.x+1,currentPos.y-2})){
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y-2))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-2))->getPiece()->getColor()!=color && (cell+((currentPos.x+1)*GRID)+(currentPos.y-2))->getPiece()->getName()==knight){
-				flag=false;
-			}	
-	}	//(x+1,y-2)
-	if(inLimits({currentPos.x-1,currentPos.y+2})){
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y+2))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+2))->getPiece()->getColor()!=color && (cell+((currentPos.x-1)*GRID)+(currentPos.y+2))->getPiece()->getName()==knight){
-				flag=false;
-			}	
-	}	//(x-1,y+2)
-	if(inLimits({currentPos.x-1,currentPos.y-2})){
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y-2))->getPiece()==NULL){
-			//do nothing - this is important to avoid segmentation fault when calling the getPiece() fucntion
-			}
-			else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-2))->getPiece()->getColor()!=color && (cell+((currentPos.x-1)*GRID)+(currentPos.y-2))->getPiece()->getName()==knight){
-				flag=false;
-			}	
-	}	//(x-1,y-2)
-	
-	
-		
-	return flag;
-}
 
 void King::generateMoves(Point currentPos){
 	movesAvailable.clear();
@@ -781,12 +789,6 @@ void King::generateMoves(Point currentPos){
 	if(isUnderAttack({currentPos.x+1, currentPos.y-1})){
 		movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
 	}
-	
-	ofstream king;
-	king.open("king.txt");
-	for(int k=0;k<movesAvailable.size();k++){
-		king<<movesAvailable[k].y<<"-"<<movesAvailable[k].x<<endl;
-	}
 }
 //Class King
 
@@ -794,35 +796,121 @@ void King::generateMoves(Point currentPos){
 class Board{
 	private:
 		Cell cells[GRID][GRID];
+		Color move;
+		void newMove();
+		bool isCheck();
+		void changeMove();
+		bool dummyMove(Point currentPos, Point newPos);
 	public:
 		Board();
 		void movePiece(Point currentPos, Point newPos);
 		void displayBoard();
 		vector<Detail> getDetails();
-		void newMove();
 };
-
-Board::Board(){ 
+Board::Board(){
+	move=white; //can implement random player start functionality
 	Piece *ptr;
-	
+	ptr=new Pawn(white);
+	cells[6][7].setPiece(ptr);
+	ptr=new Pawn(white);
+	cells[6][6].setPiece(ptr);
+	ptr=new Pawn(white);
+	cells[6][5].setPiece(ptr);
+	ptr=new Pawn(white);
+	cells[6][4].setPiece(ptr);
+	ptr=new Pawn(white);
+	cells[6][3].setPiece(ptr);
+	ptr=new Pawn(white);
+	cells[6][2].setPiece(ptr);
+	ptr=new Pawn(white);
+	cells[6][1].setPiece(ptr);
+	ptr=new Pawn(white);
+	cells[6][0].setPiece(ptr);
+	ptr=new Rook(white);
+	cells[7][0].setPiece(ptr);
+	ptr=new Rook(white);
+	cells[7][7].setPiece(ptr);
 	ptr=new Knight(white);
-	cells[3][5].setPiece(ptr);
+	cells[7][1].setPiece(ptr);
+	ptr=new Knight(white);
+	cells[7][6].setPiece(ptr);
+	ptr=new Bishop(white);
+	cells[7][2].setPiece(ptr);
+	ptr=new Bishop(white);
+	cells[7][5].setPiece(ptr);
+	ptr=new Queen(white);
+	cells[7][3].setPiece(ptr);
+	ptr=new King(white);
+	cells[7][4].setPiece(ptr);
+	
+	ptr=new Pawn(black);
+	cells[1][7].setPiece(ptr);
+	ptr=new Pawn(black);
+	cells[1][6].setPiece(ptr);
+	ptr=new Pawn(black);
+	cells[1][5].setPiece(ptr);
+	ptr=new Pawn(black);
+	cells[1][4].setPiece(ptr);
+	ptr=new Pawn(black);
+	cells[1][3].setPiece(ptr);
+	ptr=new Pawn(black);
+	cells[1][2].setPiece(ptr);
+	ptr=new Pawn(black);
+	cells[1][1].setPiece(ptr);
+	ptr=new Pawn(black);
+	cells[1][0].setPiece(ptr);
+	ptr=new Rook(black);
+	cells[0][0].setPiece(ptr);
+	ptr=new Rook(black);
+	cells[0][7].setPiece(ptr);
+	ptr=new Knight(black);
+	cells[0][1].setPiece(ptr);
+	ptr=new Knight(black);
+	cells[0][6].setPiece(ptr);
+	ptr=new Bishop(black);
+	cells[0][2].setPiece(ptr);
+	ptr=new Bishop(black);
+	cells[0][5].setPiece(ptr);
+	ptr=new Queen(black);
+	cells[0][3].setPiece(ptr);
 	ptr=new King(black);
-	cells[4][4].setPiece(ptr);
+	cells[0][4].setPiece(ptr);
+	
 	
 	Piece::setCellArray(&cells[0][0]);
 	newMove();
 }
+bool Board::dummyMove(Point currentPos, Point newPos){
+	Piece *curP=cells[currentPos.x][currentPos.y].getPiece();
+	Piece *newP=cells[newPos.x][newPos.y].getPiece();
+	Piece *k;
+	bool flag;
+	cells[newPos.x][newPos.y].setPiece(curP);
+	cells[currentPos.x][currentPos.y].setNull();
+	flag = isCheck();
+	cells[newPos.x][newPos.y].setPiece(newP);
+	cells[currentPos.x][currentPos.y].setPiece(curP);
+	return flag;
+}
 void Board::movePiece(Point currentPos, Point newPos){
 		if(currentPos.x>=0&&currentPos.x<8&&currentPos.y>=0&&currentPos.y<8){
 			if(cells[currentPos.x][currentPos.y].getPiece()!=NULL){
-				if(cells[currentPos.x][currentPos.y].getPiece()->isMoveLegal(newPos)){
+				if(cells[currentPos.x][currentPos.y].getPiece()->isMoveLegal(newPos) && cells[currentPos.x][currentPos.y].getPiece()->getColor()==move){
 					cells[newPos.x][newPos.y].setPiece(cells[currentPos.x][currentPos.y].getPiece());
 					cells[currentPos.x][currentPos.y].setNull();
+					changeMove();
 					newMove();
 				}
 			}
 		}
+}
+void Board::changeMove(){
+	if(move==white){
+		move=black;
+	}
+	else if(move==black){
+		move=white;
+	}
 }
 void Board::displayBoard(){
 	for(int x=0;x<GRID;x++){
@@ -859,6 +947,35 @@ void Board::newMove(){
 			}
 		}
 	}
+	for(int x=0;x<GRID;x++){
+		for(int y=0;y<GRID;y++){
+			if(cells[x][y].getPiece()!=NULL){
+				if(cells[x][y].getPiece()->getName()==king){
+					continue;
+				}
+				vector<Point> data = cells[x][y].getPiece()->getAvailableMoves();
+				for(int i=0;i<data.size();i++){
+					if(dummyMove({x, y}, data[i])){
+						cells[x][y].getPiece()->addMove(data[i]);
+					}
+				}
+			}
+		}
+	}
+}
+bool Board::isCheck(){
+	for(int x=0;x<GRID;x++){
+		for(int y=0;y<GRID;y++){
+			if(cells[x][y].getPiece()!=NULL){
+				if(cells[x][y].getPiece()->getName()==king && cells[x][y].getPiece()->getColor()==move){
+					if(cells[x][y].getPiece()->isUnderAttack({x, y})==false){
+						return false;
+					}
+				}
+			}
+		}
+	}
+	return true;
 }
 //Class Board
 
@@ -872,7 +989,7 @@ class GUI{
 			  curPos.x=-1;
 			  curPos.y=-1;
 			  Point newPos;
-			  sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Game Testing");
+			  sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Chess");
 			  sf::Event event;
 			  sf::Image image;
 			  image.create(800, 800, sf::Color::Black);
@@ -882,17 +999,14 @@ class GUI{
 			  sf::Color whitePixel(181,136,99,255);
 			  
 			  for (int y = 0; y < 800; y++){
-			 
 			    for (int x = 0; x < 800; x++){
 			      if (isBlackPixel)
 			        image.setPixel(x, y, blackPixel);
 			      else
 			        image.setPixel(x, y, whitePixel);
-			   
 			      if (!(x % 100))
 			        isBlackPixel = !isBlackPixel;
 			    }
-			    
 			    if(!(y%100))
 			      isBlackPixel = !isBlackPixel;
 			  }
