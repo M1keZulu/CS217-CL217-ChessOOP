@@ -3,9 +3,12 @@
 #include<fstream>
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
+#include<SFML/Network.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include<time.h>
+#include<conio.h>
+#include<sstream>
 #define GRID 8
 
 using namespace std;
@@ -21,6 +24,10 @@ enum Color{
 
 enum Status{
 	alive, dead
+};
+
+enum ConnectionType{
+	host, client
 };
 
 struct Point{
@@ -81,6 +88,7 @@ class Piece{
 		virtual int isMoveLegal(Point newPos);
 		virtual bool isUnderAttack(Point currentPos);
 		virtual void addMove(Point pos);
+		virtual int numberMoves();
 		
 };
 
@@ -92,6 +100,7 @@ Color Piece::getColor(){return color;}
 PieceType Piece::getName(){return name;}
 void Piece::PieceMoved(){moveCount++;}
 void Piece::generateMoves(Point currentPos){}
+int Piece::numberMoves(){return movesAvailable.size();}
 void Piece::addMove(Point pos){
 	movesAvailable.push_back({pos.x, pos.y});
 }
@@ -110,7 +119,7 @@ bool Piece::isUnderAttack(Point currentPos){
 			}
 			break;
 		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getName()!=king){
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getName()!=name){
 			break;
 		}
 		currentPos.x--;	// up
@@ -127,7 +136,7 @@ bool Piece::isUnderAttack(Point currentPos){
 			}
 			break;
 		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getName()!=king){
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getName()!=name){
 			break;
 		}
 		currentPos.x++;	// down
@@ -144,7 +153,7 @@ bool Piece::isUnderAttack(Point currentPos){
 			}
 			break;
 		}
-		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getName()!=king){
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getName()!=name){
 			break;
 		}
 		currentPos.y++;	// right
@@ -161,7 +170,7 @@ bool Piece::isUnderAttack(Point currentPos){
 			}
 			break;
 		}
-		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getName()!=king){
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getName()!=name){
 			break;
 		}
 		currentPos.y--;	// left
@@ -178,7 +187,7 @@ bool Piece::isUnderAttack(Point currentPos){
 			}
 			break;
 		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()!=king){
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getName()!=name){
 			break;
 		}
 		currentPos.x--;
@@ -196,7 +205,7 @@ bool Piece::isUnderAttack(Point currentPos){
 			}
 			break;
 		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()!=king){
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getName()!=name){
 			break;
 		}
 		currentPos.x++;
@@ -214,7 +223,7 @@ bool Piece::isUnderAttack(Point currentPos){
 			}
 			break;
 		}
-		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()!=king){
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==color && (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getName()!=name){
 			break;
 		}
 		currentPos.x++;
@@ -232,7 +241,7 @@ bool Piece::isUnderAttack(Point currentPos){
 			}
 			break;
 		}
-		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()!=king){
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==color && (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getName()!=name){
 			break;
 		}
 		currentPos.x--;
@@ -765,29 +774,93 @@ King::King(Color m_color):Piece(m_color, king){}
 
 void King::generateMoves(Point currentPos){
 	movesAvailable.clear();
-	if(isUnderAttack({currentPos.x-1, currentPos.y})){
-		movesAvailable.push_back({currentPos.x-1, currentPos.y});
+//	if(isUnderAttack({currentPos.x-1, currentPos.y})){
+//		movesAvailable.push_back({currentPos.x-1, currentPos.y});
+//	}
+//	if(isUnderAttack({currentPos.x+1, currentPos.y})){
+//		movesAvailable.push_back({currentPos.x+1, currentPos.y});
+//	}
+//	if(isUnderAttack({currentPos.x, currentPos.y+1})){
+//		movesAvailable.push_back({currentPos.x, currentPos.y+1});
+//	}
+//	if(isUnderAttack({currentPos.x, currentPos.y-1})){
+//		movesAvailable.push_back({currentPos.x, currentPos.y-1});
+//	}
+//	if(isUnderAttack({currentPos.x-1, currentPos.y+1})){
+//		movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
+//	}
+//	if(isUnderAttack({currentPos.x-1, currentPos.y-1})){
+//		movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
+//	}
+//	if(isUnderAttack({currentPos.x+1, currentPos.y+1})){
+//		movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
+//	}
+//	if(isUnderAttack({currentPos.x+1, currentPos.y-1})){
+//		movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
+//	}
+	if(inLimits({currentPos.x-1, currentPos.y})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y});
+		}
 	}
-	if(isUnderAttack({currentPos.x+1, currentPos.y})){
-		movesAvailable.push_back({currentPos.x+1, currentPos.y});
+	if(inLimits({currentPos.x+1, currentPos.y})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y});
+		}
 	}
-	if(isUnderAttack({currentPos.x, currentPos.y+1})){
-		movesAvailable.push_back({currentPos.x, currentPos.y+1});
+	if(inLimits({currentPos.x, currentPos.y+1})){
+		if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x, currentPos.y+1});
+		}
 	}
-	if(isUnderAttack({currentPos.x, currentPos.y-1})){
-		movesAvailable.push_back({currentPos.x, currentPos.y-1});
+	if(inLimits({currentPos.x, currentPos.y-1})){
+		if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x, currentPos.y-1});
+		}
 	}
-	if(isUnderAttack({currentPos.x-1, currentPos.y+1})){
-		movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
+	if(inLimits({currentPos.x-1, currentPos.y+1})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
+		}
 	}
-	if(isUnderAttack({currentPos.x-1, currentPos.y-1})){
-		movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
+	if(inLimits({currentPos.x-1, currentPos.y-1})){
+		if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
+		}
 	}
-	if(isUnderAttack({currentPos.x+1, currentPos.y+1})){
-		movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
+	if(inLimits({currentPos.x+1, currentPos.y+1})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
+		}
 	}
-	if(isUnderAttack({currentPos.x+1, currentPos.y-1})){
-		movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
+	if(inLimits({currentPos.x+1, currentPos.y-1})){
+		if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()==NULL){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
+		}
+		else if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
+			movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
+		}
 	}
 }
 //Class King
@@ -798,7 +871,6 @@ class Board{
 		Cell cells[GRID][GRID];
 		Color move;
 		void newMove();
-		bool isCheck();
 		void changeMove();
 		bool dummyMove(Point currentPos, Point newPos);
 	public:
@@ -806,7 +878,12 @@ class Board{
 		void movePiece(Point currentPos, Point newPos);
 		void displayBoard();
 		vector<Detail> getDetails();
+		bool isCheckMate();
+		Point getKing();
+		bool isCheck();
+		Color getMove();
 };
+Color Board::getMove(){return move;}
 Board::Board(){
 	move=white; //can implement random player start functionality
 	Piece *ptr;
@@ -950,9 +1027,6 @@ void Board::newMove(){
 	for(int x=0;x<GRID;x++){
 		for(int y=0;y<GRID;y++){
 			if(cells[x][y].getPiece()!=NULL){
-				if(cells[x][y].getPiece()->getName()==king){
-					continue;
-				}
 				vector<Point> data = cells[x][y].getPiece()->getAvailableMoves();
 				for(int i=0;i<data.size();i++){
 					if(dummyMove({x, y}, data[i])){
@@ -977,13 +1051,368 @@ bool Board::isCheck(){
 	}
 	return true;
 }
+bool Board::isCheckMate(){
+	int sum=0;
+	for(int x=0;x<GRID;x++){
+		for(int y=0;y<GRID;y++){
+			if(cells[x][y].getPiece()!=NULL){
+				if(cells[x][y].getPiece()->getColor()==move){
+					sum+=cells[x][y].getPiece()->numberMoves();
+				}
+			}
+		}
+	}
+	if(sum==0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+Point Board::getKing(){
+	for(int x=0;x<GRID;x++){
+		for(int y=0;y<GRID;y++){
+			if(cells[x][y].getPiece()!=NULL){
+				if(cells[x][y].getPiece()->getColor()==move && cells[x][y].getPiece()->getName()==king){
+					return {x, y};
+				}
+			}
+		}
+	}
+}
 //Class Board
+
+//Class Network
+class Network{
+	private:
+		sf::IpAddress ip;
+		sf::TcpSocket socket;
+		char connectionType, mode;
+		int x;
+		size_t received;
+		string text;
+	public:
+		Network(string s){
+			ip=sf::IpAddress(s);
+			sf::Socket::Status status = socket.connect(ip, 2000);
+				if (status != sf::Socket::Done){
+				    cout<<"Error! Can't connect";
+				}
+				else{
+					cout<<"Connected";
+				}
+			socket.setBlocking(false);
+		}
+		Network(){
+			sf::TcpListener listener;
+			listener.listen(2000);
+			listener.accept(socket);
+			socket.setBlocking(false);
+		}
+	public:
+		void send(int a, int b, int c, int d){
+			ostringstream s;
+			s.str("");
+			s<<a<<b<<c<<d;
+			cout<<a<<b<<c<<d<<endl;
+			string temp;
+			temp += s.str();
+			socket.send(temp.c_str(), temp.length() + 1);
+			cout<<"@Data Sent - "<<temp<<" @"<<endl;
+		}
+		string receive(){
+			char buffer[20000];
+			if(socket.receive(buffer, sizeof(buffer), received)==sf::Socket::Done){
+				socket.receive(buffer, sizeof(buffer), received);
+				cout<<"@Data Received - "<<buffer<<" @"<<endl;
+				return buffer;
+			}
+			else{
+				cout<<"@Data Received - "<<buffer<<" @"<<endl;
+				return "";
+			}
+		}
+};
+//Class Network
 
 class GUI{
 	private:
 		Board b;
+		Network *n;
 		vector<Detail> dat;
 	public:
+		GUI(const ConnectionType type){
+			  if(type==host){
+			  	n=new Network;
+			  }
+			  else if(type==client){
+			  	n=new Network("192.168.100.88");
+			  }
+			  Point curPos;
+			  curPos.x=-1;
+			  curPos.y=-1;
+			  Point newPos;
+			  sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Chess");
+			  sf::Event event;
+			  sf::Image image;
+			  image.create(800, 800, sf::Color::Black);
+			  
+			  bool flag = false;
+			  sf::Color brown(241,217,181,255);
+			  sf::Color lbrown(181,136,99,255);
+			  
+			  for (int y = 0; y < 800; y++){
+			    for (int x = 0; x < 800; x++){
+			      if (flag)
+			        image.setPixel(x, y, brown);
+			      else
+			        image.setPixel(x, y, lbrown);
+			      if (!(x % 100))
+			        flag = !flag;
+			    }
+			    if(!(y%100))
+			      flag = !flag;
+			  }
+			  sf::Texture texture;
+			  texture.loadFromImage(image);
+			  sf::Sprite sprite(texture);
+			  
+			  sf::RectangleShape border;
+			  border.setSize(sf::Vector2f(100,100));
+			  border.setOutlineColor(sf::Color::Blue);
+			  border.setOutlineThickness(5);
+			  border.setFillColor(sf::Color::Transparent);
+			  
+			  sf::RectangleShape checkmate;
+			  checkmate.setSize(sf::Vector2f(100,100));
+			  checkmate.setOutlineColor(sf::Color::Red);
+			  checkmate.setFillColor(sf::Color::Red);
+			  checkmate.setPosition(-10000,-10000);
+			  
+			  sf::RectangleShape check;
+			  check.setSize(sf::Vector2f(100,100));
+			  check.setOutlineColor(sf::Color::Yellow);
+			  check.setFillColor(sf::Color::Yellow);
+			  check.setPosition(-10000,-10000);
+			  
+			  while(renderWindow.isOpen()){
+			  	border.setPosition(curPos.x*100, curPos.y*100);
+				if(!b.isCheck()){
+					renderWindow.setTitle("Chess - Check");
+			  		Point p = b.getKing();
+			  		check.setPosition(p.y*100, p.x*100);
+				}
+				else{
+					check.setPosition(-10000, -10000);
+				}
+				if(b.isCheckMate()){
+			  		renderWindow.setTitle("Chess - Checkmate");
+			  		Point p = b.getKing();
+			  		checkmate.setPosition(p.y*100, p.x*100);
+				}
+				if(type==host && b.getMove()==black){
+					string s=n->receive();
+					b.movePiece({s[0]-'0',s[1]-'0'},{s[2]-'0', s[3]-'0'});
+				}
+				else if(type==client && b.getMove()==white){
+					string s=n->receive();
+					b.movePiece({s[0]-'0',s[1]-'0'},{s[2]-'0', s[3]-'0'});
+				}
+			    while(renderWindow.pollEvent(event)){
+			    	if(type==host && b.getMove()==white){
+				        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+				    		curPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
+				            curPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
+				    	}
+				    	if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+							newPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
+				            newPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
+							b.movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
+							n->send(curPos.y, curPos.x, newPos.y, newPos.x);
+						}
+					}
+					else if(type==client && b.getMove()==black){
+						if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+				    		curPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
+				            curPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
+				    	}
+				    	if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+							newPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
+				            newPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
+							b.movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
+							n->send(curPos.y, curPos.x, newPos.y, newPos.x);
+						}
+					}
+			      if (event.type == sf::Event::Closed)
+			            renderWindow.close();
+			    }
+			    renderWindow.clear();
+			    renderWindow.draw(sprite);
+			    renderWindow.draw(border);
+			    renderWindow.draw(check);
+			    renderWindow.draw(checkmate);
+			    dat=b.getDetails();
+			    for(int i=0;i<dat.size();i++){
+			    	if(dat[i].name==pawn&&dat[i].color==white){
+			    		int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_pawn.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==pawn&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_pawn.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==knight&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_knight.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==knight&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_knight.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==rook&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_rook.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==rook&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_rook.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==bishop&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_bishop.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==bishop&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_bishop.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(13+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==queen&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_queen.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(2+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==queen&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_queen.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(2+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==king&&dat[i].color==white){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("w_king.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(8+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+					else if(dat[i].name==king&&dat[i].color==black){
+						int x =dat[i].x;
+			    		int y =dat[i].y;
+			    		sf::Image i;
+			    		i.loadFromFile("b_king.png");
+			    		sf::Texture t;
+			    		t.loadFromImage(i);
+			    		sf::Sprite s;
+			    		s.setTexture(t);
+			    		s.setScale(0.7,0.7);
+			    		s.setPosition(8+y*100,5+x*100);
+			    		renderWindow.draw(s);
+					}
+				}
+			    renderWindow.display();
+			  }
+		}
 		GUI(){
 			  Point curPos;
 			  curPos.x=-1;
@@ -994,40 +1423,67 @@ class GUI{
 			  sf::Image image;
 			  image.create(800, 800, sf::Color::Black);
 			  
-			  bool isBlackPixel = false;
-			  sf::Color blackPixel(241,217,181,255);
-			  sf::Color whitePixel(181,136,99,255);
+			  bool flag = false;
+			  sf::Color brown(241,217,181,255);
+			  sf::Color lbrown(181,136,99,255);
 			  
 			  for (int y = 0; y < 800; y++){
 			    for (int x = 0; x < 800; x++){
-			      if (isBlackPixel)
-			        image.setPixel(x, y, blackPixel);
+			      if (flag)
+			        image.setPixel(x, y, brown);
 			      else
-			        image.setPixel(x, y, whitePixel);
+			        image.setPixel(x, y, lbrown);
 			      if (!(x % 100))
-			        isBlackPixel = !isBlackPixel;
+			        flag = !flag;
 			    }
 			    if(!(y%100))
-			      isBlackPixel = !isBlackPixel;
+			      flag = !flag;
 			  }
 			  sf::Texture texture;
 			  texture.loadFromImage(image);
 			  sf::Sprite sprite(texture);
+			  
 			  sf::RectangleShape border;
 			  border.setSize(sf::Vector2f(100,100));
 			  border.setOutlineColor(sf::Color::Blue);
 			  border.setOutlineThickness(5);
 			  border.setFillColor(sf::Color::Transparent);
-			  while (renderWindow.isOpen()){
+			  
+			  sf::RectangleShape checkmate;
+			  checkmate.setSize(sf::Vector2f(100,100));
+			  checkmate.setOutlineColor(sf::Color::Red);
+			  checkmate.setFillColor(sf::Color::Red);
+			  checkmate.setPosition(-10000,-10000);
+			  
+			  sf::RectangleShape check;
+			  check.setSize(sf::Vector2f(100,100));
+			  check.setOutlineColor(sf::Color::Yellow);
+			  check.setFillColor(sf::Color::Yellow);
+			  check.setPosition(-10000,-10000);
+			  
+			  while(renderWindow.isOpen()){
 			  	border.setPosition(curPos.x*100, curPos.y*100);
-			    while (renderWindow.pollEvent(event)){
-			        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-			    		curPos.x = sf::Mouse::getPosition(renderWindow).x/100;
-			            curPos.y = sf::Mouse::getPosition(renderWindow).y/100;
+				if(!b.isCheck()){
+					renderWindow.setTitle("Chess - Check");
+			  		Point p = b.getKing();
+			  		check.setPosition(p.y*100, p.x*100);
+				}
+				else{
+					check.setPosition(-10000, -10000);
+				}
+				if(b.isCheckMate()){
+			  		renderWindow.setTitle("Chess - Checkmate");
+			  		Point p = b.getKing();
+			  		checkmate.setPosition(p.y*100, p.x*100);
+				}
+			    while(renderWindow.pollEvent(event)){
+			        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+			    		curPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
+			            curPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
 			    	}
-			    	if (sf::Mouse::isButtonPressed(sf::Mouse::Right)){
-						newPos.x = sf::Mouse::getPosition(renderWindow).x/100;
-			            newPos.y = sf::Mouse::getPosition(renderWindow).y/100;
+			    	if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
+						newPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
+			            newPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
 						b.movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
 					}
 			      if (event.type == sf::Event::Closed)
@@ -1036,6 +1492,8 @@ class GUI{
 			    renderWindow.clear();
 			    renderWindow.draw(sprite);
 			    renderWindow.draw(border);
+			    renderWindow.draw(check);
+			    renderWindow.draw(checkmate);
 			    dat=b.getDetails();
 			    for(int i=0;i<dat.size();i++){
 			    	if(dat[i].name==pawn&&dat[i].color==white){
@@ -1201,5 +1659,13 @@ class GUI{
 };
 
 int main(){
-	GUI g;
+	char c;
+	cout<<"what do you want to do?";
+	cin>>c;
+	if(c=='s'){
+		GUI g(host);
+	}
+	else if(c=='c'){
+		GUI g(client);
+	}
 }
