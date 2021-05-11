@@ -30,6 +30,10 @@ enum ConnectionType{
 	host, client
 };
 
+enum Direction{
+	up, down
+};
+
 struct Point{
 	int x;
 	int y;	
@@ -378,46 +382,53 @@ vector<Point> Piece::getAvailableMoves(){
 
 //Class Pawn
 class Pawn:public Piece{
+	Direction d;
 	public:
-		Pawn(Color m_color);
+		Pawn(Color m_color, Direction d);
 		void generateMoves(Point currentPos);
 };
 
-Pawn::Pawn(Color m_color):Piece(m_color, pawn){}
+Pawn::Pawn(Color m_color, Direction d):Piece(m_color, pawn){this->d=d;}
 void Pawn::generateMoves(Point currentPos){
 	movesAvailable.clear();
-	if(color==white){
+	if(d==up){
 		if(inLimits({currentPos.x-1, currentPos.y})){									//(x-1)(y)
 			if((cell+((currentPos.x-1)*GRID)+(currentPos.y))->getPiece()==NULL){
 				movesAvailable.push_back({currentPos.x-1, currentPos.y});
 			}
 		}
 		if(inLimits({currentPos.x-1, currentPos.y-1})){									//(x-1)(y-1)
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()!=NULL && (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==black){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()!=NULL && (cell+((currentPos.x-1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
 				movesAvailable.push_back({currentPos.x-1, currentPos.y-1});
 			}
 		}
 		if(inLimits({currentPos.x-1, currentPos.y+1})){									//(x-1)(y+1)
-			if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()!=NULL && (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==black){
+			if((cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()!=NULL && (cell+((currentPos.x-1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
 				movesAvailable.push_back({currentPos.x-1, currentPos.y+1});
 			}
 		}
+		if(moveCount==0){
+			movesAvailable.push_back({currentPos.x-2,currentPos.y});
+		}
 	}
-	else if(color==black){
+	else if(d==down){
 		if(inLimits({currentPos.x+1, currentPos.y})){									//(x+1)(y)
 			if((cell+((currentPos.x+1)*GRID)+(currentPos.y))->getPiece()==NULL){
 				movesAvailable.push_back({currentPos.x+1, currentPos.y});
 			}
 		}
 		if(inLimits({currentPos.x+1, currentPos.y+1})){									//(x+1)(y+1)
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()!=NULL && (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()==white){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()!=NULL && (cell+((currentPos.x+1)*GRID)+(currentPos.y+1))->getPiece()->getColor()!=color){
 				movesAvailable.push_back({currentPos.x+1, currentPos.y+1});
 			}
 		}
 		if(inLimits({currentPos.x+1, currentPos.y-1})){									//(x+1)(y-1)
-			if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()!=NULL && (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()==white){
+			if((cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()!=NULL && (cell+((currentPos.x+1)*GRID)+(currentPos.y-1))->getPiece()->getColor()!=color){
 				movesAvailable.push_back({currentPos.x+1, currentPos.y-1});
 			}
+		}
+		if(moveCount==0){
+			movesAvailable.push_back({currentPos.x+2,currentPos.y});
 		}
 	}
 }
@@ -874,7 +885,7 @@ class Board{
 		void changeMove();
 		bool dummyMove(Point currentPos, Point newPos);
 	public:
-		Board();
+		Board(Color c);
 		void movePiece(Point currentPos, Point newPos);
 		void displayBoard();
 		vector<Detail> getDetails();
@@ -882,80 +893,157 @@ class Board{
 		Point getKing();
 		bool isCheck();
 		Color getMove();
+		void promotePawn(Point currentPos, PieceType name);
 };
 Color Board::getMove(){return move;}
-Board::Board(){
-	move=white; //can implement random player start functionality
-	Piece *ptr;
-	ptr=new Pawn(white);
+Board::Board(Color c){
+	Color m;
+	Direction d1=up,d2=down;
+	if(c==white){
+		m=black;
+		Piece *ptr;
+	ptr=new Pawn(c, d1);
 	cells[6][7].setPiece(ptr);
-	ptr=new Pawn(white);
+	ptr=new Pawn(c, d1);
 	cells[6][6].setPiece(ptr);
-	ptr=new Pawn(white);
+	ptr=new Pawn(c, d1);
 	cells[6][5].setPiece(ptr);
-	ptr=new Pawn(white);
+	ptr=new Pawn(c, d1);
 	cells[6][4].setPiece(ptr);
-	ptr=new Pawn(white);
+	ptr=new Pawn(c, d1);
 	cells[6][3].setPiece(ptr);
-	ptr=new Pawn(white);
+	ptr=new Pawn(c, d1);
 	cells[6][2].setPiece(ptr);
-	ptr=new Pawn(white);
+	ptr=new Pawn(c, d1);
 	cells[6][1].setPiece(ptr);
-	ptr=new Pawn(white);
+	ptr=new Pawn(c, d1);
 	cells[6][0].setPiece(ptr);
-	ptr=new Rook(white);
+	ptr=new Rook(c);
 	cells[7][0].setPiece(ptr);
-	ptr=new Rook(white);
+	ptr=new Rook(c);
 	cells[7][7].setPiece(ptr);
-	ptr=new Knight(white);
+	ptr=new Knight(c);
 	cells[7][1].setPiece(ptr);
-	ptr=new Knight(white);
+	ptr=new Knight(c);
 	cells[7][6].setPiece(ptr);
-	ptr=new Bishop(white);
+	ptr=new Bishop(c);
 	cells[7][2].setPiece(ptr);
-	ptr=new Bishop(white);
+	ptr=new Bishop(c);
 	cells[7][5].setPiece(ptr);
-	ptr=new Queen(white);
+	ptr=new Queen(c);
 	cells[7][3].setPiece(ptr);
-	ptr=new King(white);
+	ptr=new King(c);
 	cells[7][4].setPiece(ptr);
 	
-	ptr=new Pawn(black);
+	ptr=new Pawn(m, d2);
 	cells[1][7].setPiece(ptr);
-	ptr=new Pawn(black);
+	ptr=new Pawn(m, d2);
 	cells[1][6].setPiece(ptr);
-	ptr=new Pawn(black);
+	ptr=new Pawn(m, d2);
 	cells[1][5].setPiece(ptr);
-	ptr=new Pawn(black);
+	ptr=new Pawn(m, d2);
 	cells[1][4].setPiece(ptr);
-	ptr=new Pawn(black);
+	ptr=new Pawn(m, d2);
 	cells[1][3].setPiece(ptr);
-	ptr=new Pawn(black);
+	ptr=new Pawn(m, d2);
 	cells[1][2].setPiece(ptr);
-	ptr=new Pawn(black);
+	ptr=new Pawn(m, d2);
 	cells[1][1].setPiece(ptr);
-	ptr=new Pawn(black);
+	ptr=new Pawn(m, d2);
 	cells[1][0].setPiece(ptr);
-	ptr=new Rook(black);
+	ptr=new Rook(m);
 	cells[0][0].setPiece(ptr);
-	ptr=new Rook(black);
+	ptr=new Rook(m);
 	cells[0][7].setPiece(ptr);
-	ptr=new Knight(black);
+	ptr=new Knight(m);
 	cells[0][1].setPiece(ptr);
-	ptr=new Knight(black);
+	ptr=new Knight(m);
 	cells[0][6].setPiece(ptr);
-	ptr=new Bishop(black);
+	ptr=new Bishop(m);
 	cells[0][2].setPiece(ptr);
-	ptr=new Bishop(black);
+	ptr=new Bishop(m);
 	cells[0][5].setPiece(ptr);
-	ptr=new Queen(black);
+	ptr=new Queen(m);
 	cells[0][3].setPiece(ptr);
-	ptr=new King(black);
+	ptr=new King(m);
 	cells[0][4].setPiece(ptr);
+	}
+	else if(c==black){
+		m=white;
+		Piece *ptr;
+	ptr=new Pawn(c, d1);
+	cells[6][7].setPiece(ptr);
+	ptr=new Pawn(c, d1);
+	cells[6][6].setPiece(ptr);
+	ptr=new Pawn(c, d1);
+	cells[6][5].setPiece(ptr);
+	ptr=new Pawn(c, d1);
+	cells[6][4].setPiece(ptr);
+	ptr=new Pawn(c, d1);
+	cells[6][3].setPiece(ptr);
+	ptr=new Pawn(c, d1);
+	cells[6][2].setPiece(ptr);
+	ptr=new Pawn(c, d1);
+	cells[6][1].setPiece(ptr);
+	ptr=new Pawn(c, d1);
+	cells[6][0].setPiece(ptr);
+	ptr=new Rook(c);
+	cells[7][0].setPiece(ptr);
+	ptr=new Rook(c);
+	cells[7][7].setPiece(ptr);
+	ptr=new Knight(c);
+	cells[7][1].setPiece(ptr);
+	ptr=new Knight(c);
+	cells[7][6].setPiece(ptr);
+	ptr=new Bishop(c);
+	cells[7][2].setPiece(ptr);
+	ptr=new Bishop(c);
+	cells[7][5].setPiece(ptr);
+	ptr=new Queen(c);
+	cells[7][4].setPiece(ptr);
+	ptr=new King(c);
+	cells[7][3].setPiece(ptr);
 	
+	ptr=new Pawn(m, d2);
+	cells[1][7].setPiece(ptr);
+	ptr=new Pawn(m, d2);
+	cells[1][6].setPiece(ptr);
+	ptr=new Pawn(m, d2);
+	cells[1][5].setPiece(ptr);
+	ptr=new Pawn(m, d2);
+	cells[1][4].setPiece(ptr);
+	ptr=new Pawn(m, d2);
+	cells[1][3].setPiece(ptr);
+	ptr=new Pawn(m, d2);
+	cells[1][2].setPiece(ptr);
+	ptr=new Pawn(m, d2);
+	cells[1][1].setPiece(ptr);
+	ptr=new Pawn(m, d2);
+	cells[1][0].setPiece(ptr);
+	ptr=new Rook(m);
+	cells[0][0].setPiece(ptr);
+	ptr=new Rook(m);
+	cells[0][7].setPiece(ptr);
+	ptr=new Knight(m);
+	cells[0][1].setPiece(ptr);
+	ptr=new Knight(m);
+	cells[0][6].setPiece(ptr);
+	ptr=new Bishop(m);
+	cells[0][2].setPiece(ptr);
+	ptr=new Bishop(m);
+	cells[0][5].setPiece(ptr);
+	ptr=new Queen(m);
+	cells[0][4].setPiece(ptr);
+	ptr=new King(m);
+	cells[0][3].setPiece(ptr);
+	}
+	move=white; //can implement random player start functionality
 	
 	Piece::setCellArray(&cells[0][0]);
 	newMove();
+}
+void Board::promotePawn(Point currentPos, PieceType name){	//does not have validation checks because it excepts incoming data to be already validated
+	
 }
 bool Board::dummyMove(Point currentPos, Point newPos){
 	Piece *curP=cells[currentPos.x][currentPos.y].getPiece();
@@ -973,6 +1061,7 @@ void Board::movePiece(Point currentPos, Point newPos){
 		if(currentPos.x>=0&&currentPos.x<8&&currentPos.y>=0&&currentPos.y<8){
 			if(cells[currentPos.x][currentPos.y].getPiece()!=NULL){
 				if(cells[currentPos.x][currentPos.y].getPiece()->isMoveLegal(newPos) && cells[currentPos.x][currentPos.y].getPiece()->getColor()==move){
+					cells[currentPos.x][currentPos.y].getPiece()->PieceMoved();
 					cells[newPos.x][newPos.y].setPiece(cells[currentPos.x][currentPos.y].getPiece());
 					cells[currentPos.x][currentPos.y].setNull();
 					changeMove();
@@ -1031,6 +1120,7 @@ void Board::newMove(){
 				for(int i=0;i<data.size();i++){
 					if(dummyMove({x, y}, data[i])){
 						cells[x][y].getPiece()->addMove(data[i]);
+						cout<<x<<y<<endl;
 					}
 				}
 			}
@@ -1114,7 +1204,6 @@ class Network{
 			ostringstream s;
 			s.str("");
 			s<<a<<b<<c<<d;
-			cout<<a<<b<<c<<d<<endl;
 			string temp;
 			temp += s.str();
 			socket.send(temp.c_str(), temp.length() + 1);
@@ -1137,16 +1226,18 @@ class Network{
 
 class GUI{
 	private:
-		Board b;
+		Board *b;
 		Network *n;
 		vector<Detail> dat;
 	public:
 		GUI(const ConnectionType type){
 			  if(type==host){
 			  	n=new Network;
+			  	b=new Board(white);
 			  }
 			  else if(type==client){
 			  	n=new Network("192.168.100.88");
+			  	b=new Board(black);
 			  }
 			  Point curPos;
 			  curPos.x=-1;
@@ -1155,24 +1246,7 @@ class GUI{
 			  sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Chess");
 			  sf::Event event;
 			  sf::Image image;
-			  image.create(800, 800, sf::Color::Black);
-			  
-			  bool flag = false;
-			  sf::Color brown(241,217,181,255);
-			  sf::Color lbrown(181,136,99,255);
-			  
-			  for (int y = 0; y < 800; y++){
-			    for (int x = 0; x < 800; x++){
-			      if (flag)
-			        image.setPixel(x, y, brown);
-			      else
-			        image.setPixel(x, y, lbrown);
-			      if (!(x % 100))
-			        flag = !flag;
-			    }
-			    if(!(y%100))
-			      flag = !flag;
-			  }
+			  image.loadFromFile("board1.png");
 			  sf::Texture texture;
 			  texture.loadFromImage(image);
 			  sf::Sprite sprite(texture);
@@ -1197,29 +1271,32 @@ class GUI{
 			  
 			  while(renderWindow.isOpen()){
 			  	border.setPosition(curPos.x*100, curPos.y*100);
-				if(!b.isCheck()){
+				if(!b->isCheck()){
 					renderWindow.setTitle("Chess - Check");
-			  		Point p = b.getKing();
+			  		Point p = b->getKing();
 			  		check.setPosition(p.y*100, p.x*100);
 				}
 				else{
+					renderWindow.setTitle("Chess");
 					check.setPosition(-10000, -10000);
 				}
-				if(b.isCheckMate()){
+				if(b->isCheckMate()){
 			  		renderWindow.setTitle("Chess - Checkmate");
-			  		Point p = b.getKing();
+			  		Point p = b->getKing();
 			  		checkmate.setPosition(p.y*100, p.x*100);
 				}
-				if(type==host && b.getMove()==black){
+				if(type==host && b->getMove()==black){
 					string s=n->receive();
-					b.movePiece({s[0]-'0',s[1]-'0'},{s[2]-'0', s[3]-'0'});
+					cout<<s<<endl;
+					b->movePiece({s[0]-'0',s[1]-'0'},{s[2]-'0', s[3]-'0'});
 				}
-				else if(type==client && b.getMove()==white){
+				else if(type==client && b->getMove()==white){
 					string s=n->receive();
-					b.movePiece({s[0]-'0',s[1]-'0'},{s[2]-'0', s[3]-'0'});
+					cout<<s<<endl;
+					b->movePiece({s[0]-'0',s[1]-'0'},{s[2]-'0', s[3]-'0'});
 				}
 			    while(renderWindow.pollEvent(event)){
-			    	if(type==host && b.getMove()==white){
+			    	if(type==host && b->getMove()==white){
 				        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 				    		curPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
 				            curPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
@@ -1227,11 +1304,11 @@ class GUI{
 				    	if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 							newPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
 				            newPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
-							b.movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
-							n->send(curPos.y, curPos.x, newPos.y, newPos.x);
+							b->movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
+							n->send(7-curPos.y, 7-curPos.x, 7-newPos.y, 7-newPos.x);
 						}
 					}
-					else if(type==client && b.getMove()==black){
+					else if(type==client && b->getMove()==black){
 						if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 				    		curPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
 				            curPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
@@ -1239,8 +1316,8 @@ class GUI{
 				    	if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 							newPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
 				            newPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
-							b.movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
-							n->send(curPos.y, curPos.x, newPos.y, newPos.x);
+							b->movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
+							n->send(7-curPos.y, 7-curPos.x, 7-newPos.y, 7-newPos.x);
 						}
 					}
 			      if (event.type == sf::Event::Closed)
@@ -1251,7 +1328,7 @@ class GUI{
 			    renderWindow.draw(border);
 			    renderWindow.draw(check);
 			    renderWindow.draw(checkmate);
-			    dat=b.getDetails();
+			    dat=b->getDetails();
 			    for(int i=0;i<dat.size();i++){
 			    	if(dat[i].name==pawn&&dat[i].color==white){
 			    		int x =dat[i].x;
@@ -1414,6 +1491,7 @@ class GUI{
 			  }
 		}
 		GUI(){
+			  b=new Board(white);
 			  Point curPos;
 			  curPos.x=-1;
 			  curPos.y=-1;
@@ -1421,28 +1499,10 @@ class GUI{
 			  sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Chess");
 			  sf::Event event;
 			  sf::Image image;
-			  image.create(800, 800, sf::Color::Black);
-			  
-			  bool flag = false;
-			  sf::Color brown(241,217,181,255);
-			  sf::Color lbrown(181,136,99,255);
-			  
-			  for (int y = 0; y < 800; y++){
-			    for (int x = 0; x < 800; x++){
-			      if (flag)
-			        image.setPixel(x, y, brown);
-			      else
-			        image.setPixel(x, y, lbrown);
-			      if (!(x % 100))
-			        flag = !flag;
-			    }
-			    if(!(y%100))
-			      flag = !flag;
-			  }
+			  image.loadFromFile("board1.png");
 			  sf::Texture texture;
 			  texture.loadFromImage(image);
 			  sf::Sprite sprite(texture);
-			  
 			  sf::RectangleShape border;
 			  border.setSize(sf::Vector2f(100,100));
 			  border.setOutlineColor(sf::Color::Blue);
@@ -1463,17 +1523,18 @@ class GUI{
 			  
 			  while(renderWindow.isOpen()){
 			  	border.setPosition(curPos.x*100, curPos.y*100);
-				if(!b.isCheck()){
+				if(!b->isCheck()){
 					renderWindow.setTitle("Chess - Check");
-			  		Point p = b.getKing();
+			  		Point p = b->getKing();
 			  		check.setPosition(p.y*100, p.x*100);
 				}
 				else{
+					renderWindow.setTitle("Chess");
 					check.setPosition(-10000, -10000);
 				}
-				if(b.isCheckMate()){
+				if(b->isCheckMate()){
 			  		renderWindow.setTitle("Chess - Checkmate");
-			  		Point p = b.getKing();
+			  		Point p = b->getKing();
 			  		checkmate.setPosition(p.y*100, p.x*100);
 				}
 			    while(renderWindow.pollEvent(event)){
@@ -1484,7 +1545,7 @@ class GUI{
 			    	if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
 						newPos.x = sf::Mouse::getPosition(renderWindow).x/(renderWindow.getSize().x/8);
 			            newPos.y = sf::Mouse::getPosition(renderWindow).y/(renderWindow.getSize().y/8);
-						b.movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
+						b->movePiece({curPos.y,curPos.x},{newPos.y, newPos.x});
 					}
 			      if (event.type == sf::Event::Closed)
 			            renderWindow.close();
@@ -1494,7 +1555,7 @@ class GUI{
 			    renderWindow.draw(border);
 			    renderWindow.draw(check);
 			    renderWindow.draw(checkmate);
-			    dat=b.getDetails();
+			    dat=b->getDetails();
 			    for(int i=0;i<dat.size();i++){
 			    	if(dat[i].name==pawn&&dat[i].color==white){
 			    		int x =dat[i].x;
