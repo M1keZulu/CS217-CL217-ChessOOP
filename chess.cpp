@@ -1,3 +1,10 @@
+/*
+	Name: Chess-OOP
+	Author:	Muhammad Zain Ul Abiddin
+	Description: Chess game made using OOP principles for Semester Project
+	Date: 24/05/2021
+*/
+
 #include<iostream>
 #include<vector>
 #include<fstream>
