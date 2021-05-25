@@ -56,6 +56,11 @@ struct Detail{
 	Color color;
 	PieceType name;
 };
+
+struct Moves{
+	Point p;
+	string cell;
+};
 //Data Types
 
 //Forward Decleration for Circular Dependency
@@ -108,8 +113,9 @@ class Piece{
 		virtual Direction getPawnDirection();
 		virtual bool enPassant(Piece *ptr);
 		virtual void AddenPassant(Piece *ptr);
+		vector<Point> getPossibleMoves();
 };
-
+vector<Point> Piece::getPossibleMoves(){return movesAvailable;}
 vector<Piece*> Piece::pieces;
 Cell* Piece::cell;
 Piece::Piece(Color m_color, PieceType m_name):color(m_color),name(m_name){pieces.push_back(this);moveCount=0;} //Piece Constructor
@@ -909,7 +915,29 @@ class Board{
 		Color getMove();
 		void promotePawn(Point currentPos, PieceType name);
 		bool isStaleMate();
+		vector<Moves> getMoves(Point curPos);
 };
+vector<Moves> Board::getMoves(Point curPos){
+	vector<Point> temp;
+	vector<Moves> ret;
+	if(curPos.x>=0 && curPos.x<8 && curPos.y>=0 && curPos.y<8){
+		if(cells[curPos.x][curPos.y].getPiece()!=NULL){
+			if(cells[curPos.x][curPos.y].getPiece()->getColor()==move){
+				temp = cells[curPos.x][curPos.y].getPiece()->getPossibleMoves();
+				for(int i=0;i<temp.size();i++){
+					if(cells[temp[i].x][temp[i].y].getPiece()==NULL){
+						ret.push_back({{temp[i].x, temp[i].y}, "NULL"});
+					}
+					else{
+						ret.push_back({{temp[i].x, temp[i].y}, ""});
+					}
+				}
+			}
+			
+		}	
+	}
+	return ret;
+}
 Color Board::getMove(){return move;}
 Board::Board(Color c){
 	Color m;
@@ -1487,6 +1515,7 @@ class GUI{
 		Network *n;
 		vector<Detail> dat;
 		PieceType promote;
+		vector<Moves> available;
 	public:
 		GUI(const ConnectionType type, string ip){
 			  if(type==host){
@@ -1655,6 +1684,22 @@ class GUI{
 			    chessWindow.draw(check);
 			    chessWindow.draw(checkmate);
 			    dat=b->getDetails();
+			    available=b->getMoves({curPos.y, curPos.x});
+			    for(int k=0;k<available.size();k++){
+			    	sf::CircleShape border;
+				  	border.setRadius(5);
+				  	if(available[k].cell=="NULL"){
+				  		border.setFillColor(sf::Color::Green);
+				  		border.setOutlineColor(sf::Color::Green);
+					}
+					else{
+						border.setFillColor(sf::Color::Red);
+						border.setOutlineColor(sf::Color::Red);
+					}
+				  	border.setOutlineThickness(5);
+				  	border.setPosition(available[k].p.y*100, available[k].p.x*100);
+				  	chessWindow.draw(border);
+				}
 			    for(int i=0;i<dat.size();i++){
 			    	if(dat[i].name==pawn&&dat[i].color==white){
 			    		int x =dat[i].x;
@@ -1897,6 +1942,22 @@ class GUI{
 			    chessWindow.draw(check);
 			    chessWindow.draw(checkmate);
 			    dat=b->getDetails();
+			    available=b->getMoves({curPos.y, curPos.x});
+			    for(int k=0;k<available.size();k++){
+			    	sf::CircleShape border;
+				  	border.setRadius(5);
+				  	if(available[k].cell=="NULL"){
+				  		border.setFillColor(sf::Color::Green);
+				  		border.setOutlineColor(sf::Color::Green);
+					}
+					else{
+						border.setFillColor(sf::Color::Red);
+						border.setOutlineColor(sf::Color::Red);
+					}
+				  	border.setOutlineThickness(5);
+				  	border.setPosition(available[k].p.y*100, available[k].p.x*100);
+				  	chessWindow.draw(border);
+				}
 			    for(int i=0;i<dat.size();i++){
 			    	if(dat[i].name==pawn&&dat[i].color==white){
 			    		int x =dat[i].x;
