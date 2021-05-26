@@ -28,8 +28,8 @@ This project was developed on Windows 10 using Dev-C++ with SFML Library Version
 Once all the files have been downloaded and the library has been linked, compile and run chess.cpp.
 
 ```
-g++ -c chess.cpp -I <sfml-include>
-g++ chess.o -L <sfml-library> -static-libgcc -DSFML_STATIC -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -lsfml-audio
+g++ chess.cpp board.cpp cell.cpp network.cpp gui.cpp piece.cpp king.cpp queen.cpp bishop.cpp rook.cpp knight.cpp pawn.cpp -I <sfml-include>
+g++ chess.o board.o cell.o network.o gui.o piece.o king.o queen.o bishop.o rook.o knight.o pawn.o -L <sfml-library> -static-libgcc -DSFML_STATIC -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -lsfml-audio
 ```
 
 <b>Specific Instructions for Executing the Project on Dev-C++</b>
