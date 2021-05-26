@@ -73,7 +73,7 @@ IMPORTANT: It is important to note that before the PROMOTION move, you will have
 
 ![](https://imgur.com/ujhUFrn.gif)
 
-## Help
+## Help/Known Issues
 
 The Host Functionality in the program is bugged due to an issue in programming the main event loop of the program. It will go to not responding when left for a while, the only options are to connect or to force quit it if that happens.
 
@@ -87,3 +87,8 @@ muhammadzain757@gmail.com<br>
 
 * [JohnPablock](https://opengameart.org/content/chess-pieces-and-board-squares) for Texture Images
 * [Userstyles.org](https://userstyles.org/styles/113726/lichess-board-babinga) for Board Background
+
+
+## Online Gameplay
+![](https://user-images.githubusercontent.com/68997634/119646585-c3f52100-be38-11eb-94fc-db266221e3cc.gif)
+
