@@ -37,14 +37,14 @@ int main(){
 	string ip = s.str();
 	sf::RenderWindow menuWindow(sf::VideoMode(1000, 800), "Select Mode - "+ip);
 	sf::Image bg;
-	bg.loadFromFile("bg.jpg");
+	bg.loadFromFile("src/bg.jpg");
 	sf::Texture texture;
     texture.loadFromImage(bg);
     sf::Sprite sprite;
     sprite.setTexture(texture);
 	
 	sf::Image picture;
-	picture.loadFromFile("mikezulu.png");
+	picture.loadFromFile("src/mikezulu.png");
 	sf::Texture mike;
     mike.loadFromImage(picture);
     sf::Sprite github;
@@ -55,7 +55,7 @@ int main(){
 	string textbox="";
 	
     sf::Font font;
-    font.loadFromFile("arial.ttf");
+    font.loadFromFile("src/arial.ttf");
     
     sf::Text name;
     name.setFont(font); 

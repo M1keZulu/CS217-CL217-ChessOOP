@@ -38,7 +38,7 @@ Gui::Gui(const ConnectionType type, string ip){
 	sf::RenderWindow chessWindow(sf::VideoMode(800, 800), "Chess");
 	sf::Event event;
 	sf::Image image;
-	image.loadFromFile("board1.png");
+	image.loadFromFile("src/board1.png");
 	sf::Texture texture;
 	texture.loadFromImage(image);
 	sf::Sprite sprite(texture);
@@ -209,7 +209,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("w_pawn.png");
+			i.loadFromFile("src/w_pawn.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -222,7 +222,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("b_pawn.png");
+			i.loadFromFile("src/b_pawn.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -235,7 +235,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("w_knight.png");
+			i.loadFromFile("src/w_knight.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -248,7 +248,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("b_knight.png");
+			i.loadFromFile("src/b_knight.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -261,7 +261,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("w_rook.png");
+			i.loadFromFile("src/w_rook.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -274,7 +274,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("b_rook.png");
+			i.loadFromFile("src/b_rook.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -287,7 +287,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("w_bishop.png");
+			i.loadFromFile("src/w_bishop.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -300,7 +300,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("b_bishop.png");
+			i.loadFromFile("src/b_bishop.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -313,7 +313,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("w_queen.png");
+			i.loadFromFile("src/w_queen.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -326,7 +326,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("b_queen.png");
+			i.loadFromFile("src/b_queen.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -339,7 +339,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("w_king.png");
+			i.loadFromFile("src/w_king.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -352,7 +352,7 @@ Gui::Gui(const ConnectionType type, string ip){
 			int x =dat[i].x;
 			int y =dat[i].y;
 			sf::Image i;
-			i.loadFromFile("b_king.png");
+			i.loadFromFile("src/b_king.png");
 			sf::Texture t;
 			t.loadFromImage(i);
 			sf::Sprite s;
@@ -376,7 +376,7 @@ Gui::Gui(){
   sf::RenderWindow chessWindow(sf::VideoMode(800, 800), "Chess");
   sf::Event event;
   sf::Image image;
-  image.loadFromFile("board1.png");
+  image.loadFromFile("src/board1.png");
   sf::Texture texture;
   texture.loadFromImage(image);
   sf::Sprite sprite(texture);
@@ -423,6 +423,18 @@ Gui::Gui(){
 		chessWindow.setTitle("Chess - Stalemate");	//stalemate visuals not created
 	}
     while(chessWindow.pollEvent(event)){
+    	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q)){
+			promote=queen;
+		}
+		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::B)){
+			promote=bishop;
+		}
+		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::R)){
+			promote=rook;
+		}
+		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::K)){
+			promote=knight;
+		}
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
     		curPos.x = sf::Mouse::getPosition(chessWindow).x/(chessWindow.getSize().x/8);
             curPos.y = sf::Mouse::getPosition(chessWindow).y/(chessWindow.getSize().y/8);
@@ -468,7 +480,7 @@ Gui::Gui(){
     		int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("w_pawn.png");
+    		i.loadFromFile("src/w_pawn.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -481,7 +493,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("b_pawn.png");
+    		i.loadFromFile("src/b_pawn.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -494,7 +506,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("w_knight.png");
+    		i.loadFromFile("src/w_knight.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -507,7 +519,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("b_knight.png");
+    		i.loadFromFile("src/b_knight.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -520,7 +532,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("w_rook.png");
+    		i.loadFromFile("src/w_rook.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -533,7 +545,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("b_rook.png");
+    		i.loadFromFile("src/b_rook.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -546,7 +558,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("w_bishop.png");
+    		i.loadFromFile("src/w_bishop.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -559,7 +571,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("b_bishop.png");
+    		i.loadFromFile("src/b_bishop.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -572,7 +584,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("w_queen.png");
+    		i.loadFromFile("src/w_queen.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -585,7 +597,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("b_queen.png");
+    		i.loadFromFile("src/b_queen.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -598,7 +610,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("w_king.png");
+    		i.loadFromFile("src/w_king.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;
@@ -611,7 +623,7 @@ Gui::Gui(){
 			int x =dat[i].x;
     		int y =dat[i].y;
     		sf::Image i;
-    		i.loadFromFile("b_king.png");
+    		i.loadFromFile("src/b_king.png");
     		sf::Texture t;
     		t.loadFromImage(i);
     		sf::Sprite s;

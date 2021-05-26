@@ -54,7 +54,7 @@ Board::Board(Color c){
 		m=black;
 		Piece *ptr;
 	ptr=new Pawn(c, d1);
-	move_sound.openFromFile("move_sound.wav");
+	move_sound.openFromFile("src/move_sound.wav");
 	cells[6][7].setPiece(ptr);
 	ptr=new Pawn(c, d1);
 	cells[6][6].setPiece(ptr);
