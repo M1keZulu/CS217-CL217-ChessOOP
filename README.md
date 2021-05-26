@@ -37,6 +37,7 @@ g++ chess.o -L <sfml-library> -static-libgcc -DSFML_STATIC -lsfml-graphics -lsfm
 ```
 
 <b>Specific Instructions for Executing the Project on Dev-C++</b>
+
 To run this project using Dev-C++, create a new project (either console or GUI - console is required for debugging) and then follow the instructions in this video by Mike Exc (All Rights Reserved) https://www.youtube.com/watch?v=uAd2jINKCxc
 When done, add the chess.cpp file to the project and press F11 to compile and run.
 
