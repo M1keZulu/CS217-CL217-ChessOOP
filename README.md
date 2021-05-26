@@ -37,6 +37,7 @@ g++ chess.o -L <sfml-library> -static-libgcc -DSFML_STATIC -lsfml-graphics -lsfm
 ```
 
 <b>Specific Instructions for Executing the Project on Dev-C++</b>
+
 To run this project using Dev-C++, create a new project (either console or GUI - console is required for debugging) and then follow the instructions in this video by Mike Exc (All Rights Reserved) https://www.youtube.com/watch?v=uAd2jINKCxc
 When done, add the chess.cpp file to the project and press F11 to compile and run.
 
@@ -75,7 +76,9 @@ IMPORTANT: It is important to note that before the PROMOTION move, you will have
 
 ## Help/Known Issues
 
-The Host Functionality in the program is bugged due to an issue in programming the main event loop of the program. It will go to not responding when left for a while, the only options are to connect or to force quit it if that happens.
+* The Host Functionality in the program is bugged due to an issue in programming the main event loop of the program. It will go to not responding when left for a while, the only options are to connect or to force quit it if that happens.
+* Highlighting possible moves is only available for non-special/generic moves as of now.
+
 
 ## Author
 
