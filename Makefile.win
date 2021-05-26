@@ -5,8 +5,8 @@ CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
 RES      = sock_private.res
-OBJ      = chess.o $(RES)
-LINKOBJ  = chess.o $(RES)
+OBJ      = chess.o cell.o piece.o pawn.o knight.o rook.o bishop.o queen.o king.o board.o network.o gui.o $(RES)
+LINKOBJ  = chess.o cell.o piece.o pawn.o knight.o rook.o bishop.o queen.o king.o board.o network.o gui.o $(RES)
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"C:/Users/Afsar/Documents/SFML-2.4.2/lib" -static-libgcc -DSFML_STATIC -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -lsfml-audio -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/Afsar/Documents/SFML-2.4.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/Afsar/Documents/SFML-2.4.2/include"
@@ -27,6 +27,39 @@ $(BIN): $(OBJ)
 
 chess.o: chess.cpp
 	$(CPP) -c chess.cpp -o chess.o $(CXXFLAGS)
+
+cell.o: cell.cpp
+	$(CPP) -c cell.cpp -o cell.o $(CXXFLAGS)
+
+piece.o: piece.cpp
+	$(CPP) -c piece.cpp -o piece.o $(CXXFLAGS)
+
+pawn.o: pawn.cpp
+	$(CPP) -c pawn.cpp -o pawn.o $(CXXFLAGS)
+
+knight.o: knight.cpp
+	$(CPP) -c knight.cpp -o knight.o $(CXXFLAGS)
+
+rook.o: rook.cpp
+	$(CPP) -c rook.cpp -o rook.o $(CXXFLAGS)
+
+bishop.o: bishop.cpp
+	$(CPP) -c bishop.cpp -o bishop.o $(CXXFLAGS)
+
+queen.o: queen.cpp
+	$(CPP) -c queen.cpp -o queen.o $(CXXFLAGS)
+
+king.o: king.cpp
+	$(CPP) -c king.cpp -o king.o $(CXXFLAGS)
+
+board.o: board.cpp
+	$(CPP) -c board.cpp -o board.o $(CXXFLAGS)
+
+network.o: network.cpp
+	$(CPP) -c network.cpp -o network.o $(CXXFLAGS)
+
+gui.o: gui.cpp
+	$(CPP) -c gui.cpp -o gui.o $(CXXFLAGS)
 
 sock_private.res: sock_private.rc 
 	$(WINDRES) -i sock_private.rc --input-format=rc -o sock_private.res -O coff 
