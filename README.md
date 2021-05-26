@@ -15,11 +15,7 @@ Object-Oriented Programming is an important programming paradigm. It is importan
 ### Dependencies
 
 * Windows 10/MacOS/Linux
-* SFML Library Linked
-* time.h
-* string.h
-* sstream
-* vector
+* SFML (Simple and Fast Multimedia Library)
 
 ### Installing
 
