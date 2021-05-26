@@ -99,6 +99,8 @@ class Piece{
 	public:
 		Piece(Color m_color, PieceType name);
 		static void setCellArray(Cell *m_cell);
+		static vector<Piece*> getPieces();
+		static void clearPieces();
 		virtual Color getColor();
 		virtual PieceType getName();
 		virtual void PieceMoved();
@@ -117,8 +119,10 @@ class Piece{
 };
 vector<Point> Piece::getPossibleMoves(){return movesAvailable;}
 vector<Piece*> Piece::pieces;
+void Piece::clearPieces(){pieces.clear();}
 Cell* Piece::cell;
 Piece::Piece(Color m_color, PieceType m_name):color(m_color),name(m_name){pieces.push_back(this);moveCount=0;} //Piece Constructor
+vector<Piece*> Piece::getPieces(){return pieces;}
 void Piece::setCellArray(Cell *m_cell){cell = m_cell;}
 bool Piece::enPassant(Piece *ptr){cout<<"Garbage";}
 void Piece::AddenPassant(Piece *ptr){cout<<"Garbage";}
@@ -916,7 +920,18 @@ class Board{
 		void promotePawn(Point currentPos, PieceType name);
 		bool isStaleMate();
 		vector<Moves> getMoves(Point curPos);
+		~Board();
 };
+Board::~Board(){
+	vector<Piece*> destroy = Piece::getPieces();
+	Piece *ptr;
+	cout<<destroy.size()<<endl;
+	for(int i=0;i<destroy.size();i++){
+		ptr = destroy[i];
+		delete ptr;
+	}
+	Piece::clearPieces();
+}
 vector<Moves> Board::getMoves(Point curPos){
 	vector<Point> temp;
 	vector<Moves> ret;
@@ -1112,7 +1127,6 @@ void Board::promotePawn(Point currentPos, PieceType name){
 bool Board::dummyMove(Point currentPos, Point newPos){
 	Piece *curP=cells[currentPos.x][currentPos.y].getPiece();
 	Piece *newP=cells[newPos.x][newPos.y].getPiece();
-	Piece *k;
 	bool flag;
 	cells[newPos.x][newPos.y].setPiece(curP);
 	cells[currentPos.x][currentPos.y].setNull();
@@ -1862,6 +1876,7 @@ class GUI{
 			  }
 		}
 		GUI(){
+			  n=NULL;
 			  b=new Board(white);
 			  promote=queen;
 			  Point curPos;
@@ -2119,6 +2134,12 @@ class GUI{
 			    chessWindow.display();
 			  }
 		}
+		~GUI(){
+			if(n){
+				delete n;
+			}
+			delete b;
+		}
 };
 
 int main(){
@@ -2202,7 +2223,7 @@ int main(){
         	play_client.setFillColor(sf::Color::Red);
 		}
 		
-        while (menuWindow.pollEvent(event)){
+        while(menuWindow.pollEvent(event)){
         	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
 				if(choice=='h'){
 					choice='o';
@@ -2221,27 +2242,28 @@ int main(){
 			}
 			if(sf::Keyboard::isKeyPressed(sf::Keyboard::Return)){
 				if(choice=='o'){
-					GUI *ptr = new GUI;
+					GUI g;
 				}
 				else if(choice=='h'){
 					menuWindow.setTitle("Hosting at "+ip+":2000");
-					GUI *ptr = new GUI(host, "");
+					GUI g(host, "");
 				}
 				else if(choice=='c'){
 					menuWindow.setTitle("Connecting to "+textbox+":2000");
-					GUI *ptr = new GUI(client, textbox);
+					GUI g(client, textbox);
 				}
 			}
-			if (event.type == sf::Event::TextEntered){
-				if (event.text.unicode < 128){
-					if(event.text.unicode==8){
-						textbox+="";
-					}
+			if(event.type == sf::Event::TextEntered){
+				if((event.text.unicode>= 47 && event.text.unicode<=57)|| event.text.unicode==46){
 				    textbox+=static_cast<char>(event.text.unicode);
 				    enter_ip.setString("Enter IP: "+textbox);
 				}
+				if(event.text.unicode==8){
+					textbox = textbox.substr(0, textbox.size()-1);
+					enter_ip.setString("Enter IP: "+textbox);
+				}
 			}
-            if (event.type == sf::Event::Closed)
+            if(event.type == sf::Event::Closed)
                 menuWindow.close();
         }
         menuWindow.clear();
