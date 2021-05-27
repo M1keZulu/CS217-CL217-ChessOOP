@@ -91,3 +91,5 @@ muhammadzain757@gmail.com<br>
 ## Online Gameplay
 ![](https://user-images.githubusercontent.com/68997634/119646585-c3f52100-be38-11eb-94fc-db266221e3cc.gif)
 
+## UML Diagram-Object Relationship
+![Documentation](https://user-images.githubusercontent.com/68997634/119794121-b0a58c80-bef0-11eb-9631-45464f2fbd67.png)
