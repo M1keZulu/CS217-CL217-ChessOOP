@@ -81,6 +81,68 @@ vector<Moves> Board::getMoves(Point curPos){
 					}
 				}
 			}
+			if(cells[curPos.x][curPos.y].getPiece()->getName()==pawn && cells[curPos.x][curPos.y].getPiece()->getColor()==move){
+				if(cells[curPos.x][curPos.y].getPiece()->getPawnDirection()==up){
+					if(cells[curPos.x][curPos.y+1].getPiece()!=NULL){
+						if(cells[curPos.x][curPos.y+1].getPiece()->getName()==pawn && cells[curPos.x][curPos.y+1].getPiece()->getColor()!=move && curPos.x==3 && cells[curPos.x][curPos.y+1].getPiece()->getCount()==1 && cells[curPos.x][curPos.y+1].getPiece()->enPassant(cells[curPos.x][curPos.y].getPiece())){
+							Piece *temp = cells[curPos.x][curPos.y+1].getPiece();
+							cells[curPos.x-1][curPos.y+1].setPiece(cells[curPos.x][curPos.y].getPiece());
+							cells[curPos.x][curPos.y].setNull();
+							cells[curPos.x][curPos.y+1].setNull();
+							if(isCheck()){
+								ret.push_back({{curPos.x-1, curPos.y+1}, "special"});
+							}
+							cells[curPos.x][curPos.y].setPiece(cells[curPos.x-1][curPos.y+1].getPiece());
+							cells[curPos.x-1][curPos.y+1].setNull();
+							cells[curPos.x][curPos.y+1].setPiece(temp);
+						}
+					}
+				    if(cells[curPos.x][curPos.y-1].getPiece()!=NULL){
+						if(cells[curPos.x][curPos.y-1].getPiece()->getName()==pawn && cells[curPos.x][curPos.y-1].getPiece()->getColor()!=move && curPos.x==3 && cells[curPos.x][curPos.y-1].getPiece()->getCount()==1 && cells[curPos.x][curPos.y-1].getPiece()->enPassant(cells[curPos.x][curPos.y].getPiece())){
+							Piece *temp = cells[curPos.x][curPos.y-1].getPiece();
+							cells[curPos.x-1][curPos.y-1].setPiece(cells[curPos.x][curPos.y].getPiece());
+							cells[curPos.x][curPos.y].setNull();
+							cells[curPos.x][curPos.y-1].setNull();
+							if(isCheck()){
+								ret.push_back({{curPos.x-1, curPos.y-1}, "special"});
+							}
+							cells[curPos.x][curPos.y].setPiece(cells[curPos.x-1][curPos.y-1].getPiece());
+							cells[curPos.x-1][curPos.y-1].setNull();
+							cells[curPos.x][curPos.y-1].setPiece(temp);
+						}
+					}
+				}
+				if(cells[curPos.x][curPos.y].getPiece()->getPawnDirection()==down){
+					if(cells[curPos.x][curPos.y+1].getPiece()!=NULL){
+						if(cells[curPos.x][curPos.y+1].getPiece()->getName()==pawn && cells[curPos.x][curPos.y+1].getPiece()->getColor()!=move && curPos.x==4 && cells[curPos.x][curPos.y+1].getPiece()->getCount()==1 && cells[curPos.x][curPos.y+1].getPiece()->enPassant(cells[curPos.x][curPos.y].getPiece())){
+							Piece *temp = cells[curPos.x][curPos.y+1].getPiece();
+							cells[curPos.x+1][curPos.y+1].setPiece(cells[curPos.x][curPos.y].getPiece());
+							cells[curPos.x][curPos.y].setNull();
+							cells[curPos.x][curPos.y+1].setNull();
+							if(isCheck()){
+								ret.push_back({{curPos.x+1, curPos.y+1}, "special"});
+							}
+							cells[curPos.x][curPos.y].setPiece(cells[curPos.x+1][curPos.y+1].getPiece());
+							cells[curPos.x+1][curPos.y+1].setNull();
+							cells[curPos.x][curPos.y+1].setPiece(temp);
+						}
+					}
+					if(cells[curPos.x][curPos.y-1].getPiece()!=NULL){
+						if(cells[curPos.x][curPos.y-1].getPiece()->getName()==pawn && cells[curPos.x][curPos.y-1].getPiece()->getColor()!=move && curPos.x==4 && cells[curPos.x][curPos.y-1].getPiece()->getCount()==1 && cells[curPos.x][curPos.y-1].getPiece()->enPassant(cells[curPos.x][curPos.y].getPiece())){
+							Piece *temp = cells[curPos.x][curPos.y-1].getPiece();
+							cells[curPos.x+1][curPos.y-1].setPiece(cells[curPos.x][curPos.y].getPiece());
+							cells[curPos.x][curPos.y].setNull();
+							cells[curPos.x][curPos.y-1].setNull();
+							if(isCheck()){
+								ret.push_back({{curPos.x+1, curPos.y-1}, "special"});
+							}
+							cells[curPos.x][curPos.y].setPiece(cells[curPos.x+1][curPos.y-1].getPiece());
+							cells[curPos.x+1][curPos.y-1].setNull();
+							cells[curPos.x][curPos.y-1].setPiece(temp);
+						}
+					}
+				}
+			}
 		}	
 	}
 	return ret;
@@ -395,7 +457,6 @@ void Board::movePiece(Point currentPos, Point newPos){
 							return; //if bugs remove this line - debugging comment
 						}
 					}
-					
 				}
 				else if(cells[currentPos.x][currentPos.y].getPiece()->getPawnDirection()==down){
 					if(cells[currentPos.x][currentPos.y+1].getPiece()!=NULL){
