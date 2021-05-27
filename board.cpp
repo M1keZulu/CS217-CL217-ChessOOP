@@ -41,7 +41,46 @@ vector<Moves> Board::getMoves(Point curPos){
 					}
 				}
 			}
-			
+			if(cells[curPos.x][curPos.y].getPiece()->getName()==king && cells[curPos.x][curPos.y].getPiece()->getCount()==0 && cells[curPos.x][curPos.y].getPiece()->getColor()==move){
+				if(cells[curPos.x][curPos.y+3].getPiece()!=NULL){
+					if(cells[curPos.x][curPos.y+3].getPiece()->getName()==rook && cells[curPos.x][curPos.y+3].getPiece()->getCount()==0){
+						if(cells[curPos.x][curPos.y+1].getPiece()==NULL && cells[curPos.x][curPos.y+2].getPiece()==NULL){
+							if(isCheck() && cells[curPos.x][curPos.y].getPiece()->isUnderAttack({curPos.x, curPos.y+1}) && cells[curPos.x][curPos.y].getPiece()->isUnderAttack({curPos.x, curPos.y+2})){
+								ret.push_back({{curPos.x, curPos.y+2}, "special"});
+							}
+						}
+					}
+				}
+				else if(cells[curPos.x][curPos.y-3].getPiece()!=NULL){
+					if(cells[curPos.x][curPos.y-3].getPiece()->getName()==rook && cells[curPos.x][curPos.y-3].getPiece()->getCount()==0){
+						if(cells[curPos.x][curPos.y-1].getPiece()==NULL && cells[curPos.x][curPos.y-2].getPiece()==NULL){
+							if(isCheck() && cells[curPos.x][curPos.y].getPiece()->isUnderAttack({curPos.x, curPos.y-1}) && cells[curPos.x][curPos.y].getPiece()->isUnderAttack({curPos.x, curPos.y-2})){
+								ret.push_back({{curPos.x, curPos.y-2}, "special"});
+							}
+						}
+					}
+				}
+			}
+			if(cells[curPos.x][curPos.y].getPiece()->getName()==king && cells[curPos.x][curPos.y].getPiece()->getCount()==0 && cells[curPos.x][curPos.y].getPiece()->getColor()==move){
+				if(cells[curPos.x][curPos.y-4].getPiece()!=NULL){
+					if(cells[curPos.x][curPos.y-4].getPiece()->getName()==rook && cells[curPos.x][curPos.y-4].getPiece()->getCount()==0){
+						if(cells[curPos.x][curPos.y-1].getPiece()==NULL && cells[curPos.x][curPos.y-2].getPiece()==NULL){
+							if(isCheck() && cells[curPos.x][curPos.y].getPiece()->isUnderAttack({curPos.x, curPos.y-1}) && cells[curPos.x][curPos.y].getPiece()->isUnderAttack({curPos.x, curPos.y-2})){
+								ret.push_back({{curPos.x, curPos.y-2}, "special"});
+							}
+						}
+					}
+				}
+				else if(cells[curPos.x][curPos.y+4].getPiece()!=NULL){
+					if(cells[curPos.x][curPos.y+4].getPiece()->getName()==rook && cells[curPos.x][curPos.y+4].getPiece()->getCount()==0){
+						if(cells[curPos.x][curPos.y+1].getPiece()==NULL && cells[curPos.x][curPos.y+2].getPiece()==NULL){
+							if(isCheck() && cells[curPos.x][curPos.y].getPiece()->isUnderAttack({curPos.x, curPos.y+1}) && cells[curPos.x][curPos.y].getPiece()->isUnderAttack({curPos.x, curPos.y+2})){
+								ret.push_back({{curPos.x, curPos.y+2}, "special"});
+							}
+						}
+					}
+				}
+			}
 		}	
 	}
 	return ret;
@@ -295,15 +334,15 @@ void Board::movePiece(Point currentPos, Point newPos){
 						}
 					}
 				}
-				if(newPos.x==currentPos.x && newPos.y==currentPos.y+2){
-					if(cells[currentPos.x][currentPos.y+4].getPiece()!=NULL){
-						if(cells[currentPos.x][currentPos.y+4].getPiece()->getName()==rook && cells[currentPos.x][currentPos.y+4].getPiece()->getCount()==0){
-							if(cells[currentPos.x][currentPos.y+1].getPiece()==NULL && cells[currentPos.x][currentPos.y+2].getPiece()==NULL){
-								if(isCheck() && cells[currentPos.x][currentPos.y].getPiece()->isUnderAttack({currentPos.x, currentPos.y+1}) && cells[currentPos.x][currentPos.y].getPiece()->isUnderAttack({currentPos.x, currentPos.y+2})){
-									cells[currentPos.x][currentPos.y+2].setPiece(cells[currentPos.x][currentPos.y].getPiece());
+				if(newPos.x==currentPos.x && newPos.y==currentPos.y-2){
+					if(cells[currentPos.x][currentPos.y-4].getPiece()!=NULL){
+						if(cells[currentPos.x][currentPos.y-4].getPiece()->getName()==rook && cells[currentPos.x][currentPos.y-4].getPiece()->getCount()==0){
+							if(cells[currentPos.x][currentPos.y-1].getPiece()==NULL && cells[currentPos.x][currentPos.y-2].getPiece()==NULL){
+								if(isCheck() && cells[currentPos.x][currentPos.y].getPiece()->isUnderAttack({currentPos.x, currentPos.y-1}) && cells[currentPos.x][currentPos.y].getPiece()->isUnderAttack({currentPos.x, currentPos.y-2})){
+									cells[currentPos.x][currentPos.y-2].setPiece(cells[currentPos.x][currentPos.y].getPiece());
 									cells[currentPos.x][currentPos.y].setNull();
-									cells[currentPos.x][currentPos.y+1].setPiece(cells[currentPos.x][currentPos.y+4].getPiece());
-									cells[currentPos.x][currentPos.y+4].setNull();
+									cells[currentPos.x][currentPos.y-1].setPiece(cells[currentPos.x][currentPos.y-4].getPiece());
+									cells[currentPos.x][currentPos.y-4].setNull();
 									move_sound.play();
 									changeMove();
 									newMove();

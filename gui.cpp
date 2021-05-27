@@ -196,6 +196,10 @@ Gui::Gui(const ConnectionType type, string ip){
 	  		border.setFillColor(sf::Color::Green);
 	  		border.setOutlineColor(sf::Color::Green);
 		}
+		else if(available[k].cell=="special"){
+			border.setFillColor(sf::Color::Yellow);
+	  		border.setOutlineColor(sf::Color::Yellow);
+		}
 		else{
 			border.setFillColor(sf::Color::Red);
 			border.setOutlineColor(sf::Color::Red);
@@ -466,6 +470,10 @@ Gui::Gui(){
 	  	if(available[k].cell=="NULL"){
 	  		border.setFillColor(sf::Color::Green);
 	  		border.setOutlineColor(sf::Color::Green);
+		}
+		else if(available[k].cell=="special"){
+			border.setFillColor(sf::Color::Yellow);
+	  		border.setOutlineColor(sf::Color::Yellow);
 		}
 		else{
 			border.setFillColor(sf::Color::Red);
