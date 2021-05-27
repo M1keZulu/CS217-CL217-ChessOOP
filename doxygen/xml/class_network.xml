@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_network" kind="class" language="C++" prot="public">
+    <compoundname>Network</compoundname>
+    <includes refid="network_8h" local="no">network.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_network_1ac70deca1c24182f0deb8444022fef23f" prot="private" static="no" mutable="no">
+        <type>sf::IpAddress</type>
+        <definition>sf::IpAddress Network::ip</definition>
+        <argsstring></argsstring>
+        <name>ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="6" column="15" bodyfile="network.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_network_1ae01c27027b5e0c57dec953171ff92807" prot="private" static="no" mutable="no">
+        <type>sf::TcpSocket</type>
+        <definition>sf::TcpSocket Network::socket</definition>
+        <argsstring></argsstring>
+        <name>socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="7" column="15" bodyfile="network.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_network_1a90873fe902b1a65cf3172f2f384582fd" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Network::connectionType</definition>
+        <argsstring></argsstring>
+        <name>connectionType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="8" column="6" bodyfile="network.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_network_1ae6a50472db31f1692f6510aa6f07cc5c" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Network::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="8" column="21" bodyfile="network.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_network_1a150409f07e56429fa89e557b99fd8c24" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Network::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="9" column="5" bodyfile="network.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_network_1afe3b397d6a505f213c5d8304a7f80c52" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Network::received</definition>
+        <argsstring></argsstring>
+        <name>received</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="10" column="8" bodyfile="network.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_network_1a34fa7e98b7fba6add17e5e46dba99f9a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Network::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="11" column="8" bodyfile="network.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_network_1a49d0f2a4f1f53c497970829a37e24c3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Network::Network</definition>
+        <argsstring>(string s)</argsstring>
+        <name>Network</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="13" column="1" bodyfile="network.cpp" bodystart="9" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_network_1a3cc2fb4f8fa4d507077e8da85ce5a1c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Network::Network</definition>
+        <argsstring>()</argsstring>
+        <name>Network</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="14" column="1" bodyfile="network.cpp" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_network_1a2bc85db160c180bdab6d9213b1dff537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Network::send</definition>
+        <argsstring>(int a, int b, int c, int d)</argsstring>
+        <name>send</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="16" column="6" bodyfile="network.cpp" bodystart="27" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_network_1a806a3201561af6e799ebe12cc50a7339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Network::send</definition>
+        <argsstring>(int a, int b, int c, int d, PieceType promotion)</argsstring>
+        <name>send</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kindref="member">PieceType</ref></type>
+          <declname>promotion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="17" column="6" bodyfile="network.cpp" bodystart="35" bodyend="56"/>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841" compoundref="enums__data_8h" startline="7">bishop</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" compoundref="enums__data_8h" startline="7">knight</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51" compoundref="enums__data_8h" startline="7">queen</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f" compoundref="enums__data_8h" startline="7">rook</references>
+      </memberdef>
+      <memberdef kind="function" id="class_network_1a7745755fc10bf05d9fc3547adffc18d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Network::receive</definition>
+        <argsstring>()</argsstring>
+        <name>receive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="network.h" line="18" column="8" bodyfile="network.cpp" bodystart="57" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="network.h" line="4" column="1" bodyfile="network.h" bodystart="4" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_network_1a90873fe902b1a65cf3172f2f384582fd" prot="private" virt="non-virtual"><scope>Network</scope><name>connectionType</name></member>
+      <member refid="class_network_1ac70deca1c24182f0deb8444022fef23f" prot="private" virt="non-virtual"><scope>Network</scope><name>ip</name></member>
+      <member refid="class_network_1ae6a50472db31f1692f6510aa6f07cc5c" prot="private" virt="non-virtual"><scope>Network</scope><name>mode</name></member>
+      <member refid="class_network_1a49d0f2a4f1f53c497970829a37e24c3c" prot="public" virt="non-virtual"><scope>Network</scope><name>Network</name></member>
+      <member refid="class_network_1a3cc2fb4f8fa4d507077e8da85ce5a1c8" prot="public" virt="non-virtual"><scope>Network</scope><name>Network</name></member>
+      <member refid="class_network_1a7745755fc10bf05d9fc3547adffc18d1" prot="public" virt="non-virtual"><scope>Network</scope><name>receive</name></member>
+      <member refid="class_network_1afe3b397d6a505f213c5d8304a7f80c52" prot="private" virt="non-virtual"><scope>Network</scope><name>received</name></member>
+      <member refid="class_network_1a2bc85db160c180bdab6d9213b1dff537" prot="public" virt="non-virtual"><scope>Network</scope><name>send</name></member>
+      <member refid="class_network_1a806a3201561af6e799ebe12cc50a7339" prot="public" virt="non-virtual"><scope>Network</scope><name>send</name></member>
+      <member refid="class_network_1ae01c27027b5e0c57dec953171ff92807" prot="private" virt="non-virtual"><scope>Network</scope><name>socket</name></member>
+      <member refid="class_network_1a34fa7e98b7fba6add17e5e46dba99f9a" prot="private" virt="non-virtual"><scope>Network</scope><name>text</name></member>
+      <member refid="class_network_1a150409f07e56429fa89e557b99fd8c24" prot="private" virt="non-virtual"><scope>Network</scope><name>x</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

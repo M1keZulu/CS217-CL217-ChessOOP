@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_pawn" xml:lang="en-US">
+<title>Pawn Class Reference</title>
+<indexterm><primary>Pawn</primary></indexterm>
+<para>
+<computeroutput>#include &lt;pawn.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Pawn:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_pawn__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Pawn:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_pawn__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_pawn_1a3b1d6629081a0286bb8f99febf45a8fb">Pawn</link> (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color, <link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa">Direction</link> d)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_pawn_1adda5fafc9fdca25766551811dce8ab99">generateMoves</link> (<link linkend="_struct_point">Point</link> currentPos)</para>
+</listitem>
+            <listitem><para><link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa">Direction</link> <link linkend="_class_pawn_1a15b52722227cfaa8fcceb0ddf2344964">getPawnDirection</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_pawn_1a24d16bc3de3b869a2598624ba9686ef0">enPassant</link> (<link linkend="_class_piece">Piece</link> *ptr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_pawn_1aad90613fd3f8cf57c589fb039a0bd78a">AddenPassant</link> (<link linkend="_class_piece">Piece</link> *ptr)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_pawn_1a3b1d6629081a0286bb8f99febf45a8fb"/>    <section>
+    <title>Pawn()</title>
+<indexterm><primary>Pawn</primary><secondary>Pawn</secondary></indexterm>
+<indexterm><primary>Pawn</primary><secondary>Pawn</secondary></indexterm>
+<para><computeroutput>Pawn::Pawn (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color, <link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa">Direction</link> d)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_pawn_1aad90613fd3f8cf57c589fb039a0bd78a"/>    <section>
+    <title>AddenPassant()</title>
+<indexterm><primary>AddenPassant</primary><secondary>Pawn</secondary></indexterm>
+<indexterm><primary>Pawn</primary><secondary>AddenPassant</secondary></indexterm>
+<para><computeroutput>void Pawn::AddenPassant (<link linkend="_class_piece">Piece</link> * ptr)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1a88217066acc17caf4f200245abf54e05">Piece</link>.</para>
+    </section><anchor xml:id="_class_pawn_1a24d16bc3de3b869a2598624ba9686ef0"/>    <section>
+    <title>enPassant()</title>
+<indexterm><primary>enPassant</primary><secondary>Pawn</secondary></indexterm>
+<indexterm><primary>Pawn</primary><secondary>enPassant</secondary></indexterm>
+<para><computeroutput>bool Pawn::enPassant (<link linkend="_class_piece">Piece</link> * ptr)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1a0647321e482f692d3018db155158aea0">Piece</link>.</para>
+    </section><anchor xml:id="_class_pawn_1adda5fafc9fdca25766551811dce8ab99"/>    <section>
+    <title>generateMoves()</title>
+<indexterm><primary>generateMoves</primary><secondary>Pawn</secondary></indexterm>
+<indexterm><primary>Pawn</primary><secondary>generateMoves</secondary></indexterm>
+<para><computeroutput>void Pawn::generateMoves (<link linkend="_struct_point">Point</link> currentPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1ae20a169ce6b98bd1e41125f1828ec541">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_pawn_adda5fafc9fdca25766551811dce8ab99_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_pawn_1a15b52722227cfaa8fcceb0ddf2344964"/>    <section>
+    <title>getPawnDirection()</title>
+<indexterm><primary>getPawnDirection</primary><secondary>Pawn</secondary></indexterm>
+<indexterm><primary>Pawn</primary><secondary>getPawnDirection</secondary></indexterm>
+<para><computeroutput><link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa">Direction</link> Pawn::getPawnDirection ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1acf3ede4e8b3f1cd5fdefb42b322dd79d">Piece</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_pawn_8h">pawn.h</link><link linkend="_pawn_8cpp">pawn.cpp</link></section>
+</section>

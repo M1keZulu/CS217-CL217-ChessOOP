@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_rook" xml:lang="en-US">
+<title>Rook Class Reference</title>
+<indexterm><primary>Rook</primary></indexterm>
+<para>
+<computeroutput>#include &lt;rook.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Rook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_rook__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Rook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_rook__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_rook_1a5a2bca98e518ada1e56c0d0cc4f01eff">Rook</link> (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_rook_1a8bc7f85bd1cb169d1944871e3327d5e9">generateMoves</link> (<link linkend="_struct_point">Point</link> currentPos)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_rook_1a5a2bca98e518ada1e56c0d0cc4f01eff"/>    <section>
+    <title>Rook()</title>
+<indexterm><primary>Rook</primary><secondary>Rook</secondary></indexterm>
+<indexterm><primary>Rook</primary><secondary>Rook</secondary></indexterm>
+<para><computeroutput>Rook::Rook (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_rook_1a8bc7f85bd1cb169d1944871e3327d5e9"/>    <section>
+    <title>generateMoves()</title>
+<indexterm><primary>generateMoves</primary><secondary>Rook</secondary></indexterm>
+<indexterm><primary>Rook</primary><secondary>generateMoves</secondary></indexterm>
+<para><computeroutput>void Rook::generateMoves (<link linkend="_struct_point">Point</link> currentPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1ae20a169ce6b98bd1e41125f1828ec541">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_rook_a8bc7f85bd1cb169d1944871e3327d5e9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_rook_8h">rook.h</link><link linkend="_rook_8cpp">rook.cpp</link></section>
+</section>

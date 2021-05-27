@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_board" kind="class" language="C++" prot="public">
+    <compoundname>Board</compoundname>
+    <includes refid="board_8h" local="no">board.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_board_1acc3a47cac49c21e16dc93441ef53edbf" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell" kindref="compound">Cell</ref></type>
+        <definition>Cell Board::cells[GRID][GRID]</definition>
+        <argsstring>[GRID][GRID]</argsstring>
+        <name>cells</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="6" column="6" bodyfile="board.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1ad5a06150e340cf70d59cf0c0b1cd42d0" prot="private" static="no" mutable="no">
+        <type><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+        <definition>Color Board::move</definition>
+        <argsstring></argsstring>
+        <name>move</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="7" column="7" bodyfile="board.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_board_1a20ffc74c1c3a5180831773386a5837b0" prot="private" static="no" mutable="no">
+        <type>sf::Music</type>
+        <definition>sf::Music Board::move_sound</definition>
+        <argsstring></argsstring>
+        <name>move_sound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="11" column="11" bodyfile="board.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_board_1ab4535fa8c011641ec914924b697cfbd2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::newMove</definition>
+        <argsstring>()</argsstring>
+        <name>newMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="8" column="6" bodyfile="board.cpp" bodystart="442" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1aad1d55272d0731a5ba89186d27bb233f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::changeMove</definition>
+        <argsstring>()</argsstring>
+        <name>changeMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="9" column="6" bodyfile="board.cpp" bodystart="407" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1ab92926c4b8752c21d5bdb6be73a74112" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Board::dummyMove</definition>
+        <argsstring>(Point currentPos, Point newPos)</argsstring>
+        <name>dummyMove</name>
+        <param>
+          <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+          <declname>currentPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+          <declname>newPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="10" column="6" bodyfile="board.cpp" bodystart="220" bodyend="230"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_board_1afd0e96a4b1485d2ce70581d7102df864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Board::Board</definition>
+        <argsstring>(Color c)</argsstring>
+        <name>Board</name>
+        <param>
+          <type><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="13" column="1" bodyfile="board.cpp" bodystart="50" bodyend="196"/>
+        <references refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370" compoundref="enums__data_8h" startline="11">black</references>
+        <references refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaa00156fc42b17a87d0746d97b42caf296" compoundref="enums__data_8h" startline="23">down</references>
+        <references refid="class_piece_1a851fad877ea6dd61d15cba614baa78c1" compoundref="piece_8cpp" startline="16" endline="16">Piece::setCellArray</references>
+        <references refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaaebc281bf093563220c2270ba57dedfce" compoundref="enums__data_8h" startline="23">up</references>
+        <references refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9" compoundref="enums__data_8h" startline="11">white</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1ad9ce3a07c2b9095da897ce094085c8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::movePiece</definition>
+        <argsstring>(Point currentPos, Point newPos)</argsstring>
+        <name>movePiece</name>
+        <param>
+          <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+          <declname>currentPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+          <declname>newPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="14" column="6" bodyfile="board.cpp" bodystart="231" bodyend="406"/>
+        <references refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaa00156fc42b17a87d0746d97b42caf296" compoundref="enums__data_8h" startline="23">down</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790" compoundref="enums__data_8h" startline="7">king</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" compoundref="enums__data_8h" startline="7">pawn</references>
+        <references refid="class_piece_1ace8d7a830a4d419b5e3d997c1e2a12e9" compoundref="piece_8cpp" startline="22" endline="22">Piece::PieceMoved</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f" compoundref="enums__data_8h" startline="7">rook</references>
+        <references refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaaebc281bf093563220c2270ba57dedfce" compoundref="enums__data_8h" startline="23">up</references>
+        <references refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" compoundref="enums__data_8h" startline="27">Point::x</references>
+        <references refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" compoundref="enums__data_8h" startline="28">Point::y</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1a4d4b5f673cf95ad76097d918d865e7fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::displayBoard</definition>
+        <argsstring>()</argsstring>
+        <name>displayBoard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="15" column="6" bodyfile="board.cpp" bodystart="415" bodyend="430"/>
+        <references refid="board_8cpp_1ac389dbca21e58410d552988f3ec954c3" compoundref="board_8cpp" startline="3">GRID</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" compoundref="enums__data_8h" startline="7">knight</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" compoundref="enums__data_8h" startline="7">pawn</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1a7180d96a5ce90796554f694e1be82896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="struct_detail" kindref="compound">Detail</ref> &gt;</type>
+        <definition>vector&lt; Detail &gt; Board::getDetails</definition>
+        <argsstring>()</argsstring>
+        <name>getDetails</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="16" column="8" bodyfile="board.cpp" bodystart="431" bodyend="441"/>
+        <references refid="board_8cpp_1ac389dbca21e58410d552988f3ec954c3" compoundref="board_8cpp" startline="3">GRID</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1a1e46ab35e12821b87f6f29e972df003f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Board::isCheckMate</definition>
+        <argsstring>()</argsstring>
+        <name>isCheckMate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="17" column="6" bodyfile="board.cpp" bodystart="495" bodyend="512"/>
+        <references refid="board_8cpp_1ac389dbca21e58410d552988f3ec954c3" compoundref="board_8cpp" startline="3">GRID</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1afc3695932418d576a95256c42e441f4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+        <definition>Point Board::getKing</definition>
+        <argsstring>()</argsstring>
+        <name>getKing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="18" column="7" bodyfile="board.cpp" bodystart="531" bodyend="541"/>
+        <references refid="board_8cpp_1ac389dbca21e58410d552988f3ec954c3" compoundref="board_8cpp" startline="3">GRID</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790" compoundref="enums__data_8h" startline="7">king</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1ad4c89c0cdf47f0555106cb69ac5a4927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Board::isCheck</definition>
+        <argsstring>()</argsstring>
+        <name>isCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="19" column="6" bodyfile="board.cpp" bodystart="481" bodyend="494"/>
+        <references refid="board_8cpp_1ac389dbca21e58410d552988f3ec954c3" compoundref="board_8cpp" startline="3">GRID</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790" compoundref="enums__data_8h" startline="7">king</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1a108c8edee1a51d946371984192eb25ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+        <definition>Color Board::getMove</definition>
+        <argsstring>()</argsstring>
+        <name>getMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="20" column="7" bodyfile="board.cpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1adccdcc38662977fb8a8bb8227e6af223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::promotePawn</definition>
+        <argsstring>(Point currentPos, PieceType name)</argsstring>
+        <name>promotePawn</name>
+        <param>
+          <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+          <declname>currentPos</declname>
+        </param>
+        <param>
+          <type><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kindref="member">PieceType</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="21" column="6" bodyfile="board.cpp" bodystart="197" bodyend="219"/>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841" compoundref="enums__data_8h" startline="7">bishop</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" compoundref="enums__data_8h" startline="7">knight</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" compoundref="enums__data_8h" startline="7">pawn</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51" compoundref="enums__data_8h" startline="7">queen</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f" compoundref="enums__data_8h" startline="7">rook</references>
+        <references refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" compoundref="enums__data_8h" startline="27">Point::x</references>
+        <references refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" compoundref="enums__data_8h" startline="28">Point::y</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1a02fbaf695549cd0a63f874e137e7fe38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Board::isStaleMate</definition>
+        <argsstring>()</argsstring>
+        <name>isStaleMate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="22" column="6" bodyfile="board.cpp" bodystart="513" bodyend="530"/>
+        <references refid="board_8cpp_1ac389dbca21e58410d552988f3ec954c3" compoundref="board_8cpp" startline="3">GRID</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1a37d5024864df4bc263e26b8cbd6bbaec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="struct_moves" kindref="compound">Moves</ref> &gt;</type>
+        <definition>vector&lt; Moves &gt; Board::getMoves</definition>
+        <argsstring>(Point curPos)</argsstring>
+        <name>getMoves</name>
+        <param>
+          <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+          <declname>curPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="23" column="8" bodyfile="board.cpp" bodystart="28" bodyend="48"/>
+        <references refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" compoundref="enums__data_8h" startline="27">Point::x</references>
+        <references refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" compoundref="enums__data_8h" startline="28">Point::y</references>
+      </memberdef>
+      <memberdef kind="function" id="class_board_1af73f45730119a1fd8f6670f53f959e68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Board::~Board</definition>
+        <argsstring>()</argsstring>
+        <name>~Board</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="board.h" line="24" column="1" bodyfile="board.cpp" bodystart="18" bodyend="27"/>
+        <references refid="class_piece_1ae7d23e73e4591a7b671cc70e2c43cc67" compoundref="piece_8cpp" startline="12" endline="12">Piece::clearPieces</references>
+        <references refid="class_piece_1af9d46f546814e53bef385fa951b2579a" compoundref="piece_8cpp" startline="15" endline="15">Piece::getPieces</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="board.h" line="4" column="1" bodyfile="board.h" bodystart="4" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_board_1afd0e96a4b1485d2ce70581d7102df864" prot="public" virt="non-virtual"><scope>Board</scope><name>Board</name></member>
+      <member refid="class_board_1acc3a47cac49c21e16dc93441ef53edbf" prot="private" virt="non-virtual"><scope>Board</scope><name>cells</name></member>
+      <member refid="class_board_1aad1d55272d0731a5ba89186d27bb233f" prot="private" virt="non-virtual"><scope>Board</scope><name>changeMove</name></member>
+      <member refid="class_board_1a4d4b5f673cf95ad76097d918d865e7fa" prot="public" virt="non-virtual"><scope>Board</scope><name>displayBoard</name></member>
+      <member refid="class_board_1ab92926c4b8752c21d5bdb6be73a74112" prot="private" virt="non-virtual"><scope>Board</scope><name>dummyMove</name></member>
+      <member refid="class_board_1a7180d96a5ce90796554f694e1be82896" prot="public" virt="non-virtual"><scope>Board</scope><name>getDetails</name></member>
+      <member refid="class_board_1afc3695932418d576a95256c42e441f4f" prot="public" virt="non-virtual"><scope>Board</scope><name>getKing</name></member>
+      <member refid="class_board_1a108c8edee1a51d946371984192eb25ef" prot="public" virt="non-virtual"><scope>Board</scope><name>getMove</name></member>
+      <member refid="class_board_1a37d5024864df4bc263e26b8cbd6bbaec" prot="public" virt="non-virtual"><scope>Board</scope><name>getMoves</name></member>
+      <member refid="class_board_1ad4c89c0cdf47f0555106cb69ac5a4927" prot="public" virt="non-virtual"><scope>Board</scope><name>isCheck</name></member>
+      <member refid="class_board_1a1e46ab35e12821b87f6f29e972df003f" prot="public" virt="non-virtual"><scope>Board</scope><name>isCheckMate</name></member>
+      <member refid="class_board_1a02fbaf695549cd0a63f874e137e7fe38" prot="public" virt="non-virtual"><scope>Board</scope><name>isStaleMate</name></member>
+      <member refid="class_board_1ad5a06150e340cf70d59cf0c0b1cd42d0" prot="private" virt="non-virtual"><scope>Board</scope><name>move</name></member>
+      <member refid="class_board_1a20ffc74c1c3a5180831773386a5837b0" prot="private" virt="non-virtual"><scope>Board</scope><name>move_sound</name></member>
+      <member refid="class_board_1ad9ce3a07c2b9095da897ce094085c8ea" prot="public" virt="non-virtual"><scope>Board</scope><name>movePiece</name></member>
+      <member refid="class_board_1ab4535fa8c011641ec914924b697cfbd2" prot="private" virt="non-virtual"><scope>Board</scope><name>newMove</name></member>
+      <member refid="class_board_1adccdcc38662977fb8a8bb8227e6af223" prot="public" virt="non-virtual"><scope>Board</scope><name>promotePawn</name></member>
+      <member refid="class_board_1af73f45730119a1fd8f6670f53f959e68" prot="public" virt="non-virtual"><scope>Board</scope><name>~Board</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

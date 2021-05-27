@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rook_8h" xml:lang="en-US">
+<title>rook.h File Reference</title>
+<indexterm><primary>rook.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="rook_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_rook">Rook</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_rook_8h_1ab35a4cffbe364e830e350c1a3e7c3b4a">ROOK_H</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_rook_8h_1ab35a4cffbe364e830e350c1a3e7c3b4a"/>    <section>
+    <title>ROOK_H</title>
+<indexterm><primary>ROOK_H</primary><secondary>rook.h</secondary></indexterm>
+<indexterm><primary>rook.h</primary><secondary>ROOK_H</secondary></indexterm>
+<para><computeroutput>#define ROOK_H</computeroutput></para></section>
+</section>
+</section>

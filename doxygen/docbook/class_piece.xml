@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_piece" xml:lang="en-US">
+<title>Piece Class Reference</title>
+<indexterm><primary>Piece</primary></indexterm>
+<para>
+<computeroutput>#include &lt;piece.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Piece:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piece__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Piece:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piece__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_piece_1a0879195c4d81bdac95aa4d57320eee10">Piece</link> (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> <link linkend="_class_piece_1ab866e2b78f08c3764feed43e43da25d0">name</link>)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> <link linkend="_class_piece_1ad65707ed2f50e6d5fef41000395bc050">getColor</link> ()</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> <link linkend="_class_piece_1a38eb417c4df0cf957e4c60e990ac2177">getName</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_piece_1ace8d7a830a4d419b5e3d997c1e2a12e9">PieceMoved</link> ()</para>
+</listitem>
+            <listitem><para>virtual vector&lt; <link linkend="_struct_point">Point</link> &gt; <link linkend="_class_piece_1aedad096a332cb6fe4abd799c503927f3">getAvailableMoves</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_piece_1a0b4a7d639608664bc968062679def36c">inLimits</link> (<link linkend="_struct_point">Point</link> checkPos)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_piece_1ae20a169ce6b98bd1e41125f1828ec541">generateMoves</link> (<link linkend="_struct_point">Point</link> currentPos)</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_class_piece_1a14b78dc6c3fad1a96d57040b6107d0e8">isMoveLegal</link> (<link linkend="_struct_point">Point</link> newPos)</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_piece_1a1d592d6952b109b806428ae0b291e98e">isUnderAttack</link> (<link linkend="_struct_point">Point</link> currentPos)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_piece_1a2cbe16344ed80ccead6c8679be678078">addMove</link> (<link linkend="_struct_point">Point</link> pos)</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_class_piece_1ae49872b2812e4825f2d4a45c8a996539">numberMoves</link> ()</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_class_piece_1a5c4e8e2c03b49909ffd8f7ac16afebd6">getCount</link> ()</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa">Direction</link> <link linkend="_class_piece_1acf3ede4e8b3f1cd5fdefb42b322dd79d">getPawnDirection</link> ()</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_piece_1a0647321e482f692d3018db155158aea0">enPassant</link> (<link linkend="_class_piece">Piece</link> *ptr)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_piece_1a88217066acc17caf4f200245abf54e05">AddenPassant</link> (<link linkend="_class_piece">Piece</link> *ptr)</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_struct_point">Point</link> &gt; <link linkend="_class_piece_1a9bbdeaa655a2de61b6e7101ff89bf795">getPossibleMoves</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_piece_1a851fad877ea6dd61d15cba614baa78c1">setCellArray</link> (<link linkend="_class_cell">Cell</link> *m_cell)</para>
+</listitem>
+            <listitem><para>static vector&lt; <link linkend="_class_piece">Piece</link> * &gt; <link linkend="_class_piece_1af9d46f546814e53bef385fa951b2579a">getPieces</link> ()</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_piece_1ae7d23e73e4591a7b671cc70e2c43cc67">clearPieces</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> <link linkend="_class_piece_1ab866e2b78f08c3764feed43e43da25d0">name</link></para>
+</listitem>
+            <listitem><para>const <link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> <link linkend="_class_piece_1ac3951a11d91640b4a4c507e67bacee73">color</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_piece_1a256212f96ea2ff8d6324d239b23b730d">moveCount</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_struct_point">Point</link> &gt; <link linkend="_class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2">movesAvailable</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_piece">Piece</link> * &gt; <link linkend="_class_piece_1afedb258feac080da7def714398b92ce0">pawnLocation</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_cell">Cell</link> * <link linkend="_class_piece_1abf0dcc424990fe8e17e72b846988e262">cell</link></para>
+</listitem>
+            <listitem><para>static vector&lt; <link linkend="_class_piece">Piece</link> * &gt; <link linkend="_class_piece_1a42d582696c1698b0c8b565c3e0d325d3">pieces</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_piece_1a0879195c4d81bdac95aa4d57320eee10"/>    <section>
+    <title>Piece()</title>
+<indexterm><primary>Piece</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>Piece</secondary></indexterm>
+<para><computeroutput>Piece::Piece (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> name)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_piece_1a88217066acc17caf4f200245abf54e05"/>    <section>
+    <title>AddenPassant()</title>
+<indexterm><primary>AddenPassant</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>AddenPassant</secondary></indexterm>
+<para><computeroutput>void Piece::AddenPassant (<link linkend="_class_piece">Piece</link> * ptr)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_pawn_1aad90613fd3f8cf57c589fb039a0bd78a">Pawn</link>.</para>
+    </section><anchor xml:id="_class_piece_1a2cbe16344ed80ccead6c8679be678078"/>    <section>
+    <title>addMove()</title>
+<indexterm><primary>addMove</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>addMove</secondary></indexterm>
+<para><computeroutput>void Piece::addMove (<link linkend="_struct_point">Point</link> pos)<computeroutput>[virtual]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1ae7d23e73e4591a7b671cc70e2c43cc67"/>    <section>
+    <title>clearPieces()</title>
+<indexterm><primary>clearPieces</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>clearPieces</secondary></indexterm>
+<para><computeroutput>void Piece::clearPieces ( )<computeroutput>[static]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piece_ae7d23e73e4591a7b671cc70e2c43cc67_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_piece_1a0647321e482f692d3018db155158aea0"/>    <section>
+    <title>enPassant()</title>
+<indexterm><primary>enPassant</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>enPassant</secondary></indexterm>
+<para><computeroutput>bool Piece::enPassant (<link linkend="_class_piece">Piece</link> * ptr)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_pawn_1a24d16bc3de3b869a2598624ba9686ef0">Pawn</link>.</para>
+    </section><anchor xml:id="_class_piece_1ae20a169ce6b98bd1e41125f1828ec541"/>    <section>
+    <title>generateMoves()</title>
+<indexterm><primary>generateMoves</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>generateMoves</secondary></indexterm>
+<para><computeroutput>void Piece::generateMoves (<link linkend="_struct_point">Point</link> currentPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_rook_1a8bc7f85bd1cb169d1944871e3327d5e9">Rook</link>, <link linkend="_class_queen_1a276779894849d33832e841ee21286b99">Queen</link>, <link linkend="_class_pawn_1adda5fafc9fdca25766551811dce8ab99">Pawn</link>, <link linkend="_class_knight_1a8dc6fb637609a836174bd75c3da15769">Knight</link>, <link linkend="_class_king_1a1fb75c94e504d4fccb9595444331135d">King</link>, and <link linkend="_class_bishop_1a46906106996a8c68fb5c54130eb70d19">Bishop</link>.</para>
+    </section><anchor xml:id="_class_piece_1aedad096a332cb6fe4abd799c503927f3"/>    <section>
+    <title>getAvailableMoves()</title>
+<indexterm><primary>getAvailableMoves</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>getAvailableMoves</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_struct_point">Point</link> &gt; Piece::getAvailableMoves ( )<computeroutput>[virtual]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1ad65707ed2f50e6d5fef41000395bc050"/>    <section>
+    <title>getColor()</title>
+<indexterm><primary>getColor</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>getColor</secondary></indexterm>
+<para><computeroutput><link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> Piece::getColor ( )<computeroutput>[virtual]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1a5c4e8e2c03b49909ffd8f7ac16afebd6"/>    <section>
+    <title>getCount()</title>
+<indexterm><primary>getCount</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>getCount</secondary></indexterm>
+<para><computeroutput>int Piece::getCount ( )<computeroutput>[virtual]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1a38eb417c4df0cf957e4c60e990ac2177"/>    <section>
+    <title>getName()</title>
+<indexterm><primary>getName</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>getName</secondary></indexterm>
+<para><computeroutput><link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> Piece::getName ( )<computeroutput>[virtual]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1acf3ede4e8b3f1cd5fdefb42b322dd79d"/>    <section>
+    <title>getPawnDirection()</title>
+<indexterm><primary>getPawnDirection</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>getPawnDirection</secondary></indexterm>
+<para><computeroutput><link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa">Direction</link> Piece::getPawnDirection ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_pawn_1a15b52722227cfaa8fcceb0ddf2344964">Pawn</link>.</para>
+    </section><anchor xml:id="_class_piece_1af9d46f546814e53bef385fa951b2579a"/>    <section>
+    <title>getPieces()</title>
+<indexterm><primary>getPieces</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>getPieces</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_class_piece">Piece</link> * &gt; Piece::getPieces ( )<computeroutput>[static]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piece_af9d46f546814e53bef385fa951b2579a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_piece_1a9bbdeaa655a2de61b6e7101ff89bf795"/>    <section>
+    <title>getPossibleMoves()</title>
+<indexterm><primary>getPossibleMoves</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>getPossibleMoves</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_struct_point">Point</link> &gt; Piece::getPossibleMoves ( )</computeroutput></para>    </section><anchor xml:id="_class_piece_1a0b4a7d639608664bc968062679def36c"/>    <section>
+    <title>inLimits()</title>
+<indexterm><primary>inLimits</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>inLimits</secondary></indexterm>
+<para><computeroutput>int Piece::inLimits (<link linkend="_struct_point">Point</link> checkPos)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piece_a0b4a7d639608664bc968062679def36c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_piece_1a14b78dc6c3fad1a96d57040b6107d0e8"/>    <section>
+    <title>isMoveLegal()</title>
+<indexterm><primary>isMoveLegal</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>isMoveLegal</secondary></indexterm>
+<para><computeroutput>int Piece::isMoveLegal (<link linkend="_struct_point">Point</link> newPos)<computeroutput>[virtual]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1a1d592d6952b109b806428ae0b291e98e"/>    <section>
+    <title>isUnderAttack()</title>
+<indexterm><primary>isUnderAttack</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>isUnderAttack</secondary></indexterm>
+<para><computeroutput>bool Piece::isUnderAttack (<link linkend="_struct_point">Point</link> currentPos)<computeroutput>[virtual]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piece_a1d592d6952b109b806428ae0b291e98e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_piece_1ae49872b2812e4825f2d4a45c8a996539"/>    <section>
+    <title>numberMoves()</title>
+<indexterm><primary>numberMoves</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>numberMoves</secondary></indexterm>
+<para><computeroutput>int Piece::numberMoves ( )<computeroutput>[virtual]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1ace8d7a830a4d419b5e3d997c1e2a12e9"/>    <section>
+    <title>PieceMoved()</title>
+<indexterm><primary>PieceMoved</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>PieceMoved</secondary></indexterm>
+<para><computeroutput>void Piece::PieceMoved ( )<computeroutput>[virtual]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piece_ace8d7a830a4d419b5e3d997c1e2a12e9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_piece_1a851fad877ea6dd61d15cba614baa78c1"/>    <section>
+    <title>setCellArray()</title>
+<indexterm><primary>setCellArray</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>setCellArray</secondary></indexterm>
+<para><computeroutput>void Piece::setCellArray (<link linkend="_class_cell">Cell</link> * m_cell)<computeroutput>[static]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piece_a851fad877ea6dd61d15cba614baa78c1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_piece_1abf0dcc424990fe8e17e72b846988e262"/>    <section>
+    <title>cell</title>
+<indexterm><primary>cell</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>cell</secondary></indexterm>
+<para><computeroutput><link linkend="_class_cell">Cell</link> * Piece::cell<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1ac3951a11d91640b4a4c507e67bacee73"/>    <section>
+    <title>color</title>
+<indexterm><primary>color</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>color</secondary></indexterm>
+<para><computeroutput>const <link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> Piece::color<computeroutput>[protected]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1a256212f96ea2ff8d6324d239b23b730d"/>    <section>
+    <title>moveCount</title>
+<indexterm><primary>moveCount</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>moveCount</secondary></indexterm>
+<para><computeroutput>int Piece::moveCount<computeroutput>[protected]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2"/>    <section>
+    <title>movesAvailable</title>
+<indexterm><primary>movesAvailable</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>movesAvailable</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_struct_point">Point</link>&gt; Piece::movesAvailable<computeroutput>[protected]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1ab866e2b78f08c3764feed43e43da25d0"/>    <section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>const <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> Piece::name<computeroutput>[protected]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1afedb258feac080da7def714398b92ce0"/>    <section>
+    <title>pawnLocation</title>
+<indexterm><primary>pawnLocation</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>pawnLocation</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_class_piece">Piece</link>*&gt; Piece::pawnLocation<computeroutput>[protected]</computeroutput></computeroutput></para>    </section><anchor xml:id="_class_piece_1a42d582696c1698b0c8b565c3e0d325d3"/>    <section>
+    <title>pieces</title>
+<indexterm><primary>pieces</primary><secondary>Piece</secondary></indexterm>
+<indexterm><primary>Piece</primary><secondary>pieces</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_class_piece">Piece</link> * &gt; Piece::pieces<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_piece_8h">piece.h</link><link linkend="_piece_8cpp">piece.cpp</link></section>
+</section>

@@ -1,0 +1,12 @@
+<map id="piece.h" name="piece.h">
+<area shape="rect" id="node1" title=" " alt="" coords="412,5,476,32"/>
+<area shape="rect" id="node2" href="$bishop_8cpp.html" title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node3" href="$board_8cpp.html" title=" " alt="" coords="115,80,194,107"/>
+<area shape="rect" id="node4" href="$gui_8cpp.html" title=" " alt="" coords="219,80,283,107"/>
+<area shape="rect" id="node5" href="$king_8cpp.html" title=" " alt="" coords="307,80,378,107"/>
+<area shape="rect" id="node6" href="$knight_8cpp.html" title=" " alt="" coords="403,80,485,107"/>
+<area shape="rect" id="node7" href="$pawn_8cpp.html" title=" " alt="" coords="509,80,587,107"/>
+<area shape="rect" id="node8" href="$piece_8cpp.html" title=" " alt="" coords="611,80,690,107"/>
+<area shape="rect" id="node9" href="$queen_8cpp.html" title=" " alt="" coords="715,80,797,107"/>
+<area shape="rect" id="node10" href="$rook_8cpp.html" title=" " alt="" coords="821,80,893,107"/>
+</map>

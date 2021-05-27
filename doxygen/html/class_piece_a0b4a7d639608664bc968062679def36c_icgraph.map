@@ -1,0 +1,10 @@
+<map id="Piece::inLimits" name="Piece::inLimits">
+<area shape="rect" id="node1" title=" " alt="" coords="211,157,319,184"/>
+<area shape="rect" id="node2" href="$class_bishop.html#a46906106996a8c68fb5c54130eb70d19" title=" " alt="" coords="5,5,163,32"/>
+<area shape="rect" id="node3" href="$class_king.html#a1fb75c94e504d4fccb9595444331135d" title=" " alt="" coords="13,56,155,83"/>
+<area shape="rect" id="node4" href="$class_knight.html#a8dc6fb637609a836174bd75c3da15769" title=" " alt="" coords="7,107,161,133"/>
+<area shape="rect" id="node5" href="$class_pawn.html#adda5fafc9fdca25766551811dce8ab99" title=" " alt="" coords="9,157,159,184"/>
+<area shape="rect" id="node6" href="$class_queen.html#a276779894849d33832e841ee21286b99" title=" " alt="" coords="7,208,161,235"/>
+<area shape="rect" id="node7" href="$class_rook.html#a8bc7f85bd1cb169d1944871e3327d5e9" title=" " alt="" coords="11,259,157,285"/>
+<area shape="rect" id="node8" href="$class_piece.html#a1d592d6952b109b806428ae0b291e98e" title=" " alt="" coords="11,309,157,336"/>
+</map>

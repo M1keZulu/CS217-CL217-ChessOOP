@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_network" xml:lang="en-US">
+<title>Network Class Reference</title>
+<indexterm><primary>Network</primary></indexterm>
+<para>
+<computeroutput>#include &lt;network.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_network_1a49d0f2a4f1f53c497970829a37e24c3c">Network</link> (string s)</para>
+</listitem>
+            <listitem><para><link linkend="_class_network_1a3cc2fb4f8fa4d507077e8da85ce5a1c8">Network</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_network_1a2bc85db160c180bdab6d9213b1dff537">send</link> (int a, int b, int c, int d)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_network_1a806a3201561af6e799ebe12cc50a7339">send</link> (int a, int b, int c, int d, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> promotion)</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_network_1a7745755fc10bf05d9fc3547adffc18d1">receive</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_network_1a49d0f2a4f1f53c497970829a37e24c3c"/>    <section>
+    <title>Network()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Network</primary><secondary>Network</secondary></indexterm>
+<indexterm><primary>Network</primary><secondary>Network</secondary></indexterm>
+<para><computeroutput>Network::Network (string s)</computeroutput></para>    </section><anchor xml:id="_class_network_1a3cc2fb4f8fa4d507077e8da85ce5a1c8"/>    <section>
+    <title>Network()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Network</primary><secondary>Network</secondary></indexterm>
+<indexterm><primary>Network</primary><secondary>Network</secondary></indexterm>
+<para><computeroutput>Network::Network ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_network_1a7745755fc10bf05d9fc3547adffc18d1"/>    <section>
+    <title>receive()</title>
+<indexterm><primary>receive</primary><secondary>Network</secondary></indexterm>
+<indexterm><primary>Network</primary><secondary>receive</secondary></indexterm>
+<para><computeroutput>string Network::receive ( )</computeroutput></para>    </section><anchor xml:id="_class_network_1a2bc85db160c180bdab6d9213b1dff537"/>    <section>
+    <title>send()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>send</primary><secondary>Network</secondary></indexterm>
+<indexterm><primary>Network</primary><secondary>send</secondary></indexterm>
+<para><computeroutput>void Network::send (int a, int b, int c, int d)</computeroutput></para>    </section><anchor xml:id="_class_network_1a806a3201561af6e799ebe12cc50a7339"/>    <section>
+    <title>send()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>send</primary><secondary>Network</secondary></indexterm>
+<indexterm><primary>Network</primary><secondary>send</secondary></indexterm>
+<para><computeroutput>void Network::send (int a, int b, int c, int d, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> promotion)</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_network_8h">network.h</link><link linkend="_network_8cpp">network.cpp</link></section>
+</section>

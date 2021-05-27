@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="board_8h" kind="file" language="C++">
+    <compoundname>board.h</compoundname>
+    <includedby refid="board_8cpp" local="yes">board.cpp</includedby>
+    <includedby refid="chess_8cpp" local="yes">chess.cpp</includedby>
+    <includedby refid="gui_8cpp" local="yes">gui.cpp</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>chess.cpp</label>
+        <link refid="chess_8cpp"/>
+      </node>
+      <node id="4">
+        <label>gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="1">
+        <label>board.h</label>
+        <link refid="board_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>board.cpp</label>
+        <link refid="board_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_board" prot="public">Board</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BOARD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BOARD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_board" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_board" kindref="compound">Board</ref>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cell" kindref="compound">Cell</ref><sp/>cells[<ref refid="bishop_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>][<ref refid="bishop_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>];</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref><sp/>move;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>newMove();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>changeMove();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dummyMove(<ref refid="struct_point" kindref="compound">Point</ref><sp/>currentPos,<sp/><ref refid="struct_point" kindref="compound">Point</ref><sp/>newPos);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Music<sp/>move_sound;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_board_1afd0e96a4b1485d2ce70581d7102df864" kindref="member">Board</ref>(<ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref><sp/>c);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_board_1ad9ce3a07c2b9095da897ce094085c8ea" kindref="member">movePiece</ref>(<ref refid="struct_point" kindref="compound">Point</ref><sp/>currentPos,<sp/><ref refid="struct_point" kindref="compound">Point</ref><sp/>newPos);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_board_1a4d4b5f673cf95ad76097d918d865e7fa" kindref="member">displayBoard</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Detail&gt;<sp/><ref refid="class_board_1a7180d96a5ce90796554f694e1be82896" kindref="member">getDetails</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_board_1a1e46ab35e12821b87f6f29e972df003f" kindref="member">isCheckMate</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_point" kindref="compound">Point</ref><sp/><ref refid="class_board_1afc3695932418d576a95256c42e441f4f" kindref="member">getKing</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_board_1ad4c89c0cdf47f0555106cb69ac5a4927" kindref="member">isCheck</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref><sp/><ref refid="class_board_1a108c8edee1a51d946371984192eb25ef" kindref="member">getMove</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_board_1adccdcc38662977fb8a8bb8227e6af223" kindref="member">promotePawn</ref>(<ref refid="struct_point" kindref="compound">Point</ref><sp/>currentPos,<sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kindref="member">PieceType</ref><sp/>name);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_board_1a02fbaf695549cd0a63f874e137e7fe38" kindref="member">isStaleMate</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Moves&gt;<sp/><ref refid="class_board_1a37d5024864df4bc263e26b8cbd6bbaec" kindref="member">getMoves</ref>(<ref refid="struct_point" kindref="compound">Point</ref><sp/>curPos);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_board_1af73f45730119a1fd8f6670f53f959e68" kindref="member">~Board</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="board.h"/>
+  </compounddef>
+</doxygen>

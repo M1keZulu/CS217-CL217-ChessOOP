@@ -1,0 +1,3411 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\info 
+{\title {\comment Chess-OOP  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+2.0 \par
+}}Chess-OOP}
+{\comment Generated by doxygen1.9.1.}
+{\creatim \yr2021\mo5\dy27\hr13\min33\sec39}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt Chess-OOP}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version 2.0\par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Thu May 27 2021 }}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+CS217-CL217-ChessOOP{\tc \v CS217-CL217-ChessOOP}\par \pard\plain 
+{\bkmkstart AAAAAAAAGR}
+{\bkmkend AAAAAAAAGR}
+\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+Chess Game designed as a semester project for OOP course at FAST National University-NUCES, Karachi.\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Description
+\par}
+{\tc\tcl2 \v Description}
+Object-Oriented Programming is an important programming paradigm. It is important that a programmer is well-versed with its principles to write code that makes development and maintenance of code easier and secure. Game Development relies on OOP more than any other form of development. It is, therefore, an effecient way to demonstrate skills that were picked up during the course. Chess is a game that is played worldwide and is a very good example of how different core objects of the game can be simulated virtually throught Object-Oriented Programming. This game is completely made from scratch and uses OOP principles to implement a completely functional game that can be played both Offline and Online over a LAN network or Public Internet using port-forwarding. Simple and Fast Multimedia Library (SFML) was used to achieve the graphical and network functionality of the game.\par}
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Getting Started
+\par}
+{\tc\tcl2 \v Getting Started}
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Dependencies
+\par}
+{\tc\tcl3 \v Dependencies}
+{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Windows 10/MacOS/Linux\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+SFML Library Linked\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+time.h\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+string.h\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+sstream\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector\par}
+\par
+\par}
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Installing
+\par}
+{\tc\tcl3 \v Installing}
+{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+All the files linked in the GitHub repository are needed for the project to run as intended \par
+ This project was developed on Windows 10 using Dev-C++ with SFML Library Version 2.4.2 TDM. The files for this particular version are available in the respoitory. However, it should be made sure that the library you download is compatible with the exact version of the C++ compiler that you are using. In this case, the compiler in use was TDM-GCC 4.9.2 64-bit Release. For more information and download, visit {\f2 https://www.sfml-dev.org/download.php}\par}
+\par
+\par}
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Executing program
+\par}
+{\tc\tcl3 \v Executing program}
+{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+How to run the program \par
+ Once all the files have been downloaded and the library has been linked, compile and run {\b chess.cpp}.\par}
+\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid g++ -c chess.cpp -I <sfml-include>\par
+g++ chess.o -L <sfml-library> -static-libgcc -DSFML_STATIC -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -lsfml-audio\par
+}
+\par
+{\b Specific Instructions for Executing the Project on Dev-C++} \par
+To run this project using Dev-C++, create a new project (either console or GUI - console is required for debugging) and then follow the instructions in this video by Mike Exc (All Rights Reserved) {\f2 https://www.youtube.com/watch?v=uAd2jINKCxc} When done, add the {\b chess.cpp} file to the project and press F11 to compile and run.\par}
+\par}
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Gameplay
+\par}
+{\tc\tcl2 \v Gameplay}
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Features
+\par}
+{\tc\tcl3 \v Features}
+Complete functionality of chess game has been added except for draw conditions. Only one draw condition is implemented up till now which will occur when the moving side is not in check and has no moves left. Special {\b Moves} Available:{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+En Passant \par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Short Castling \par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Long Castling \par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Pawn} Promotion \par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Stalemate by no legal moves left\par}
+\par
+\par}
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Movement
+\par}
+{\tc\tcl3 \v Movement}
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{{\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Main Menu
+\par}
+{\tc\tcl4 \v Main Menu}
+The main menu works with a KEYBOARD only and up/down arrow keys are used to navigate the menu. You can enter the IP address directly by typing using the keyboard. Refer to help menu for a known bug regarding the Host mode.\par
+\par}
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{{\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Offline/Online Modes
+\par}
+{\tc\tcl4 \v Offline/Online Modes}
+To make a move, use the left mouse button to select the piece you want to move and right mouse button at the desired location that you want to move the piece to.\par
+IMPORTANT: It is important to note that before the PROMOTION move, you will have to press q(queen), r(rook), k(knight), or b(bishop) on the keyboard before making hitting the right mouse button. By default, the game promotes all pawns to {\b Queen}.\par
+\par}
+\par}
+\par}
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Help/Known Issues
+\par}
+{\tc\tcl2 \v Help/Known Issues}
+{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+The Host Functionality in the program is bugged due to an issue in programming the main event loop of the program. It will go to not responding when left for a while, the only options are to connect or to force quit it if that happens.\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Highlighting possible moves is only available for non-special/generic moves as of now.\par}
+\par
+\par}
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Author
+\par}
+{\tc\tcl2 \v Author}
+Muhammad Zain Ul Abiddin\par
+ {\f2 muhammadzain757@gmail.com}\par
+ {\f2 LinkedIn}\par}
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Acknowledgments
+\par}
+{\tc\tcl2 \v Acknowledgments}
+{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\f2 JohnPablock} for Texture Images\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\f2 Userstyles.org} for {\b Board} Background\par}
+\par
+\par}
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Online Gameplay
+\par}
+{\tc\tcl2 \v Online Gameplay}
+ \par}
+}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Hierarchical Index\par \pard\plain 
+{\tc \v Hierarchical Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class Hierarchy\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This inheritance list is sorted roughly, but not completely, alphabetically:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Board\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Cell\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Detail\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Gui\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Moves\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAET \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Network\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Piece\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFL \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Bishop\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+King\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Knight\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Pawn\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Queen\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Rook\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+Point\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Index\par \pard\plain 
+{\tc \v Class Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b Bishop} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Board} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Cell} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Detail} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Gui} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b King} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Knight} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Moves} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAET \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Network} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Pawn} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Piece} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Point} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Queen} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Rook} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all files with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b bishop.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b bishop.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b board.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b board.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b cell.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b cell.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b chess.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b enums_data.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b gui.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b gui.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b king.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b king.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b knight.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b knight.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b network.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABO \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b network.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b pawn.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b pawn.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b piece.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABT \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b piece.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b queen.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b queen.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b rook.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b rook.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b sock_private.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Bishop Class Reference\par \pard\plain 
+{\tc\tcl2 \v Bishop}
+{\xe \v Bishop}
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+\par
+{
+{\f2 #include <bishop.h>}}\par
+Inheritance diagram for Bishop:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_bishop__inherit__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+Collaboration diagram for Bishop:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_bishop__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Bishop} ({\b Color} m_color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b generateMoves} ({\b Point} currentPos)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Additional Inherited Members\par
+\pard\plain 
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Bishop\:Bishop}
+{\xe \v Bishop\:Bishop}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Bishop::Bishop ({\b Color}  {\i m_color})}}
+\par
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v generateMoves\:Bishop}
+{\xe \v Bishop\:generateMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Bishop::generateMoves ({\b Point}  {\i currentPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_bishop_a46906106996a8c68fb5c54130eb70d19_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b bishop.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b bishop.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Board Class Reference\par \pard\plain 
+{\tc\tcl2 \v Board}
+{\xe \v Board}
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+\par
+{
+{\f2 #include <board.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Board} ({\b Color} c)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b movePiece} ({\b Point} currentPos, {\b Point} newPos)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b displayBoard} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< {\b Detail} > {\b getDetails} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b isCheckMate} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Point} {\b getKing} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b isCheck} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Color} {\b getMove} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b promotePawn} ({\b Point} currentPos, {\b PieceType} name)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b isStaleMate} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< {\b Moves} > {\b getMoves} ({\b Point} curPos)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ~Board} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Board\:Board}
+{\xe \v Board\:Board}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Board::Board ({\b Color}  {\i c})}}
+\par
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_board_afd0e96a4b1485d2ce70581d7102df864_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\xe \v ~Board\:Board}
+{\xe \v Board\:~Board}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Board::~Board ()}}
+\par
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_board_af73f45730119a1fd8f6670f53f959e68_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v displayBoard\:Board}
+{\xe \v Board\:displayBoard}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Board::displayBoard ()}}
+\par
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getDetails\:Board}
+{\xe \v Board\:getDetails}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector< {\b Detail} > Board::getDetails ()}}
+\par
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getKing\:Board}
+{\xe \v Board\:getKing}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Point} Board::getKing ()}}
+\par
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getMove\:Board}
+{\xe \v Board\:getMove}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Color} Board::getMove ()}}
+\par
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getMoves\:Board}
+{\xe \v Board\:getMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector< {\b Moves} > Board::getMoves ({\b Point}  {\i curPos})}}
+\par
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v isCheck\:Board}
+{\xe \v Board\:isCheck}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool Board::isCheck ()}}
+\par
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v isCheckMate\:Board}
+{\xe \v Board\:isCheckMate}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool Board::isCheckMate ()}}
+\par
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v isStaleMate\:Board}
+{\xe \v Board\:isStaleMate}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool Board::isStaleMate ()}}
+\par
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v movePiece\:Board}
+{\xe \v Board\:movePiece}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Board::movePiece ({\b Point}  {\i currentPos}, {\b Point}  {\i newPos})}}
+\par
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_board_ad9ce3a07c2b9095da897ce094085c8ea_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\xe \v promotePawn\:Board}
+{\xe \v Board\:promotePawn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Board::promotePawn ({\b Point}  {\i currentPos}, {\b PieceType}  {\i name})}}
+\par
+{\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b board.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b board.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Cell Class Reference\par \pard\plain 
+{\tc\tcl2 \v Cell}
+{\xe \v Cell}
+{\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
+\par
+{
+{\f2 #include <cell.h>}}\par
+Collaboration diagram for Cell:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_cell__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cell} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setNull} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setPiece} ({\b Piece} *m_piece)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Piece} * {\b getPiece} ()\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Piece} * {\b piece}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Cell\:Cell}
+{\xe \v Cell\:Cell}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Cell::Cell ()}}
+\par
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v getPiece\:Cell}
+{\xe \v Cell\:getPiece}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Piece} * Cell::getPiece ()}}
+\par
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setNull\:Cell}
+{\xe \v Cell\:setNull}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Cell::setNull ()}}
+\par
+{\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v setPiece\:Cell}
+{\xe \v Cell\:setPiece}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Cell::setPiece ({\b Piece} *  {\i m_piece})}}
+\par
+{\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v piece\:Cell}
+{\xe \v Cell\:piece}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Piece}* Cell::piece{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b cell.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b cell.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Detail Struct Reference\par \pard\plain 
+{\tc\tcl2 \v Detail}
+{\xe \v Detail}
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
+\par
+{
+{\f2 #include <enums_data.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b x}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b y}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Color} {\b color}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b PieceType} {\b name}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v color\:Detail}
+{\xe \v Detail\:color}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Color} Detail::color}}
+\par
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v name\:Detail}
+{\xe \v Detail\:name}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b PieceType} Detail::name}}
+\par
+{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v x\:Detail}
+{\xe \v Detail\:x}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Detail::x}}
+\par
+{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v y\:Detail}
+{\xe \v Detail\:y}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Detail::y}}
+\par
+{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b enums_data.h}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Gui Class Reference\par \pard\plain 
+{\tc\tcl2 \v Gui}
+{\xe \v Gui}
+{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
+\par
+{
+{\f2 #include <gui.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gui} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gui} (const {\b ConnectionType} type, string ip)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ~Gui} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Gui\:Gui}
+{\xe \v Gui\:Gui}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Gui::Gui ()}}
+\par
+{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Gui\:Gui}
+{\xe \v Gui\:Gui}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Gui::Gui (const {\b ConnectionType}  {\i type}, string  {\i ip})}}
+\par
+{\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ~Gui\:Gui}
+{\xe \v Gui\:~Gui}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Gui::~Gui ()}}
+\par
+{\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b gui.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b gui.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+King Class Reference\par \pard\plain 
+{\tc\tcl2 \v King}
+{\xe \v King}
+{\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
+\par
+{
+{\f2 #include <king.h>}}\par
+Inheritance diagram for King:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_king__inherit__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+Collaboration diagram for King:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_king__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b King} ({\b Color} m_color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b generateMoves} ({\b Point} currentPos)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Additional Inherited Members\par
+\pard\plain 
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v King\:King}
+{\xe \v King\:King}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+King::King ({\b Color}  {\i m_color})}}
+\par
+{\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v generateMoves\:King}
+{\xe \v King\:generateMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void King::generateMoves ({\b Point}  {\i currentPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_king_a1fb75c94e504d4fccb9595444331135d_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b king.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b king.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Knight Class Reference\par \pard\plain 
+{\tc\tcl2 \v Knight}
+{\xe \v Knight}
+{\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
+\par
+{
+{\f2 #include <knight.h>}}\par
+Inheritance diagram for Knight:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_knight__inherit__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+Collaboration diagram for Knight:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_knight__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Knight} ({\b Color} m_color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b generateMoves} ({\b Point} currentPos)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Additional Inherited Members\par
+\pard\plain 
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Knight\:Knight}
+{\xe \v Knight\:Knight}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Knight::Knight ({\b Color}  {\i m_color})}}
+\par
+{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v generateMoves\:Knight}
+{\xe \v Knight\:generateMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Knight::generateMoves ({\b Point}  {\i currentPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_knight_a8dc6fb637609a836174bd75c3da15769_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b knight.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b knight.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Moves Struct Reference\par \pard\plain 
+{\tc\tcl2 \v Moves}
+{\xe \v Moves}
+{\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
+\par
+{
+{\f2 #include <enums_data.h>}}\par
+Collaboration diagram for Moves:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "struct_moves__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Point} {\b p}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+string {\b cell}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v cell\:Moves}
+{\xe \v Moves\:cell}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+string Moves::cell}}
+\par
+{\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v p\:Moves}
+{\xe \v Moves\:p}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Point} Moves::p}}
+\par
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b enums_data.h}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Network Class Reference\par \pard\plain 
+{\tc\tcl2 \v Network}
+{\xe \v Network}
+{\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
+\par
+{
+{\f2 #include <network.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Network} (string s)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Network} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b send} (int a, int b, int c, int d)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b send} (int a, int b, int c, int d, {\b PieceType} promotion)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+string {\b receive} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Network\:Network}
+{\xe \v Network\:Network}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Network::Network (string  {\i s})}}
+\par
+{\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Network\:Network}
+{\xe \v Network\:Network}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Network::Network ()}}
+\par
+{\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v receive\:Network}
+{\xe \v Network\:receive}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+string Network::receive ()}}
+\par
+{\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v send\:Network}
+{\xe \v Network\:send}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Network::send (int  {\i a}, int  {\i b}, int  {\i c}, int  {\i d})}}
+\par
+{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v send\:Network}
+{\xe \v Network\:send}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Network::send (int  {\i a}, int  {\i b}, int  {\i c}, int  {\i d}, {\b PieceType}  {\i promotion})}}
+\par
+{\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b network.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b network.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Pawn Class Reference\par \pard\plain 
+{\tc\tcl2 \v Pawn}
+{\xe \v Pawn}
+{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
+\par
+{
+{\f2 #include <pawn.h>}}\par
+Inheritance diagram for Pawn:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_pawn__inherit__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+Collaboration diagram for Pawn:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_pawn__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Pawn} ({\b Color} m_color, {\b Direction} d)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b generateMoves} ({\b Point} currentPos)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Direction} {\b getPawnDirection} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b enPassant} ({\b Piece} *ptr)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b AddenPassant} ({\b Piece} *ptr)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Additional Inherited Members\par
+\pard\plain 
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Pawn\:Pawn}
+{\xe \v Pawn\:Pawn}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Pawn::Pawn ({\b Color}  {\i m_color}, {\b Direction}  {\i d})}}
+\par
+{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v AddenPassant\:Pawn}
+{\xe \v Pawn\:AddenPassant}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Pawn::AddenPassant ({\b Piece} *  {\i ptr}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFF \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v enPassant\:Pawn}
+{\xe \v Pawn\:enPassant}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool Pawn::enPassant ({\b Piece} *  {\i ptr}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFH \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v generateMoves\:Pawn}
+{\xe \v Pawn\:generateMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Pawn::generateMoves ({\b Point}  {\i currentPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFI}
+{\bkmkend AAAAAAAAFI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_pawn_adda5fafc9fdca25766551811dce8ab99_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\xe \v getPawnDirection\:Pawn}
+{\xe \v Pawn\:getPawnDirection}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Direction} Pawn::getPawnDirection (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFJ}
+{\bkmkend AAAAAAAAFJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFK \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pawn.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pawn.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Piece Class Reference\par \pard\plain 
+{\tc\tcl2 \v Piece}
+{\xe \v Piece}
+{\bkmkstart AAAAAAAAFL}
+{\bkmkend AAAAAAAAFL}
+\par
+{
+{\f2 #include <piece.h>}}\par
+Inheritance diagram for Piece:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_piece__inherit__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+Collaboration diagram for Piece:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_piece__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Piece} ({\b Color} m_color, {\b PieceType} {\b name})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b Color} {\b getColor} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b PieceType} {\b getName} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b PieceMoved} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual vector< {\b Point} > {\b getAvailableMoves} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b inLimits} ({\b Point} checkPos)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b generateMoves} ({\b Point} currentPos)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b isMoveLegal} ({\b Point} newPos)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual bool {\b isUnderAttack} ({\b Point} currentPos)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b addMove} ({\b Point} pos)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b numberMoves} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual int {\b getCount} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual {\b Direction} {\b getPawnDirection} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual bool {\b enPassant} ({\b Piece} *ptr)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual void {\b AddenPassant} ({\b Piece} *ptr)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< {\b Point} > {\b getPossibleMoves} ()\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+static void {\b setCellArray} ({\b Cell} *m_cell)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+static vector< {\b Piece} * > {\b getPieces} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+static void {\b clearPieces} ()\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Protected Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const {\b PieceType} {\b name}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const {\b Color} {\b color}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b moveCount}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< {\b Point} > {\b movesAvailable}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< {\b Piece} * > {\b pawnLocation}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Protected Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+static {\b Cell} * {\b cell}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+static vector< {\b Piece} * > {\b pieces}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Piece\:Piece}
+{\xe \v Piece\:Piece}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Piece::Piece ({\b Color}  {\i m_color}, {\b PieceType}  {\i name})}}
+\par
+{\bkmkstart AAAAAAAAFM}
+{\bkmkend AAAAAAAAFM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v AddenPassant\:Piece}
+{\xe \v Piece\:AddenPassant}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Piece::AddenPassant ({\b Piece} *  {\i ptr}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented in {\b Pawn} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v addMove\:Piece}
+{\xe \v Piece\:addMove}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Piece::addMove ({\b Point}  {\i pos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFN}
+{\bkmkend AAAAAAAAFN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v clearPieces\:Piece}
+{\xe \v Piece\:clearPieces}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Piece::clearPieces (){\f2 [static]}}}
+\par
+{\bkmkstart AAAAAAAAFO}
+{\bkmkend AAAAAAAAFO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the caller graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_piece_ae7d23e73e4591a7b671cc70e2c43cc67_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\xe \v enPassant\:Piece}
+{\xe \v Piece\:enPassant}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool Piece::enPassant ({\b Piece} *  {\i ptr}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFH}
+{\bkmkend AAAAAAAAFH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented in {\b Pawn} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFG \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v generateMoves\:Piece}
+{\xe \v Piece\:generateMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Piece::generateMoves ({\b Point}  {\i currentPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented in {\b Rook} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFP \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Queen} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFQ \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Pawn} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFI \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Knight} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAES \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b King} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEP \\*MERGEFORMAT}{\fldrslt pagenum}}}), and {\b Bishop} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v getAvailableMoves\:Piece}
+{\xe \v Piece\:getAvailableMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector< {\b Point} > Piece::getAvailableMoves (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFR}
+{\bkmkend AAAAAAAAFR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getColor\:Piece}
+{\xe \v Piece\:getColor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Color} Piece::getColor (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFS}
+{\bkmkend AAAAAAAAFS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getCount\:Piece}
+{\xe \v Piece\:getCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Piece::getCount (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFT}
+{\bkmkend AAAAAAAAFT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getName\:Piece}
+{\xe \v Piece\:getName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b PieceType} Piece::getName (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFU}
+{\bkmkend AAAAAAAAFU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v getPawnDirection\:Piece}
+{\xe \v Piece\:getPawnDirection}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Direction} Piece::getPawnDirection (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFK}
+{\bkmkend AAAAAAAAFK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented in {\b Pawn} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v getPieces\:Piece}
+{\xe \v Piece\:getPieces}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector< {\b Piece} * > Piece::getPieces (){\f2 [static]}}}
+\par
+{\bkmkstart AAAAAAAAFV}
+{\bkmkend AAAAAAAAFV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the caller graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_piece_af9d46f546814e53bef385fa951b2579a_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\xe \v getPossibleMoves\:Piece}
+{\xe \v Piece\:getPossibleMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector< {\b Point} > Piece::getPossibleMoves ()}}
+\par
+{\bkmkstart AAAAAAAAFW}
+{\bkmkend AAAAAAAAFW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v inLimits\:Piece}
+{\xe \v Piece\:inLimits}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Piece::inLimits ({\b Point}  {\i checkPos})}}
+\par
+{\bkmkstart AAAAAAAAFX}
+{\bkmkend AAAAAAAAFX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the caller graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_piece_a0b4a7d639608664bc968062679def36c_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\xe \v isMoveLegal\:Piece}
+{\xe \v Piece\:isMoveLegal}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Piece::isMoveLegal ({\b Point}  {\i newPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFY}
+{\bkmkend AAAAAAAAFY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v isUnderAttack\:Piece}
+{\xe \v Piece\:isUnderAttack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool Piece::isUnderAttack ({\b Point}  {\i currentPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFZ}
+{\bkmkend AAAAAAAAFZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_piece_a1d592d6952b109b806428ae0b291e98e_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\xe \v numberMoves\:Piece}
+{\xe \v Piece\:numberMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Piece::numberMoves (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAGA}
+{\bkmkend AAAAAAAAGA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v PieceMoved\:Piece}
+{\xe \v Piece\:PieceMoved}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Piece::PieceMoved (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAGB}
+{\bkmkend AAAAAAAAGB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the caller graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_piece_ace8d7a830a4d419b5e3d997c1e2a12e9_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\xe \v setCellArray\:Piece}
+{\xe \v Piece\:setCellArray}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Piece::setCellArray ({\b Cell} *  {\i m_cell}){\f2 [static]}}}
+\par
+{\bkmkstart AAAAAAAAGC}
+{\bkmkend AAAAAAAAGC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+Here is the caller graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_piece_a851fad877ea6dd61d15cba614baa78c1_icgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v cell\:Piece}
+{\xe \v Piece\:cell}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cell} * Piece::cell{\f2 [static]}, {\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAGD}
+{\bkmkend AAAAAAAAGD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v color\:Piece}
+{\xe \v Piece\:color}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const {\b Color} Piece::color{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAGE}
+{\bkmkend AAAAAAAAGE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v moveCount\:Piece}
+{\xe \v Piece\:moveCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Piece::moveCount{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAGF}
+{\bkmkend AAAAAAAAGF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v movesAvailable\:Piece}
+{\xe \v Piece\:movesAvailable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector<{\b Point}> Piece::movesAvailable{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAGG}
+{\bkmkend AAAAAAAAGG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v name\:Piece}
+{\xe \v Piece\:name}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const {\b PieceType} Piece::name{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAGH}
+{\bkmkend AAAAAAAAGH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v pawnLocation\:Piece}
+{\xe \v Piece\:pawnLocation}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector<{\b Piece}*> Piece::pawnLocation{\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAGI}
+{\bkmkend AAAAAAAAGI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v pieces\:Piece}
+{\xe \v Piece\:pieces}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector< {\b Piece} * > Piece::pieces{\f2 [static]}, {\f2 [protected]}}}
+\par
+{\bkmkstart AAAAAAAAGJ}
+{\bkmkend AAAAAAAAGJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b piece.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b piece.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Point Struct Reference\par \pard\plain 
+{\tc\tcl2 \v Point}
+{\xe \v Point}
+{\bkmkstart AAAAAAAAGK}
+{\bkmkend AAAAAAAAGK}
+\par
+{
+{\f2 #include <enums_data.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b x}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b y}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v x\:Point}
+{\xe \v Point\:x}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Point::x}}
+\par
+{\bkmkstart AAAAAAAAGL}
+{\bkmkend AAAAAAAAGL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v y\:Point}
+{\xe \v Point\:y}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Point::y}}
+\par
+{\bkmkstart AAAAAAAAGM}
+{\bkmkend AAAAAAAAGM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b enums_data.h}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Queen Class Reference\par \pard\plain 
+{\tc\tcl2 \v Queen}
+{\xe \v Queen}
+{\bkmkstart AAAAAAAAGN}
+{\bkmkend AAAAAAAAGN}
+\par
+{
+{\f2 #include <queen.h>}}\par
+Inheritance diagram for Queen:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_queen__inherit__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+Collaboration diagram for Queen:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_queen__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Queen} ({\b Color} m_color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b generateMoves} ({\b Point} currentPos)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Additional Inherited Members\par
+\pard\plain 
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Queen\:Queen}
+{\xe \v Queen\:Queen}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Queen::Queen ({\b Color}  {\i m_color})}}
+\par
+{\bkmkstart AAAAAAAAGO}
+{\bkmkend AAAAAAAAGO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v generateMoves\:Queen}
+{\xe \v Queen\:generateMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Queen::generateMoves ({\b Point}  {\i currentPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFQ}
+{\bkmkend AAAAAAAAFQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_queen_a276779894849d33832e841ee21286b99_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b queen.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b queen.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Rook Class Reference\par \pard\plain 
+{\tc\tcl2 \v Rook}
+{\xe \v Rook}
+{\bkmkstart AAAAAAAAGP}
+{\bkmkend AAAAAAAAGP}
+\par
+{
+{\f2 #include <rook.h>}}\par
+Inheritance diagram for Rook:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_rook__inherit__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+Collaboration diagram for Rook:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_rook__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Rook} ({\b Color} m_color)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b generateMoves} ({\b Point} currentPos)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Additional Inherited Members\par
+\pard\plain 
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Rook\:Rook}
+{\xe \v Rook\:Rook}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Rook::Rook ({\b Color}  {\i m_color})}}
+\par
+{\bkmkstart AAAAAAAAGQ}
+{\bkmkend AAAAAAAAGQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v generateMoves\:Rook}
+{\xe \v Rook\:generateMoves}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Rook::generateMoves ({\b Point}  {\i currentPos}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAFP}
+{\bkmkend AAAAAAAAFP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Reimplemented from {\b Piece} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Here is the call graph for this function:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_rook_a8bc7f85bd1cb169d1944871e3327d5e9_cgraph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b rook.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b rook.cpp}\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+bishop.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v bishop.cpp}
+{\xe \v bishop.cpp}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "piece.h"}\par
+{\f2 #include "bishop.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for bishop.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "bishop_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:bishop.cpp}
+{\xe \v bishop.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+bishop.h File Reference\par \pard\plain 
+{\tc\tcl2 \v bishop.h}
+{\xe \v bishop.h}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "bishop_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Bishop}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+board.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v board.cpp}
+{\xe \v board.cpp}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "piece.h"}\par
+{\f2 #include "pawn.h"}\par
+{\f2 #include "knight.h"}\par
+{\f2 #include "rook.h"}\par
+{\f2 #include "bishop.h"}\par
+{\f2 #include "queen.h"}\par
+{\f2 #include "king.h"}\par
+{\f2 #include <SFML/Audio.hpp>}\par
+{\f2 #include "board.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for board.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "board_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:board.cpp}
+{\xe \v board.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+board.h File Reference\par \pard\plain 
+{\tc\tcl2 \v board.h}
+{\xe \v board.h}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "board_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Board}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+cell.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v cell.cpp}
+{\xe \v cell.cpp}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include "cell.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for cell.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "cell_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+cell.h File Reference\par \pard\plain 
+{\tc\tcl2 \v cell.h}
+{\xe \v cell.h}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "cell_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Cell}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+chess.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v chess.cpp}
+{\xe \v chess.cpp}
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <SFML/System.hpp>}\par
+{\f2 #include <SFML/Graphics.hpp>}\par
+{\f2 #include <SFML/Network.hpp>}\par
+{\f2 #include <SFML/Window.hpp>}\par
+{\f2 #include <SFML/Audio.hpp>}\par
+{\f2 #include <time.h>}\par
+{\f2 #include <string>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include <sstream>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "board.h"}\par
+{\f2 #include "network.h"}\par
+{\f2 #include "gui.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for chess.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "chess_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:chess.cpp}
+{\xe \v chess.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v main\:chess.cpp}
+{\xe \v chess.cpp\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int main ()}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+enums_data.h File Reference\par \pard\plain 
+{\tc\tcl2 \v enums_data.h}
+{\xe \v enums_data.h}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "enums__data_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b Point}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b Detail}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b Moves}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Enumerations\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b PieceType} \{ {\b king}
+, {\b queen}
+, {\b bishop}
+, {\b knight}
+, {\b rook}
+, {\b pawn}
+ \}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b Color} \{ {\b black}
+, {\b white}
+ \}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b Status} \{ {\b alive}
+, {\b dead}
+ \}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b ConnectionType} \{ {\b host}
+, {\b client}
+ \}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b Direction} \{ {\b up}
+, {\b down}
+ \}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Enumeration Type Documentation\par
+\pard\plain 
+{\xe \v Color\:enums_data.h}
+{\xe \v enums_data.h\:Color}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b Color}}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v black\:enums_data.h}
+{\xe \v enums_data.h\:black}
+{\qr black{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+\cell }{\cell }{\row }
+{\xe \v white\:enums_data.h}
+{\xe \v enums_data.h\:white}
+{\qr white{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+\cell }{\cell }{\row }
+}
+}
+{\xe \v ConnectionType\:enums_data.h}
+{\xe \v enums_data.h\:ConnectionType}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b ConnectionType}}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v host\:enums_data.h}
+{\xe \v enums_data.h\:host}
+{\qr host{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+\cell }{\cell }{\row }
+{\xe \v client\:enums_data.h}
+{\xe \v enums_data.h\:client}
+{\qr client{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+\cell }{\cell }{\row }
+}
+}
+{\xe \v Direction\:enums_data.h}
+{\xe \v enums_data.h\:Direction}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b Direction}}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v up\:enums_data.h}
+{\xe \v enums_data.h\:up}
+{\qr up{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+\cell }{\cell }{\row }
+{\xe \v down\:enums_data.h}
+{\xe \v enums_data.h\:down}
+{\qr down{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+\cell }{\cell }{\row }
+}
+}
+{\xe \v PieceType\:enums_data.h}
+{\xe \v enums_data.h\:PieceType}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b PieceType}}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v king\:enums_data.h}
+{\xe \v enums_data.h\:king}
+{\qr king{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+\cell }{\cell }{\row }
+{\xe \v queen\:enums_data.h}
+{\xe \v enums_data.h\:queen}
+{\qr queen{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+\cell }{\cell }{\row }
+{\xe \v bishop\:enums_data.h}
+{\xe \v enums_data.h\:bishop}
+{\qr bishop{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+\cell }{\cell }{\row }
+{\xe \v knight\:enums_data.h}
+{\xe \v enums_data.h\:knight}
+{\qr knight{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+\cell }{\cell }{\row }
+{\xe \v rook\:enums_data.h}
+{\xe \v enums_data.h\:rook}
+{\qr rook{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+\cell }{\cell }{\row }
+{\xe \v pawn\:enums_data.h}
+{\xe \v enums_data.h\:pawn}
+{\qr pawn{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+\cell }{\cell }{\row }
+}
+}
+{\xe \v Status\:enums_data.h}
+{\xe \v enums_data.h\:Status}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b Status}}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Enumerator:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v alive\:enums_data.h}
+{\xe \v enums_data.h\:alive}
+{\qr alive{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+\cell }{\cell }{\row }
+{\xe \v dead\:enums_data.h}
+{\xe \v enums_data.h\:dead}
+{\qr dead{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+\cell }{\cell }{\row }
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gui.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v gui.cpp}
+{\xe \v gui.cpp}
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include <SFML/System.hpp>}\par
+{\f2 #include <SFML/Graphics.hpp>}\par
+{\f2 #include <SFML/Network.hpp>}\par
+{\f2 #include <SFML/Window.hpp>}\par
+{\f2 #include <SFML/Audio.hpp>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "piece.h"}\par
+{\f2 #include "pawn.h"}\par
+{\f2 #include "knight.h"}\par
+{\f2 #include "rook.h"}\par
+{\f2 #include "bishop.h"}\par
+{\f2 #include "queen.h"}\par
+{\f2 #include "king.h"}\par
+{\f2 #include "board.h"}\par
+{\f2 #include "network.h"}\par
+{\f2 #include "gui.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for gui.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "gui_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:gui.cpp}
+{\xe \v gui.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+gui.h File Reference\par \pard\plain 
+{\tc\tcl2 \v gui.h}
+{\xe \v gui.h}
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "gui_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Gui}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+king.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v king.cpp}
+{\xe \v king.cpp}
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "piece.h"}\par
+{\f2 #include "king.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for king.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "king_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:king.cpp}
+{\xe \v king.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+king.h File Reference\par \pard\plain 
+{\tc\tcl2 \v king.h}
+{\xe \v king.h}
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "king_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b King}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+knight.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v knight.cpp}
+{\xe \v knight.cpp}
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "piece.h"}\par
+{\f2 #include "knight.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for knight.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "knight_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:knight.cpp}
+{\xe \v knight.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+knight.h File Reference\par \pard\plain 
+{\tc\tcl2 \v knight.h}
+{\xe \v knight.h}
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "knight_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Knight}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+network.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v network.cpp}
+{\xe \v network.cpp}
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <sstream>}\par
+{\f2 #include <SFML/Network.hpp>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "network.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for network.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "network_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+network.h File Reference\par \pard\plain 
+{\tc\tcl2 \v network.h}
+{\xe \v network.h}
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "network_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Network}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+pawn.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v pawn.cpp}
+{\xe \v pawn.cpp}
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "piece.h"}\par
+{\f2 #include "pawn.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for pawn.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "pawn_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:pawn.cpp}
+{\xe \v pawn.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+pawn.h File Reference\par \pard\plain 
+{\tc\tcl2 \v pawn.h}
+{\xe \v pawn.h}
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "pawn_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Pawn}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+piece.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v piece.cpp}
+{\xe \v piece.cpp}
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "piece.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for piece.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "piece_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:piece.cpp}
+{\xe \v piece.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+piece.h File Reference\par \pard\plain 
+{\tc\tcl2 \v piece.h}
+{\xe \v piece.h}
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "piece_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Piece}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+queen.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v queen.cpp}
+{\xe \v queen.cpp}
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "piece.h"}\par
+{\f2 #include "queen.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for queen.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "queen_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:queen.cpp}
+{\xe \v queen.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+queen.h File Reference\par \pard\plain 
+{\tc\tcl2 \v queen.h}
+{\xe \v queen.h}
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "queen_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Queen}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+README.md File Reference\par \pard\plain 
+{\tc\tcl2 \v README.md}
+{\xe \v README.md}
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+rook.cpp File Reference\par \pard\plain 
+{\tc\tcl2 \v rook.cpp}
+{\xe \v rook.cpp}
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <vector>}\par
+{\f2 #include "enums_data.h"}\par
+{\f2 #include "cell.h"}\par
+{\f2 #include "piece.h"}\par
+{\f2 #include "rook.h"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Include dependency graph for rook.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "rook_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b GRID}\~ 8\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v GRID\:rook.cpp}
+{\xe \v rook.cpp\:GRID}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define GRID\~ 8}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+rook.h File Reference\par \pard\plain 
+{\tc\tcl2 \v rook.h}
+{\xe \v rook.h}
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This graph shows which files directly or indirectly include this file:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "rook_8h__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Classes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Rook}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ROOK_H}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v ROOK_H\:rook.h}
+{\xe \v rook.h\:ROOK_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ROOK_H}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+sock_private.h File Reference\par \pard\plain 
+{\tc\tcl2 \v sock_private.h}
+{\xe \v sock_private.h}
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b VER_STRING}\~ "1.0.0.0"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b VER_MAJOR}\~ 1\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b VER_MINOR}\~ 0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b VER_RELEASE}\~ 0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b VER_BUILD}\~ 0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b COMPANY_NAME}\~ ""\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b FILE_VERSION}\~ "1.0.0.0"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b FILE_DESCRIPTION}\~ "Developed using the Dev-C++ IDE"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b INTERNAL_NAME}\~ ""\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b LEGAL_COPYRIGHT}\~ ""\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b LEGAL_TRADEMARKS}\~ ""\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ORIGINAL_FILENAME}\~ ""\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PRODUCT_NAME}\~ ""\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PRODUCT_VERSION}\~ "1.0.0.0"\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v COMPANY_NAME\:sock_private.h}
+{\xe \v sock_private.h\:COMPANY_NAME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define COMPANY_NAME\~ ""}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FILE_DESCRIPTION\:sock_private.h}
+{\xe \v sock_private.h\:FILE_DESCRIPTION}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define FILE_DESCRIPTION\~ "Developed using the Dev-C++ IDE"}}
+\par
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v FILE_VERSION\:sock_private.h}
+{\xe \v sock_private.h\:FILE_VERSION}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define FILE_VERSION\~ "1.0.0.0"}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v INTERNAL_NAME\:sock_private.h}
+{\xe \v sock_private.h\:INTERNAL_NAME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define INTERNAL_NAME\~ ""}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LEGAL_COPYRIGHT\:sock_private.h}
+{\xe \v sock_private.h\:LEGAL_COPYRIGHT}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define LEGAL_COPYRIGHT\~ ""}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v LEGAL_TRADEMARKS\:sock_private.h}
+{\xe \v sock_private.h\:LEGAL_TRADEMARKS}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define LEGAL_TRADEMARKS\~ ""}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v ORIGINAL_FILENAME\:sock_private.h}
+{\xe \v sock_private.h\:ORIGINAL_FILENAME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ORIGINAL_FILENAME\~ ""}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v PRODUCT_NAME\:sock_private.h}
+{\xe \v sock_private.h\:PRODUCT_NAME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PRODUCT_NAME\~ ""}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v PRODUCT_VERSION\:sock_private.h}
+{\xe \v sock_private.h\:PRODUCT_VERSION}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PRODUCT_VERSION\~ "1.0.0.0"}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v VER_BUILD\:sock_private.h}
+{\xe \v sock_private.h\:VER_BUILD}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define VER_BUILD\~ 0}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v VER_MAJOR\:sock_private.h}
+{\xe \v sock_private.h\:VER_MAJOR}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define VER_MAJOR\~ 1}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v VER_MINOR\:sock_private.h}
+{\xe \v sock_private.h\:VER_MINOR}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define VER_MINOR\~ 0}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v VER_RELEASE\:sock_private.h}
+{\xe \v sock_private.h\:VER_RELEASE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define VER_RELEASE\~ 0}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v VER_STRING\:sock_private.h}
+{\xe \v sock_private.h\:VER_STRING}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define VER_STRING\~ "1.0.0.0"}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

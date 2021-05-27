@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_king" xml:lang="en-US">
+<title>King Class Reference</title>
+<indexterm><primary>King</primary></indexterm>
+<para>
+<computeroutput>#include &lt;king.h&gt;</computeroutput>
+</para>
+Inheritance diagram for King:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_king__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for King:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_king__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_king_1a2c74bdbc87706c0f0688cd19b5d92b37">King</link> (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_king_1a1fb75c94e504d4fccb9595444331135d">generateMoves</link> (<link linkend="_struct_point">Point</link> currentPos)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_king_1a2c74bdbc87706c0f0688cd19b5d92b37"/>    <section>
+    <title>King()</title>
+<indexterm><primary>King</primary><secondary>King</secondary></indexterm>
+<indexterm><primary>King</primary><secondary>King</secondary></indexterm>
+<para><computeroutput>King::King (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_king_1a1fb75c94e504d4fccb9595444331135d"/>    <section>
+    <title>generateMoves()</title>
+<indexterm><primary>generateMoves</primary><secondary>King</secondary></indexterm>
+<indexterm><primary>King</primary><secondary>generateMoves</secondary></indexterm>
+<para><computeroutput>void King::generateMoves (<link linkend="_struct_point">Point</link> currentPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1ae20a169ce6b98bd1e41125f1828ec541">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_king_a1fb75c94e504d4fccb9595444331135d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_king_8h">king.h</link><link linkend="_king_8cpp">king.cpp</link></section>
+</section>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_detail" kind="struct" language="C++" prot="public">
+    <compoundname>Detail</compoundname>
+    <includes refid="enums__data_8h" local="no">enums_data.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_detail_1a3d9737b936dcddff42430751472e3259" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Detail::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="32" column="5" bodyfile="enums_data.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_detail_1a55b49cdeb34db8d8637af0e80aa1ddae" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Detail::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="33" column="5" bodyfile="enums_data.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_detail_1a557caaacf6cc64e1b77c3c5453834793" prot="public" static="no" mutable="no">
+        <type><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+        <definition>Color Detail::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="34" column="7" bodyfile="enums_data.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_detail_1a5c6641fdbcacf5164e383325dd9fd04d" prot="public" static="no" mutable="no">
+        <type><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kindref="member">PieceType</ref></type>
+        <definition>PieceType Detail::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="35" column="11" bodyfile="enums_data.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="enums_data.h" line="31" column="1" bodyfile="enums_data.h" bodystart="31" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct_detail_1a557caaacf6cc64e1b77c3c5453834793" prot="public" virt="non-virtual"><scope>Detail</scope><name>color</name></member>
+      <member refid="struct_detail_1a5c6641fdbcacf5164e383325dd9fd04d" prot="public" virt="non-virtual"><scope>Detail</scope><name>name</name></member>
+      <member refid="struct_detail_1a3d9737b936dcddff42430751472e3259" prot="public" virt="non-virtual"><scope>Detail</scope><name>x</name></member>
+      <member refid="struct_detail_1a55b49cdeb34db8d8637af0e80aa1ddae" prot="public" virt="non-virtual"><scope>Detail</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

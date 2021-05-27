@@ -1,0 +1,106 @@
+\hypertarget{class_pawn}{}\doxysection{Pawn Class Reference}
+\label{class_pawn}\index{Pawn@{Pawn}}
+
+
+{\ttfamily \#include $<$pawn.\+h$>$}
+
+
+
+Inheritance diagram for Pawn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{class_pawn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Pawn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{class_pawn__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pawn_a3b1d6629081a0286bb8f99febf45a8fb}{Pawn}} (\mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} m\+\_\+color, \mbox{\hyperlink{enums__data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} d)
+\item 
+void \mbox{\hyperlink{class_pawn_adda5fafc9fdca25766551811dce8ab99}{generate\+Moves}} (\mbox{\hyperlink{struct_point}{Point}} current\+Pos)
+\item 
+\mbox{\hyperlink{enums__data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_pawn_a15b52722227cfaa8fcceb0ddf2344964}{get\+Pawn\+Direction}} ()
+\item 
+bool \mbox{\hyperlink{class_pawn_a24d16bc3de3b869a2598624ba9686ef0}{en\+Passant}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$ptr)
+\item 
+void \mbox{\hyperlink{class_pawn_aad90613fd3f8cf57c589fb039a0bd78a}{Adden\+Passant}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pawn_a3b1d6629081a0286bb8f99febf45a8fb}\label{class_pawn_a3b1d6629081a0286bb8f99febf45a8fb}} 
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{Pawn()}{Pawn()}}
+{\footnotesize\ttfamily Pawn\+::\+Pawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{m\+\_\+color,  }\item[{\mbox{\hyperlink{enums__data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{d }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pawn_aad90613fd3f8cf57c589fb039a0bd78a}\label{class_pawn_aad90613fd3f8cf57c589fb039a0bd78a}} 
+\index{Pawn@{Pawn}!AddenPassant@{AddenPassant}}
+\index{AddenPassant@{AddenPassant}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{AddenPassant()}{AddenPassant()}}
+{\footnotesize\ttfamily void Pawn\+::\+Adden\+Passant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_piece_a88217066acc17caf4f200245abf54e05}{Piece}}.
+
+\mbox{\Hypertarget{class_pawn_a24d16bc3de3b869a2598624ba9686ef0}\label{class_pawn_a24d16bc3de3b869a2598624ba9686ef0}} 
+\index{Pawn@{Pawn}!enPassant@{enPassant}}
+\index{enPassant@{enPassant}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{enPassant()}{enPassant()}}
+{\footnotesize\ttfamily bool Pawn\+::en\+Passant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_piece_a0647321e482f692d3018db155158aea0}{Piece}}.
+
+\mbox{\Hypertarget{class_pawn_adda5fafc9fdca25766551811dce8ab99}\label{class_pawn_adda5fafc9fdca25766551811dce8ab99}} 
+\index{Pawn@{Pawn}!generateMoves@{generateMoves}}
+\index{generateMoves@{generateMoves}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{generateMoves()}{generateMoves()}}
+{\footnotesize\ttfamily void Pawn\+::generate\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{current\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_piece_ae20a169ce6b98bd1e41125f1828ec541}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_pawn_adda5fafc9fdca25766551811dce8ab99_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pawn_a15b52722227cfaa8fcceb0ddf2344964}\label{class_pawn_a15b52722227cfaa8fcceb0ddf2344964}} 
+\index{Pawn@{Pawn}!getPawnDirection@{getPawnDirection}}
+\index{getPawnDirection@{getPawnDirection}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{getPawnDirection()}{getPawnDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enums__data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Pawn\+::get\+Pawn\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_piece_acf3ede4e8b3f1cd5fdefb42b322dd79d}{Piece}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pawn_8h}{pawn.\+h}}\item 
+\mbox{\hyperlink{pawn_8cpp}{pawn.\+cpp}}\end{DoxyCompactItemize}

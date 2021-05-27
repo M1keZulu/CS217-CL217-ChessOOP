@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_enums__data_8h" xml:lang="en-US">
+<title>enums_data.h File Reference</title>
+<indexterm><primary>enums_data.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="enums__data_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_point">Point</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_detail">Detail</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_moves">Moves</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> { 
+<link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790">king</link>
+, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51">queen</link>
+, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841">bishop</link>
+, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3">knight</link>
+, 
+<link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f">rook</link>
+, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4">pawn</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> { <link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370">black</link>
+, <link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9">white</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</link> { <link linkend="_enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70bac188eabb2d61ddb1e8632280be9b0dd5">alive</link>
+, <link linkend="_enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70ba2bc11c916ebf99c8bd8b66b416de6d62">dead</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</link> { <link linkend="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81fae877e773e9c04524711efca1ab2fffe9">host</link>
+, <link linkend="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81faa86f52c0660de0ba0e16c95501853106">client</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa">Direction</link> { <link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaaebc281bf093563220c2270ba57dedfce">up</link>
+, <link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaa00156fc42b17a87d0746d97b42caf296">down</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c"/>    <section>
+    <title>Color</title>
+<indexterm><primary>Color</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>Color</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>black</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>black</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370"/>black</entry><entry></entry></row><row><entry><indexterm><primary>white</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>white</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9"/>white</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+    </section><anchor xml:id="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f"/>    <section>
+    <title>ConnectionType</title>
+<indexterm><primary>ConnectionType</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>ConnectionType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>host</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>host</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81fae877e773e9c04524711efca1ab2fffe9"/>host</entry><entry></entry></row><row><entry><indexterm><primary>client</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>client</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81faa86f52c0660de0ba0e16c95501853106"/>client</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+    </section><anchor xml:id="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa"/>    <section>
+    <title>Direction</title>
+<indexterm><primary>Direction</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>Direction</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa">Direction</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>up</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>up</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaaebc281bf093563220c2270ba57dedfce"/>up</entry><entry></entry></row><row><entry><indexterm><primary>down</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>down</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaa00156fc42b17a87d0746d97b42caf296"/>down</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+    </section><anchor xml:id="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021"/>    <section>
+    <title>PieceType</title>
+<indexterm><primary>PieceType</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>PieceType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>king</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>king</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790"/>king</entry><entry></entry></row><row><entry><indexterm><primary>queen</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>queen</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51"/>queen</entry><entry></entry></row><row><entry><indexterm><primary>bishop</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>bishop</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841"/>bishop</entry><entry></entry></row><row><entry><indexterm><primary>knight</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>knight</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3"/>knight</entry><entry></entry></row><row><entry><indexterm><primary>rook</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>rook</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f"/>rook</entry><entry></entry></row><row><entry><indexterm><primary>pawn</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>pawn</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4"/>pawn</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+    </section><anchor xml:id="_enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70b"/>    <section>
+    <title>Status</title>
+<indexterm><primary>Status</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>Status</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>alive</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>alive</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70bac188eabb2d61ddb1e8632280be9b0dd5"/>alive</entry><entry></entry></row><row><entry><indexterm><primary>dead</primary><secondary>enums_data.h</secondary></indexterm>
+<indexterm><primary>enums_data.h</primary><secondary>dead</secondary></indexterm>
+<anchor xml:id="_enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70ba2bc11c916ebf99c8bd8b66b416de6d62"/>dead</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_chess_8cpp" xml:lang="en-US">
+<title>chess.cpp File Reference</title>
+<indexterm><primary>chess.cpp</primary></indexterm>
+<programlisting>#include &lt;iostream&gt;
+#include &lt;SFML/System.hpp&gt;
+#include &lt;SFML/Graphics.hpp&gt;
+#include &lt;SFML/Network.hpp&gt;
+#include &lt;SFML/Window.hpp&gt;
+#include &lt;SFML/Audio.hpp&gt;
+#include &lt;time.h&gt;
+#include &lt;string&gt;
+#include &lt;string.h&gt;
+#include &lt;sstream&gt;
+#include &quot;enums_data.h&quot;
+#include &quot;cell.h&quot;
+#include &quot;board.h&quot;
+#include &quot;network.h&quot;
+#include &quot;gui.h&quot;
+</programlisting>Include dependency graph for chess.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="chess_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_chess_8cpp_1ac389dbca21e58410d552988f3ec954c3">GRID</link>   8</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_chess_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_chess_8cpp_1ac389dbca21e58410d552988f3ec954c3"/>    <section>
+    <title>GRID</title>
+<indexterm><primary>GRID</primary><secondary>chess.cpp</secondary></indexterm>
+<indexterm><primary>chess.cpp</primary><secondary>GRID</secondary></indexterm>
+<para><computeroutput>#define GRID   8</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_chess_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>chess.cpp</secondary></indexterm>
+<indexterm><primary>chess.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para></section>
+</section>
+</section>

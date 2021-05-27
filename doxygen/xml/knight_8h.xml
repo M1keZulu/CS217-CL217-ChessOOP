@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="knight_8h" kind="file" language="C++">
+    <compoundname>knight.h</compoundname>
+    <includedby refid="board_8cpp" local="yes">board.cpp</includedby>
+    <includedby refid="gui_8cpp" local="yes">gui.cpp</includedby>
+    <includedby refid="knight_8cpp" local="yes">knight.cpp</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>knight.cpp</label>
+        <link refid="knight_8cpp"/>
+      </node>
+      <node id="1">
+        <label>knight.h</label>
+        <link refid="knight_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="2">
+        <label>board.cpp</label>
+        <link refid="board_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_knight" prot="public">Knight</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>KNIGHT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KNIGHT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_knight" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_knight" kindref="compound">Knight</ref>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_piece" kindref="compound">Piece</ref>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_knight_1a1567b822a6eac89ab6873eedc8ff5ad6" kindref="member">Knight</ref>(<ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref><sp/>m_color);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_knight_1a8dc6fb637609a836174bd75c3da15769" kindref="member">generateMoves</ref>(<ref refid="struct_point" kindref="compound">Point</ref><sp/>currentPos);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="knight.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_point" kind="struct" language="C++" prot="public">
+    <compoundname>Point</compoundname>
+    <includes refid="enums__data_8h" local="no">enums_data.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_point_1a8c779e11e694b20e0946105a9f5de842" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Point::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="27" column="5" bodyfile="enums_data.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_piece_1a2cbe16344ed80ccead6c8679be678078" compoundref="piece_8cpp" startline="26" endline="28">Piece::addMove</referencedby>
+        <referencedby refid="class_bishop_1a46906106996a8c68fb5c54130eb70d19" compoundref="bishop_8cpp" startline="12" endline="78">Bishop::generateMoves</referencedby>
+        <referencedby refid="class_king_1a1fb75c94e504d4fccb9595444331135d" compoundref="king_8cpp" startline="13" endline="79">King::generateMoves</referencedby>
+        <referencedby refid="class_knight_1a8dc6fb637609a836174bd75c3da15769" compoundref="knight_8cpp" startline="12" endline="54">Knight::generateMoves</referencedby>
+        <referencedby refid="class_pawn_1adda5fafc9fdca25766551811dce8ab99" compoundref="pawn_8cpp" startline="24" endline="70">Pawn::generateMoves</referencedby>
+        <referencedby refid="class_queen_1a276779894849d33832e841ee21286b99" compoundref="queen_8cpp" startline="12" endline="138">Queen::generateMoves</referencedby>
+        <referencedby refid="class_rook_1a8bc7f85bd1cb169d1944871e3327d5e9" compoundref="rook_8cpp" startline="12" endline="74">Rook::generateMoves</referencedby>
+        <referencedby refid="class_board_1a37d5024864df4bc263e26b8cbd6bbaec" compoundref="board_8cpp" startline="28" endline="48">Board::getMoves</referencedby>
+        <referencedby refid="class_gui_1a643aa58792ef3bddd81272c28b2d4c56" compoundref="gui_8cpp" startline="24" endline="367">Gui::Gui</referencedby>
+        <referencedby refid="class_piece_1a0b4a7d639608664bc968062679def36c" compoundref="piece_8cpp" startline="286" endline="293">Piece::inLimits</referencedby>
+        <referencedby refid="class_piece_1a14b78dc6c3fad1a96d57040b6107d0e8" compoundref="piece_8cpp" startline="278" endline="285">Piece::isMoveLegal</referencedby>
+        <referencedby refid="class_piece_1a1d592d6952b109b806428ae0b291e98e" compoundref="piece_8cpp" startline="29" endline="277">Piece::isUnderAttack</referencedby>
+        <referencedby refid="class_board_1ad9ce3a07c2b9095da897ce094085c8ea" compoundref="board_8cpp" startline="231" endline="406">Board::movePiece</referencedby>
+        <referencedby refid="class_board_1adccdcc38662977fb8a8bb8227e6af223" compoundref="board_8cpp" startline="197" endline="219">Board::promotePawn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Point::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="28" column="5" bodyfile="enums_data.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_piece_1a2cbe16344ed80ccead6c8679be678078" compoundref="piece_8cpp" startline="26" endline="28">Piece::addMove</referencedby>
+        <referencedby refid="class_bishop_1a46906106996a8c68fb5c54130eb70d19" compoundref="bishop_8cpp" startline="12" endline="78">Bishop::generateMoves</referencedby>
+        <referencedby refid="class_king_1a1fb75c94e504d4fccb9595444331135d" compoundref="king_8cpp" startline="13" endline="79">King::generateMoves</referencedby>
+        <referencedby refid="class_knight_1a8dc6fb637609a836174bd75c3da15769" compoundref="knight_8cpp" startline="12" endline="54">Knight::generateMoves</referencedby>
+        <referencedby refid="class_pawn_1adda5fafc9fdca25766551811dce8ab99" compoundref="pawn_8cpp" startline="24" endline="70">Pawn::generateMoves</referencedby>
+        <referencedby refid="class_queen_1a276779894849d33832e841ee21286b99" compoundref="queen_8cpp" startline="12" endline="138">Queen::generateMoves</referencedby>
+        <referencedby refid="class_rook_1a8bc7f85bd1cb169d1944871e3327d5e9" compoundref="rook_8cpp" startline="12" endline="74">Rook::generateMoves</referencedby>
+        <referencedby refid="class_board_1a37d5024864df4bc263e26b8cbd6bbaec" compoundref="board_8cpp" startline="28" endline="48">Board::getMoves</referencedby>
+        <referencedby refid="class_gui_1a643aa58792ef3bddd81272c28b2d4c56" compoundref="gui_8cpp" startline="24" endline="367">Gui::Gui</referencedby>
+        <referencedby refid="class_piece_1a0b4a7d639608664bc968062679def36c" compoundref="piece_8cpp" startline="286" endline="293">Piece::inLimits</referencedby>
+        <referencedby refid="class_piece_1a14b78dc6c3fad1a96d57040b6107d0e8" compoundref="piece_8cpp" startline="278" endline="285">Piece::isMoveLegal</referencedby>
+        <referencedby refid="class_piece_1a1d592d6952b109b806428ae0b291e98e" compoundref="piece_8cpp" startline="29" endline="277">Piece::isUnderAttack</referencedby>
+        <referencedby refid="class_board_1ad9ce3a07c2b9095da897ce094085c8ea" compoundref="board_8cpp" startline="231" endline="406">Board::movePiece</referencedby>
+        <referencedby refid="class_board_1adccdcc38662977fb8a8bb8227e6af223" compoundref="board_8cpp" startline="197" endline="219">Board::promotePawn</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="enums_data.h" line="26" column="1" bodyfile="enums_data.h" bodystart="26" bodyend="29"/>
+    <listofallmembers>
+      <member refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" prot="public" virt="non-virtual"><scope>Point</scope><name>x</name></member>
+      <member refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" prot="public" virt="non-virtual"><scope>Point</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

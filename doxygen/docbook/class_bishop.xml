@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_bishop" xml:lang="en-US">
+<title>Bishop Class Reference</title>
+<indexterm><primary>Bishop</primary></indexterm>
+<para>
+<computeroutput>#include &lt;bishop.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Bishop:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bishop__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Bishop:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bishop__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_bishop_1a003f6939a41664a9b348e6b09ee8c0b2">Bishop</link> (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_bishop_1a46906106996a8c68fb5c54130eb70d19">generateMoves</link> (<link linkend="_struct_point">Point</link> currentPos)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_bishop_1a003f6939a41664a9b348e6b09ee8c0b2"/>    <section>
+    <title>Bishop()</title>
+<indexterm><primary>Bishop</primary><secondary>Bishop</secondary></indexterm>
+<indexterm><primary>Bishop</primary><secondary>Bishop</secondary></indexterm>
+<para><computeroutput>Bishop::Bishop (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_bishop_1a46906106996a8c68fb5c54130eb70d19"/>    <section>
+    <title>generateMoves()</title>
+<indexterm><primary>generateMoves</primary><secondary>Bishop</secondary></indexterm>
+<indexterm><primary>Bishop</primary><secondary>generateMoves</secondary></indexterm>
+<para><computeroutput>void Bishop::generateMoves (<link linkend="_struct_point">Point</link> currentPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1ae20a169ce6b98bd1e41125f1828ec541">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bishop_a46906106996a8c68fb5c54130eb70d19_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_bishop_8h">bishop.h</link><link linkend="_bishop_8cpp">bishop.cpp</link></section>
+</section>

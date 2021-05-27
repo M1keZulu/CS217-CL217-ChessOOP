@@ -1,0 +1,6 @@
+<map id="board.h" name="board.h">
+<area shape="rect" id="node1" title=" " alt="" coords="117,5,183,32"/>
+<area shape="rect" id="node2" href="$board_8cpp.html" title=" " alt="" coords="5,80,84,107"/>
+<area shape="rect" id="node3" href="$chess_8cpp.html" title=" " alt="" coords="109,80,191,107"/>
+<area shape="rect" id="node4" href="$gui_8cpp.html" title=" " alt="" coords="215,80,279,107"/>
+</map>

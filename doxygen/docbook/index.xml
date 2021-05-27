@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Chess-OOP</title>
+    </info>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_bishop.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_board.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_cell.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_detail.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_gui.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_king.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_knight.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_moves.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_network.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_pawn.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_piece.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_point.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_queen.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_rook.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="bishop_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bishop_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="board_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="board_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cell_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cell_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="chess_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="enums__data_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gui_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gui_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="king_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="king_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="knight_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="knight_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="network_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="network_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="pawn_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="pawn_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="piece_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="piece_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queen_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queen_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="rook_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="rook_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="sock__private_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

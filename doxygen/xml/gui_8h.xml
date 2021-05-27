@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="gui_8h" kind="file" language="C++">
+    <compoundname>gui.h</compoundname>
+    <includedby refid="chess_8cpp" local="yes">chess.cpp</includedby>
+    <includedby refid="gui_8cpp" local="yes">gui.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>chess.cpp</label>
+        <link refid="chess_8cpp"/>
+      </node>
+      <node id="1">
+        <label>gui.h</label>
+        <link refid="gui_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_gui" prot="public">Gui</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GUI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GUI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_gui" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_gui" kindref="compound">Gui</ref>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_board" kindref="compound">Board</ref><sp/>*b;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_network" kindref="compound">Network</ref><sp/>*n;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Detail&gt;<sp/>dat;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kindref="member">PieceType</ref><sp/>promote;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Moves&gt;<sp/>available;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gui_1ab2655dbb6d3a91d7e90cb83dad6c0450" kindref="member">Gui</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gui_1ab2655dbb6d3a91d7e90cb83dad6c0450" kindref="member">Gui</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f" kindref="member">ConnectionType</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ip);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gui_1a4fd8485d226f9b8a2ac2d81d7f0f3598" kindref="member">~Gui</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="gui.h"/>
+  </compounddef>
+</doxygen>

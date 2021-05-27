@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="enums__data_8h" kind="file" language="C++">
+    <compoundname>enums_data.h</compoundname>
+    <includedby refid="bishop_8cpp" local="yes">bishop.cpp</includedby>
+    <includedby refid="board_8cpp" local="yes">board.cpp</includedby>
+    <includedby refid="chess_8cpp" local="yes">chess.cpp</includedby>
+    <includedby refid="gui_8cpp" local="yes">gui.cpp</includedby>
+    <includedby refid="king_8cpp" local="yes">king.cpp</includedby>
+    <includedby refid="knight_8cpp" local="yes">knight.cpp</includedby>
+    <includedby refid="network_8cpp" local="yes">network.cpp</includedby>
+    <includedby refid="pawn_8cpp" local="yes">pawn.cpp</includedby>
+    <includedby refid="piece_8cpp" local="yes">piece.cpp</includedby>
+    <includedby refid="queen_8cpp" local="yes">queen.cpp</includedby>
+    <includedby refid="rook_8cpp" local="yes">rook.cpp</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>chess.cpp</label>
+        <link refid="chess_8cpp"/>
+      </node>
+      <node id="10">
+        <label>piece.cpp</label>
+        <link refid="piece_8cpp"/>
+      </node>
+      <node id="9">
+        <label>pawn.cpp</label>
+        <link refid="pawn_8cpp"/>
+      </node>
+      <node id="6">
+        <label>king.cpp</label>
+        <link refid="king_8cpp"/>
+      </node>
+      <node id="7">
+        <label>knight.cpp</label>
+        <link refid="knight_8cpp"/>
+      </node>
+      <node id="11">
+        <label>queen.cpp</label>
+        <link refid="queen_8cpp"/>
+      </node>
+      <node id="5">
+        <label>gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="12">
+        <label>rook.cpp</label>
+        <link refid="rook_8cpp"/>
+      </node>
+      <node id="1">
+        <label>enums_data.h</label>
+        <link refid="enums__data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bishop.cpp</label>
+        <link refid="bishop_8cpp"/>
+      </node>
+      <node id="8">
+        <label>network.cpp</label>
+        <link refid="network_8cpp"/>
+      </node>
+      <node id="3">
+        <label>board.cpp</label>
+        <link refid="board_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_point" prot="public">Point</innerclass>
+    <innerclass refid="struct_detail" prot="public">Detail</innerclass>
+    <innerclass refid="struct_moves" prot="public">Moves</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PieceType</name>
+        <enumvalue id="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790" prot="public">
+          <name>king</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51" prot="public">
+          <name>queen</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841" prot="public">
+          <name>bishop</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" prot="public">
+          <name>knight</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f" prot="public">
+          <name>rook</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" prot="public">
+          <name>pawn</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="6" column="1" bodyfile="enums_data.h" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="enum" id="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Color</name>
+        <enumvalue id="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370" prot="public">
+          <name>black</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9" prot="public">
+          <name>white</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="10" column="1" bodyfile="enums_data.h" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="enum" id="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Status</name>
+        <enumvalue id="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70bac188eabb2d61ddb1e8632280be9b0dd5" prot="public">
+          <name>alive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70ba2bc11c916ebf99c8bd8b66b416de6d62" prot="public">
+          <name>dead</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="14" column="1" bodyfile="enums_data.h" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="enum" id="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ConnectionType</name>
+        <enumvalue id="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81fae877e773e9c04524711efca1ab2fffe9" prot="public">
+          <name>host</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81faa86f52c0660de0ba0e16c95501853106" prot="public">
+          <name>client</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="18" column="1" bodyfile="enums_data.h" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="enum" id="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Direction</name>
+        <enumvalue id="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaaebc281bf093563220c2270ba57dedfce" prot="public">
+          <name>up</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaa00156fc42b17a87d0746d97b42caf296" prot="public">
+          <name>down</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="22" column="1" bodyfile="enums_data.h" bodystart="22" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ENUMS_DATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENUMS_DATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kindref="member">PieceType</ref>{</highlight></codeline>
+<codeline lineno="7" refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790" kindref="member">king</ref>,<sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51" kindref="member">queen</ref>,<sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841" kindref="member">bishop</ref>,<sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" kindref="member">knight</ref>,<sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f" kindref="member">rook</ref>,<sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" kindref="member">pawn</ref><sp/></highlight></codeline>
+<codeline lineno="8" refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref>{</highlight></codeline>
+<codeline lineno="11" refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370" kindref="member">black</ref>,<sp/><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9" kindref="member">white</ref></highlight></codeline>
+<codeline lineno="12" refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70b" kindref="member">Status</ref>{</highlight></codeline>
+<codeline lineno="15" refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70bac188eabb2d61ddb1e8632280be9b0dd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70bac188eabb2d61ddb1e8632280be9b0dd5" kindref="member">alive</ref>,<sp/><ref refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70ba2bc11c916ebf99c8bd8b66b416de6d62" kindref="member">dead</ref></highlight></codeline>
+<codeline lineno="16" refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70ba2bc11c916ebf99c8bd8b66b416de6d62" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f" kindref="member">ConnectionType</ref>{</highlight></codeline>
+<codeline lineno="19" refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81fae877e773e9c04524711efca1ab2fffe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81fae877e773e9c04524711efca1ab2fffe9" kindref="member">host</ref>,<sp/><ref refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81faa86f52c0660de0ba0e16c95501853106" kindref="member">client</ref></highlight></codeline>
+<codeline lineno="20" refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81faa86f52c0660de0ba0e16c95501853106" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref>{</highlight></codeline>
+<codeline lineno="23" refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaaebc281bf093563220c2270ba57dedfce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaaebc281bf093563220c2270ba57dedfce" kindref="member">up</ref>,<sp/><ref refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaa00156fc42b17a87d0746d97b42caf296" kindref="member">down</ref></highlight></codeline>
+<codeline lineno="24" refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaa00156fc42b17a87d0746d97b42caf296" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="struct_point" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_point" kindref="compound">Point</ref>{</highlight></codeline>
+<codeline lineno="27" refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="28" refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="struct_detail" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_detail" kindref="compound">Detail</ref>{</highlight></codeline>
+<codeline lineno="32" refid="struct_detail_1a3d9737b936dcddff42430751472e3259" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_detail_1a3d9737b936dcddff42430751472e3259" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="33" refid="struct_detail_1a55b49cdeb34db8d8637af0e80aa1ddae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_detail_1a55b49cdeb34db8d8637af0e80aa1ddae" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="34" refid="struct_detail_1a557caaacf6cc64e1b77c3c5453834793" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref><sp/><ref refid="struct_detail_1a557caaacf6cc64e1b77c3c5453834793" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="35" refid="struct_detail_1a5c6641fdbcacf5164e383325dd9fd04d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kindref="member">PieceType</ref><sp/><ref refid="struct_detail_1a5c6641fdbcacf5164e383325dd9fd04d" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="struct_moves" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_moves" kindref="compound">Moves</ref>{</highlight></codeline>
+<codeline lineno="39" refid="struct_moves_1a09fbe6b26d2897221a7a682f9d573b50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_point" kindref="compound">Point</ref><sp/><ref refid="struct_moves_1a09fbe6b26d2897221a7a682f9d573b50" kindref="member">p</ref>;</highlight></codeline>
+<codeline lineno="40" refid="struct_moves_1a2a304254395478d6a2a6f8eebfb59591" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="struct_moves_1a2a304254395478d6a2a6f8eebfb59591" kindref="member">cell</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="enums_data.h"/>
+  </compounddef>
+</doxygen>

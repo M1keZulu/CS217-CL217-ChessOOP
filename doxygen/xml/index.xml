@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="class_bishop" kind="class"><name>Bishop</name>
+    <member refid="class_bishop_1a003f6939a41664a9b348e6b09ee8c0b2" kind="function"><name>Bishop</name></member>
+    <member refid="class_bishop_1a46906106996a8c68fb5c54130eb70d19" kind="function"><name>generateMoves</name></member>
+  </compound>
+  <compound refid="class_board" kind="class"><name>Board</name>
+    <member refid="class_board_1acc3a47cac49c21e16dc93441ef53edbf" kind="variable"><name>cells</name></member>
+    <member refid="class_board_1ad5a06150e340cf70d59cf0c0b1cd42d0" kind="variable"><name>move</name></member>
+    <member refid="class_board_1a20ffc74c1c3a5180831773386a5837b0" kind="variable"><name>move_sound</name></member>
+    <member refid="class_board_1ab4535fa8c011641ec914924b697cfbd2" kind="function"><name>newMove</name></member>
+    <member refid="class_board_1aad1d55272d0731a5ba89186d27bb233f" kind="function"><name>changeMove</name></member>
+    <member refid="class_board_1ab92926c4b8752c21d5bdb6be73a74112" kind="function"><name>dummyMove</name></member>
+    <member refid="class_board_1afd0e96a4b1485d2ce70581d7102df864" kind="function"><name>Board</name></member>
+    <member refid="class_board_1ad9ce3a07c2b9095da897ce094085c8ea" kind="function"><name>movePiece</name></member>
+    <member refid="class_board_1a4d4b5f673cf95ad76097d918d865e7fa" kind="function"><name>displayBoard</name></member>
+    <member refid="class_board_1a7180d96a5ce90796554f694e1be82896" kind="function"><name>getDetails</name></member>
+    <member refid="class_board_1a1e46ab35e12821b87f6f29e972df003f" kind="function"><name>isCheckMate</name></member>
+    <member refid="class_board_1afc3695932418d576a95256c42e441f4f" kind="function"><name>getKing</name></member>
+    <member refid="class_board_1ad4c89c0cdf47f0555106cb69ac5a4927" kind="function"><name>isCheck</name></member>
+    <member refid="class_board_1a108c8edee1a51d946371984192eb25ef" kind="function"><name>getMove</name></member>
+    <member refid="class_board_1adccdcc38662977fb8a8bb8227e6af223" kind="function"><name>promotePawn</name></member>
+    <member refid="class_board_1a02fbaf695549cd0a63f874e137e7fe38" kind="function"><name>isStaleMate</name></member>
+    <member refid="class_board_1a37d5024864df4bc263e26b8cbd6bbaec" kind="function"><name>getMoves</name></member>
+    <member refid="class_board_1af73f45730119a1fd8f6670f53f959e68" kind="function"><name>~Board</name></member>
+  </compound>
+  <compound refid="class_cell" kind="class"><name>Cell</name>
+    <member refid="class_cell_1a2e2d853f3325acd13027be4e5859a86a" kind="variable"><name>piece</name></member>
+    <member refid="class_cell_1a394510643e8664cf12b5efaf5cb99f71" kind="function"><name>Cell</name></member>
+    <member refid="class_cell_1a1973e6692f8b697222d7d1d3876a7558" kind="function"><name>setNull</name></member>
+    <member refid="class_cell_1a41b76369693cd9039dc68e95c207aaa1" kind="function"><name>setPiece</name></member>
+    <member refid="class_cell_1adfdab6ba1b6a5f9b5369466d84a83a0b" kind="function"><name>getPiece</name></member>
+  </compound>
+  <compound refid="struct_detail" kind="struct"><name>Detail</name>
+    <member refid="struct_detail_1a3d9737b936dcddff42430751472e3259" kind="variable"><name>x</name></member>
+    <member refid="struct_detail_1a55b49cdeb34db8d8637af0e80aa1ddae" kind="variable"><name>y</name></member>
+    <member refid="struct_detail_1a557caaacf6cc64e1b77c3c5453834793" kind="variable"><name>color</name></member>
+    <member refid="struct_detail_1a5c6641fdbcacf5164e383325dd9fd04d" kind="variable"><name>name</name></member>
+  </compound>
+  <compound refid="class_gui" kind="class"><name>Gui</name>
+    <member refid="class_gui_1af530c500add6077d669d58b00f42aa4a" kind="variable"><name>b</name></member>
+    <member refid="class_gui_1a0bcd4717f1150c470bbcedce91f47d50" kind="variable"><name>n</name></member>
+    <member refid="class_gui_1a2410c29d9c6378523a99abf3884b2ee6" kind="variable"><name>dat</name></member>
+    <member refid="class_gui_1a25609cfe0f8bd48824a334a4567b0860" kind="variable"><name>promote</name></member>
+    <member refid="class_gui_1a9950f9ee92df24a69ceee00addded8fa" kind="variable"><name>available</name></member>
+    <member refid="class_gui_1ab2655dbb6d3a91d7e90cb83dad6c0450" kind="function"><name>Gui</name></member>
+    <member refid="class_gui_1a643aa58792ef3bddd81272c28b2d4c56" kind="function"><name>Gui</name></member>
+    <member refid="class_gui_1a4fd8485d226f9b8a2ac2d81d7f0f3598" kind="function"><name>~Gui</name></member>
+  </compound>
+  <compound refid="class_king" kind="class"><name>King</name>
+    <member refid="class_king_1a2c74bdbc87706c0f0688cd19b5d92b37" kind="function"><name>King</name></member>
+    <member refid="class_king_1a1fb75c94e504d4fccb9595444331135d" kind="function"><name>generateMoves</name></member>
+  </compound>
+  <compound refid="class_knight" kind="class"><name>Knight</name>
+    <member refid="class_knight_1a1567b822a6eac89ab6873eedc8ff5ad6" kind="function"><name>Knight</name></member>
+    <member refid="class_knight_1a8dc6fb637609a836174bd75c3da15769" kind="function"><name>generateMoves</name></member>
+  </compound>
+  <compound refid="struct_moves" kind="struct"><name>Moves</name>
+    <member refid="struct_moves_1a09fbe6b26d2897221a7a682f9d573b50" kind="variable"><name>p</name></member>
+    <member refid="struct_moves_1a2a304254395478d6a2a6f8eebfb59591" kind="variable"><name>cell</name></member>
+  </compound>
+  <compound refid="class_network" kind="class"><name>Network</name>
+    <member refid="class_network_1ac70deca1c24182f0deb8444022fef23f" kind="variable"><name>ip</name></member>
+    <member refid="class_network_1ae01c27027b5e0c57dec953171ff92807" kind="variable"><name>socket</name></member>
+    <member refid="class_network_1a90873fe902b1a65cf3172f2f384582fd" kind="variable"><name>connectionType</name></member>
+    <member refid="class_network_1ae6a50472db31f1692f6510aa6f07cc5c" kind="variable"><name>mode</name></member>
+    <member refid="class_network_1a150409f07e56429fa89e557b99fd8c24" kind="variable"><name>x</name></member>
+    <member refid="class_network_1afe3b397d6a505f213c5d8304a7f80c52" kind="variable"><name>received</name></member>
+    <member refid="class_network_1a34fa7e98b7fba6add17e5e46dba99f9a" kind="variable"><name>text</name></member>
+    <member refid="class_network_1a49d0f2a4f1f53c497970829a37e24c3c" kind="function"><name>Network</name></member>
+    <member refid="class_network_1a3cc2fb4f8fa4d507077e8da85ce5a1c8" kind="function"><name>Network</name></member>
+    <member refid="class_network_1a2bc85db160c180bdab6d9213b1dff537" kind="function"><name>send</name></member>
+    <member refid="class_network_1a806a3201561af6e799ebe12cc50a7339" kind="function"><name>send</name></member>
+    <member refid="class_network_1a7745755fc10bf05d9fc3547adffc18d1" kind="function"><name>receive</name></member>
+  </compound>
+  <compound refid="class_pawn" kind="class"><name>Pawn</name>
+    <member refid="class_pawn_1a21922f11d5b66bf23bcff00c521e5949" kind="variable"><name>d</name></member>
+    <member refid="class_pawn_1a3b1d6629081a0286bb8f99febf45a8fb" kind="function"><name>Pawn</name></member>
+    <member refid="class_pawn_1adda5fafc9fdca25766551811dce8ab99" kind="function"><name>generateMoves</name></member>
+    <member refid="class_pawn_1a15b52722227cfaa8fcceb0ddf2344964" kind="function"><name>getPawnDirection</name></member>
+    <member refid="class_pawn_1a24d16bc3de3b869a2598624ba9686ef0" kind="function"><name>enPassant</name></member>
+    <member refid="class_pawn_1aad90613fd3f8cf57c589fb039a0bd78a" kind="function"><name>AddenPassant</name></member>
+  </compound>
+  <compound refid="class_piece" kind="class"><name>Piece</name>
+    <member refid="class_piece_1ab866e2b78f08c3764feed43e43da25d0" kind="variable"><name>name</name></member>
+    <member refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kind="variable"><name>color</name></member>
+    <member refid="class_piece_1a256212f96ea2ff8d6324d239b23b730d" kind="variable"><name>moveCount</name></member>
+    <member refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kind="variable"><name>movesAvailable</name></member>
+    <member refid="class_piece_1afedb258feac080da7def714398b92ce0" kind="variable"><name>pawnLocation</name></member>
+    <member refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kind="variable"><name>cell</name></member>
+    <member refid="class_piece_1a42d582696c1698b0c8b565c3e0d325d3" kind="variable"><name>pieces</name></member>
+    <member refid="class_piece_1a0879195c4d81bdac95aa4d57320eee10" kind="function"><name>Piece</name></member>
+    <member refid="class_piece_1ad65707ed2f50e6d5fef41000395bc050" kind="function"><name>getColor</name></member>
+    <member refid="class_piece_1a38eb417c4df0cf957e4c60e990ac2177" kind="function"><name>getName</name></member>
+    <member refid="class_piece_1ace8d7a830a4d419b5e3d997c1e2a12e9" kind="function"><name>PieceMoved</name></member>
+    <member refid="class_piece_1aedad096a332cb6fe4abd799c503927f3" kind="function"><name>getAvailableMoves</name></member>
+    <member refid="class_piece_1a0b4a7d639608664bc968062679def36c" kind="function"><name>inLimits</name></member>
+    <member refid="class_piece_1ae20a169ce6b98bd1e41125f1828ec541" kind="function"><name>generateMoves</name></member>
+    <member refid="class_piece_1a14b78dc6c3fad1a96d57040b6107d0e8" kind="function"><name>isMoveLegal</name></member>
+    <member refid="class_piece_1a1d592d6952b109b806428ae0b291e98e" kind="function"><name>isUnderAttack</name></member>
+    <member refid="class_piece_1a2cbe16344ed80ccead6c8679be678078" kind="function"><name>addMove</name></member>
+    <member refid="class_piece_1ae49872b2812e4825f2d4a45c8a996539" kind="function"><name>numberMoves</name></member>
+    <member refid="class_piece_1a5c4e8e2c03b49909ffd8f7ac16afebd6" kind="function"><name>getCount</name></member>
+    <member refid="class_piece_1acf3ede4e8b3f1cd5fdefb42b322dd79d" kind="function"><name>getPawnDirection</name></member>
+    <member refid="class_piece_1a0647321e482f692d3018db155158aea0" kind="function"><name>enPassant</name></member>
+    <member refid="class_piece_1a88217066acc17caf4f200245abf54e05" kind="function"><name>AddenPassant</name></member>
+    <member refid="class_piece_1a9bbdeaa655a2de61b6e7101ff89bf795" kind="function"><name>getPossibleMoves</name></member>
+    <member refid="class_piece_1a851fad877ea6dd61d15cba614baa78c1" kind="function"><name>setCellArray</name></member>
+    <member refid="class_piece_1af9d46f546814e53bef385fa951b2579a" kind="function"><name>getPieces</name></member>
+    <member refid="class_piece_1ae7d23e73e4591a7b671cc70e2c43cc67" kind="function"><name>clearPieces</name></member>
+  </compound>
+  <compound refid="struct_point" kind="struct"><name>Point</name>
+    <member refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kind="variable"><name>x</name></member>
+    <member refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kind="variable"><name>y</name></member>
+  </compound>
+  <compound refid="class_queen" kind="class"><name>Queen</name>
+    <member refid="class_queen_1aba37d0e5e187c24f61bbae136445c633" kind="function"><name>Queen</name></member>
+    <member refid="class_queen_1a276779894849d33832e841ee21286b99" kind="function"><name>generateMoves</name></member>
+  </compound>
+  <compound refid="class_rook" kind="class"><name>Rook</name>
+    <member refid="class_rook_1a5a2bca98e518ada1e56c0d0cc4f01eff" kind="function"><name>Rook</name></member>
+    <member refid="class_rook_1a8bc7f85bd1cb169d1944871e3327d5e9" kind="function"><name>generateMoves</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="bishop_8cpp" kind="file"><name>bishop.cpp</name>
+    <member refid="bishop_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="bishop_8h" kind="file"><name>bishop.h</name>
+  </compound>
+  <compound refid="board_8cpp" kind="file"><name>board.cpp</name>
+    <member refid="board_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="board_8h" kind="file"><name>board.h</name>
+  </compound>
+  <compound refid="cell_8cpp" kind="file"><name>cell.cpp</name>
+  </compound>
+  <compound refid="cell_8h" kind="file"><name>cell.h</name>
+  </compound>
+  <compound refid="chess_8cpp" kind="file"><name>chess.cpp</name>
+    <member refid="chess_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+    <member refid="chess_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="enums__data_8h" kind="file"><name>enums_data.h</name>
+    <member refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kind="enum"><name>PieceType</name></member>
+    <member refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790" kind="enumvalue"><name>king</name></member>
+    <member refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51" kind="enumvalue"><name>queen</name></member>
+    <member refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841" kind="enumvalue"><name>bishop</name></member>
+    <member refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" kind="enumvalue"><name>knight</name></member>
+    <member refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f" kind="enumvalue"><name>rook</name></member>
+    <member refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" kind="enumvalue"><name>pawn</name></member>
+    <member refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kind="enum"><name>Color</name></member>
+    <member refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370" kind="enumvalue"><name>black</name></member>
+    <member refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9" kind="enumvalue"><name>white</name></member>
+    <member refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70b" kind="enum"><name>Status</name></member>
+    <member refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70bac188eabb2d61ddb1e8632280be9b0dd5" kind="enumvalue"><name>alive</name></member>
+    <member refid="enums__data_8h_1a67a0db04d321a74b7e7fcfd3f1a3f70ba2bc11c916ebf99c8bd8b66b416de6d62" kind="enumvalue"><name>dead</name></member>
+    <member refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f" kind="enum"><name>ConnectionType</name></member>
+    <member refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81fae877e773e9c04524711efca1ab2fffe9" kind="enumvalue"><name>host</name></member>
+    <member refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81faa86f52c0660de0ba0e16c95501853106" kind="enumvalue"><name>client</name></member>
+    <member refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kind="enum"><name>Direction</name></member>
+    <member refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaaebc281bf093563220c2270ba57dedfce" kind="enumvalue"><name>up</name></member>
+    <member refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aaa00156fc42b17a87d0746d97b42caf296" kind="enumvalue"><name>down</name></member>
+  </compound>
+  <compound refid="gui_8cpp" kind="file"><name>gui.cpp</name>
+    <member refid="gui_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="gui_8h" kind="file"><name>gui.h</name>
+  </compound>
+  <compound refid="king_8cpp" kind="file"><name>king.cpp</name>
+    <member refid="king_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="king_8h" kind="file"><name>king.h</name>
+  </compound>
+  <compound refid="knight_8cpp" kind="file"><name>knight.cpp</name>
+    <member refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="knight_8h" kind="file"><name>knight.h</name>
+  </compound>
+  <compound refid="network_8cpp" kind="file"><name>network.cpp</name>
+  </compound>
+  <compound refid="network_8h" kind="file"><name>network.h</name>
+  </compound>
+  <compound refid="pawn_8cpp" kind="file"><name>pawn.cpp</name>
+    <member refid="pawn_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="pawn_8h" kind="file"><name>pawn.h</name>
+  </compound>
+  <compound refid="piece_8cpp" kind="file"><name>piece.cpp</name>
+    <member refid="piece_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="piece_8h" kind="file"><name>piece.h</name>
+  </compound>
+  <compound refid="queen_8cpp" kind="file"><name>queen.cpp</name>
+    <member refid="queen_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="queen_8h" kind="file"><name>queen.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="rook_8cpp" kind="file"><name>rook.cpp</name>
+    <member refid="rook_8cpp_1ac389dbca21e58410d552988f3ec954c3" kind="define"><name>GRID</name></member>
+  </compound>
+  <compound refid="rook_8h" kind="file"><name>rook.h</name>
+    <member refid="rook_8h_1ab35a4cffbe364e830e350c1a3e7c3b4a" kind="define"><name>ROOK_H</name></member>
+  </compound>
+  <compound refid="sock__private_8h" kind="file"><name>sock_private.h</name>
+    <member refid="sock__private_8h_1aec977eff8d77d9c22f46665015a6f239" kind="define"><name>VER_STRING</name></member>
+    <member refid="sock__private_8h_1ae9b0873c1004a01651f733d556db118c" kind="define"><name>VER_MAJOR</name></member>
+    <member refid="sock__private_8h_1ad78650efa42849c5f86d372f11f26403" kind="define"><name>VER_MINOR</name></member>
+    <member refid="sock__private_8h_1a3addb24971814c8e78cf3872dd643a48" kind="define"><name>VER_RELEASE</name></member>
+    <member refid="sock__private_8h_1a7ce3a6824adeecbb4481086e2ba00fb8" kind="define"><name>VER_BUILD</name></member>
+    <member refid="sock__private_8h_1a9c76a8ad5fd75187ad154a79d392dfc2" kind="define"><name>COMPANY_NAME</name></member>
+    <member refid="sock__private_8h_1a78550c98b8cfa286587b618347dc3011" kind="define"><name>FILE_VERSION</name></member>
+    <member refid="sock__private_8h_1a01192f4cf039acedc3ac603f80f59184" kind="define"><name>FILE_DESCRIPTION</name></member>
+    <member refid="sock__private_8h_1a8a8c7bc542435504233c139db8466fa5" kind="define"><name>INTERNAL_NAME</name></member>
+    <member refid="sock__private_8h_1a8b95afde376bc69dc26a267786125074" kind="define"><name>LEGAL_COPYRIGHT</name></member>
+    <member refid="sock__private_8h_1ae4fa88b4630b8cd07bc0bd4bd90ca816" kind="define"><name>LEGAL_TRADEMARKS</name></member>
+    <member refid="sock__private_8h_1a60d025b4ac9be9b1a924be9d15b2d4a3" kind="define"><name>ORIGINAL_FILENAME</name></member>
+    <member refid="sock__private_8h_1a2fd81ded1b6a151f629441182c358d5b" kind="define"><name>PRODUCT_NAME</name></member>
+    <member refid="sock__private_8h_1a0ba1a85361118228096108c7d425f84b" kind="define"><name>PRODUCT_VERSION</name></member>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+</doxygenindex>

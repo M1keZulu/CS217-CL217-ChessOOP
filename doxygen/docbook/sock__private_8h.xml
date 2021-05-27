@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sock__private_8h" xml:lang="en-US">
+<title>sock_private.h File Reference</title>
+<indexterm><primary>sock_private.h</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_sock__private_8h_1aec977eff8d77d9c22f46665015a6f239">VER_STRING</link>   &quot;1.0.0.0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1ae9b0873c1004a01651f733d556db118c">VER_MAJOR</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1ad78650efa42849c5f86d372f11f26403">VER_MINOR</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a3addb24971814c8e78cf3872dd643a48">VER_RELEASE</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a7ce3a6824adeecbb4481086e2ba00fb8">VER_BUILD</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a9c76a8ad5fd75187ad154a79d392dfc2">COMPANY_NAME</link>   &quot;&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a78550c98b8cfa286587b618347dc3011">FILE_VERSION</link>   &quot;1.0.0.0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a01192f4cf039acedc3ac603f80f59184">FILE_DESCRIPTION</link>   &quot;Developed using the Dev-C++ IDE&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a8a8c7bc542435504233c139db8466fa5">INTERNAL_NAME</link>   &quot;&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a8b95afde376bc69dc26a267786125074">LEGAL_COPYRIGHT</link>   &quot;&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1ae4fa88b4630b8cd07bc0bd4bd90ca816">LEGAL_TRADEMARKS</link>   &quot;&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a60d025b4ac9be9b1a924be9d15b2d4a3">ORIGINAL_FILENAME</link>   &quot;&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a2fd81ded1b6a151f629441182c358d5b">PRODUCT_NAME</link>   &quot;&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sock__private_8h_1a0ba1a85361118228096108c7d425f84b">PRODUCT_VERSION</link>   &quot;1.0.0.0&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_sock__private_8h_1a9c76a8ad5fd75187ad154a79d392dfc2"/>    <section>
+    <title>COMPANY_NAME</title>
+<indexterm><primary>COMPANY_NAME</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>COMPANY_NAME</secondary></indexterm>
+<para><computeroutput>#define COMPANY_NAME   &quot;&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a01192f4cf039acedc3ac603f80f59184"/>    <section>
+    <title>FILE_DESCRIPTION</title>
+<indexterm><primary>FILE_DESCRIPTION</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>FILE_DESCRIPTION</secondary></indexterm>
+<para><computeroutput>#define FILE_DESCRIPTION   &quot;Developed using the Dev-C++ IDE&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a78550c98b8cfa286587b618347dc3011"/>    <section>
+    <title>FILE_VERSION</title>
+<indexterm><primary>FILE_VERSION</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>FILE_VERSION</secondary></indexterm>
+<para><computeroutput>#define FILE_VERSION   &quot;1.0.0.0&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a8a8c7bc542435504233c139db8466fa5"/>    <section>
+    <title>INTERNAL_NAME</title>
+<indexterm><primary>INTERNAL_NAME</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>INTERNAL_NAME</secondary></indexterm>
+<para><computeroutput>#define INTERNAL_NAME   &quot;&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a8b95afde376bc69dc26a267786125074"/>    <section>
+    <title>LEGAL_COPYRIGHT</title>
+<indexterm><primary>LEGAL_COPYRIGHT</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>LEGAL_COPYRIGHT</secondary></indexterm>
+<para><computeroutput>#define LEGAL_COPYRIGHT   &quot;&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1ae4fa88b4630b8cd07bc0bd4bd90ca816"/>    <section>
+    <title>LEGAL_TRADEMARKS</title>
+<indexterm><primary>LEGAL_TRADEMARKS</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>LEGAL_TRADEMARKS</secondary></indexterm>
+<para><computeroutput>#define LEGAL_TRADEMARKS   &quot;&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a60d025b4ac9be9b1a924be9d15b2d4a3"/>    <section>
+    <title>ORIGINAL_FILENAME</title>
+<indexterm><primary>ORIGINAL_FILENAME</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>ORIGINAL_FILENAME</secondary></indexterm>
+<para><computeroutput>#define ORIGINAL_FILENAME   &quot;&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a2fd81ded1b6a151f629441182c358d5b"/>    <section>
+    <title>PRODUCT_NAME</title>
+<indexterm><primary>PRODUCT_NAME</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>PRODUCT_NAME</secondary></indexterm>
+<para><computeroutput>#define PRODUCT_NAME   &quot;&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a0ba1a85361118228096108c7d425f84b"/>    <section>
+    <title>PRODUCT_VERSION</title>
+<indexterm><primary>PRODUCT_VERSION</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>PRODUCT_VERSION</secondary></indexterm>
+<para><computeroutput>#define PRODUCT_VERSION   &quot;1.0.0.0&quot;</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a7ce3a6824adeecbb4481086e2ba00fb8"/>    <section>
+    <title>VER_BUILD</title>
+<indexterm><primary>VER_BUILD</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>VER_BUILD</secondary></indexterm>
+<para><computeroutput>#define VER_BUILD   0</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1ae9b0873c1004a01651f733d556db118c"/>    <section>
+    <title>VER_MAJOR</title>
+<indexterm><primary>VER_MAJOR</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>VER_MAJOR</secondary></indexterm>
+<para><computeroutput>#define VER_MAJOR   1</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1ad78650efa42849c5f86d372f11f26403"/>    <section>
+    <title>VER_MINOR</title>
+<indexterm><primary>VER_MINOR</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>VER_MINOR</secondary></indexterm>
+<para><computeroutput>#define VER_MINOR   0</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1a3addb24971814c8e78cf3872dd643a48"/>    <section>
+    <title>VER_RELEASE</title>
+<indexterm><primary>VER_RELEASE</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>VER_RELEASE</secondary></indexterm>
+<para><computeroutput>#define VER_RELEASE   0</computeroutput></para>    </section><anchor xml:id="_sock__private_8h_1aec977eff8d77d9c22f46665015a6f239"/>    <section>
+    <title>VER_STRING</title>
+<indexterm><primary>VER_STRING</primary><secondary>sock_private.h</secondary></indexterm>
+<indexterm><primary>sock_private.h</primary><secondary>VER_STRING</secondary></indexterm>
+<para><computeroutput>#define VER_STRING   &quot;1.0.0.0&quot;</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="knight_8cpp" kind="file" language="C++">
+    <compoundname>knight.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes refid="enums__data_8h" local="yes">enums_data.h</includes>
+    <includes refid="cell_8h" local="yes">cell.h</includes>
+    <includes refid="piece_8h" local="yes">piece.h</includes>
+    <includes refid="knight_8h" local="yes">knight.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>knight.cpp</label>
+        <link refid="knight_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>knight.h</label>
+        <link refid="knight_8h"/>
+      </node>
+      <node id="6">
+        <label>piece.h</label>
+        <link refid="piece_8h"/>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>enums_data.h</label>
+        <link refid="enums__data_8h"/>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>cell.h</label>
+        <link refid="cell_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" prot="public" static="no">
+        <name>GRID</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="knight.cpp" line="3" column="11" bodyfile="knight.cpp" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRID<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="enums__data_8h" kindref="compound">enums_data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cell_8h" kindref="compound">cell.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="piece_8h" kindref="compound">piece.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="knight_8h" kindref="compound">knight.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_knight_1a1567b822a6eac89ab6873eedc8ff5ad6" refkind="member"><highlight class="normal"><ref refid="class_knight_1a1567b822a6eac89ab6873eedc8ff5ad6" kindref="member">Knight::Knight</ref>(<ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref><sp/>m_color):<ref refid="class_piece" kindref="compound">Piece</ref>(m_color,<sp/><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" kindref="member">knight</ref>){}</highlight></codeline>
+<codeline lineno="12" refid="class_knight_1a8dc6fb637609a836174bd75c3da15769" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_knight_1a8dc6fb637609a836174bd75c3da15769" kindref="member">Knight::generateMoves</ref>(<ref refid="struct_point" kindref="compound">Point</ref><sp/>currentPos){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.clear();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_piece_1a0b4a7d639608664bc968062679def36c" kindref="member">inLimits</ref>({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-2,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-1})){<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(x-2,y-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-2)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-1))-&gt;getPiece()==NULL<sp/>||<sp/>(<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-2)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-1))-&gt;getPiece()-&gt;getColor()!=<ref refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.push_back({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-2,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-1});</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_piece_1a0b4a7d639608664bc968062679def36c" kindref="member">inLimits</ref>({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+2,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-1})){<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(x+2,y-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+2)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-1))-&gt;getPiece()==NULL<sp/>||<sp/>(<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+2)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-1))-&gt;getPiece()-&gt;getColor()!=<ref refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.push_back({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+2,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-1});</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_piece_1a0b4a7d639608664bc968062679def36c" kindref="member">inLimits</ref>({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+2,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+1})){<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(x+2,y+1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+2)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+1))-&gt;getPiece()==NULL<sp/>||<sp/>(<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+2)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+1))-&gt;getPiece()-&gt;getColor()!=<ref refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.push_back({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+2,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+1});</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_piece_1a0b4a7d639608664bc968062679def36c" kindref="member">inLimits</ref>({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-2,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+1})){<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(x-2,y+1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-2)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+1))-&gt;getPiece()==NULL<sp/>||<sp/>(<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-2)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+1))-&gt;getPiece()-&gt;getColor()!=<ref refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.push_back({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-2,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+1});</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_piece_1a0b4a7d639608664bc968062679def36c" kindref="member">inLimits</ref>({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+1,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+2})){<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(x+1,y+2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+1)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+2))-&gt;getPiece()==NULL<sp/>||<sp/>(<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+1)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+2))-&gt;getPiece()-&gt;getColor()!=<ref refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.push_back({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+1,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+2});</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_piece_1a0b4a7d639608664bc968062679def36c" kindref="member">inLimits</ref>({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+1,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-2})){<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(x+1,y-2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+1)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-2))-&gt;getPiece()==NULL<sp/>||<sp/>(<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+1)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-2))-&gt;getPiece()-&gt;getColor()!=<ref refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.push_back({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>+1,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-2});</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_piece_1a0b4a7d639608664bc968062679def36c" kindref="member">inLimits</ref>({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-1,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+2})){<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(x-1,y+2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-1)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+2))-&gt;getPiece()==NULL<sp/>||<sp/>(<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-1)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+2))-&gt;getPiece()-&gt;getColor()!=<ref refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.push_back({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-1,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>+2});</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_piece_1a0b4a7d639608664bc968062679def36c" kindref="member">inLimits</ref>({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-1,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-2})){<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//(x-1,y-2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-1)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-2))-&gt;getPiece()==NULL<sp/>||<sp/>(<ref refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" kindref="member">cell</ref>+((currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-1)*<ref refid="knight_8cpp_1ac389dbca21e58410d552988f3ec954c3" kindref="member">GRID</ref>)+(currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-2))-&gt;getPiece()-&gt;getColor()!=<ref refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" kindref="member">movesAvailable</ref>.push_back({currentPos.<ref refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" kindref="member">x</ref>-1,<sp/>currentPos.<ref refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" kindref="member">y</ref>-2});</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="knight.cpp"/>
+  </compounddef>
+</doxygen>

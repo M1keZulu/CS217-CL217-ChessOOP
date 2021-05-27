@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_queen" xml:lang="en-US">
+<title>Queen Class Reference</title>
+<indexterm><primary>Queen</primary></indexterm>
+<para>
+<computeroutput>#include &lt;queen.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Queen:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_queen__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Queen:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_queen__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_queen_1aba37d0e5e187c24f61bbae136445c633">Queen</link> (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_queen_1a276779894849d33832e841ee21286b99">generateMoves</link> (<link linkend="_struct_point">Point</link> currentPos)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_queen_1aba37d0e5e187c24f61bbae136445c633"/>    <section>
+    <title>Queen()</title>
+<indexterm><primary>Queen</primary><secondary>Queen</secondary></indexterm>
+<indexterm><primary>Queen</primary><secondary>Queen</secondary></indexterm>
+<para><computeroutput>Queen::Queen (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_queen_1a276779894849d33832e841ee21286b99"/>    <section>
+    <title>generateMoves()</title>
+<indexterm><primary>generateMoves</primary><secondary>Queen</secondary></indexterm>
+<indexterm><primary>Queen</primary><secondary>generateMoves</secondary></indexterm>
+<para><computeroutput>void Queen::generateMoves (<link linkend="_struct_point">Point</link> currentPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1ae20a169ce6b98bd1e41125f1828ec541">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_queen_a276779894849d33832e841ee21286b99_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_queen_8h">queen.h</link><link linkend="_queen_8cpp">queen.cpp</link></section>
+</section>

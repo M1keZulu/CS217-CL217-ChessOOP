@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pawn_8h" kind="file" language="C++">
+    <compoundname>pawn.h</compoundname>
+    <includedby refid="board_8cpp" local="yes">board.cpp</includedby>
+    <includedby refid="gui_8cpp" local="yes">gui.cpp</includedby>
+    <includedby refid="pawn_8cpp" local="yes">pawn.cpp</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>pawn.cpp</label>
+        <link refid="pawn_8cpp"/>
+      </node>
+      <node id="3">
+        <label>gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="1">
+        <label>pawn.h</label>
+        <link refid="pawn_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>board.cpp</label>
+        <link refid="board_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_pawn" prot="public">Pawn</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PAWN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PAWN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_pawn" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_pawn" kindref="compound">Pawn</ref>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_piece" kindref="compound">Piece</ref>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/>d;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pawn_1a3b1d6629081a0286bb8f99febf45a8fb" kindref="member">Pawn</ref>(<ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref><sp/>m_color,<sp/><ref refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/>d);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pawn_1adda5fafc9fdca25766551811dce8ab99" kindref="member">generateMoves</ref>(<ref refid="struct_point" kindref="compound">Point</ref><sp/>currentPos);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="enums__data_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/><ref refid="class_pawn_1a15b52722227cfaa8fcceb0ddf2344964" kindref="member">getPawnDirection</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_pawn_1a24d16bc3de3b869a2598624ba9686ef0" kindref="member">enPassant</ref>(<ref refid="class_piece" kindref="compound">Piece</ref><sp/>*ptr);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pawn_1aad90613fd3f8cf57c589fb039a0bd78a" kindref="member">AddenPassant</ref>(<ref refid="class_piece" kindref="compound">Piece</ref><sp/>*ptr);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="pawn.h"/>
+  </compounddef>
+</doxygen>

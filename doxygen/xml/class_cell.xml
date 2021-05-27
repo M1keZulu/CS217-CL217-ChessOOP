@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_cell" kind="class" language="C++" prot="public">
+    <compoundname>Cell</compoundname>
+    <includes refid="cell_8h" local="no">cell.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_cell_1a2e2d853f3325acd13027be4e5859a86a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_piece" kindref="compound">Piece</ref> *</type>
+        <definition>Piece* Cell::piece</definition>
+        <argsstring></argsstring>
+        <name>piece</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cell.h" line="8" column="7" bodyfile="cell.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cell_1a394510643e8664cf12b5efaf5cb99f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Cell::Cell</definition>
+        <argsstring>()</argsstring>
+        <name>Cell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cell.h" line="10" column="1" bodyfile="cell.cpp" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a1973e6692f8b697222d7d1d3876a7558" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::setNull</definition>
+        <argsstring>()</argsstring>
+        <name>setNull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cell.h" line="11" column="6" bodyfile="cell.cpp" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1a41b76369693cd9039dc68e95c207aaa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cell::setPiece</definition>
+        <argsstring>(Piece *m_piece)</argsstring>
+        <name>setPiece</name>
+        <param>
+          <type><ref refid="class_piece" kindref="compound">Piece</ref> *</type>
+          <declname>m_piece</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cell.h" line="12" column="6" bodyfile="cell.cpp" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cell_1adfdab6ba1b6a5f9b5369466d84a83a0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_piece" kindref="compound">Piece</ref> *</type>
+        <definition>Piece * Cell::getPiece</definition>
+        <argsstring>()</argsstring>
+        <name>getPiece</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cell.h" line="13" column="7" bodyfile="cell.cpp" bodystart="9" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Cell</label>
+        <link refid="class_cell"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>piece</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Piece</label>
+        <link refid="class_piece"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>cell</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cell.h" line="6" column="1" bodyfile="cell.h" bodystart="6" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_cell_1a394510643e8664cf12b5efaf5cb99f71" prot="public" virt="non-virtual"><scope>Cell</scope><name>Cell</name></member>
+      <member refid="class_cell_1adfdab6ba1b6a5f9b5369466d84a83a0b" prot="public" virt="non-virtual"><scope>Cell</scope><name>getPiece</name></member>
+      <member refid="class_cell_1a2e2d853f3325acd13027be4e5859a86a" prot="protected" virt="non-virtual"><scope>Cell</scope><name>piece</name></member>
+      <member refid="class_cell_1a1973e6692f8b697222d7d1d3876a7558" prot="public" virt="non-virtual"><scope>Cell</scope><name>setNull</name></member>
+      <member refid="class_cell_1a41b76369693cd9039dc68e95c207aaa1" prot="public" virt="non-virtual"><scope>Cell</scope><name>setPiece</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

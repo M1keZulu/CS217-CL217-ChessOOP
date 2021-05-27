@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>CS217-CL217-ChessOOP</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;https://imgur.com/1wULnoj.png?raw=true&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Chess<sp/>Game<sp/>designed<sp/>as<sp/>a<sp/>semester<sp/>project<sp/>for<sp/>OOP<sp/>course<sp/>at<sp/>FAST<sp/>National<sp/>University-NUCES,<sp/>Karachi.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![FAST<sp/>National<sp/>University](https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/National_University_of_Computer_and_Emerging_Sciences_logo.png/250px-National_University_of_Computer_and_Emerging_Sciences_logo.png)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Object-Oriented<sp/>Programming<sp/>is<sp/>an<sp/>important<sp/>programming<sp/>paradigm.<sp/>It<sp/>is<sp/>important<sp/>that<sp/>a<sp/>programmer<sp/>is<sp/>well-versed<sp/>with<sp/>its<sp/>principles<sp/>to<sp/>write<sp/>code<sp/>that<sp/>makes<sp/>development<sp/>and<sp/>maintenance<sp/>of<sp/>code<sp/>easier<sp/>and<sp/>secure.<sp/>Game<sp/>Development<sp/>relies<sp/>on<sp/>OOP<sp/>more<sp/>than<sp/>any<sp/>other<sp/>form<sp/>of<sp/>development.<sp/>It<sp/>is,<sp/>therefore,<sp/>an<sp/>effecient<sp/>way<sp/>to<sp/>demonstrate<sp/>skills<sp/>that<sp/>were<sp/>picked<sp/>up<sp/>during<sp/>the<sp/>course.<sp/>Chess<sp/>is<sp/>a<sp/>game<sp/>that<sp/>is<sp/>played<sp/>worldwide<sp/>and<sp/>is<sp/>a<sp/>very<sp/>good<sp/>example<sp/>of<sp/>how<sp/>different<sp/>core<sp/>objects<sp/>of<sp/>the<sp/>game<sp/>can<sp/>be<sp/>simulated<sp/>virtually<sp/>throught<sp/>Object-Oriented<sp/>Programming.<sp/>This<sp/>game<sp/>is<sp/>completely<sp/>made<sp/>from<sp/>scratch<sp/>and<sp/>uses<sp/>OOP<sp/>principles<sp/>to<sp/>implement<sp/>a<sp/>completely<sp/>functional<sp/>game<sp/>that<sp/>can<sp/>be<sp/>played<sp/>both<sp/>Offline<sp/>and<sp/>Online<sp/>over<sp/>a<sp/>LAN<sp/>network<sp/>or<sp/>Public<sp/>Internet<sp/>using<sp/>port-forwarding.<sp/>Simple<sp/>and<sp/>Fast<sp/>Multimedia<sp/>Library<sp/>(SFML)<sp/>was<sp/>used<sp/>to<sp/>achieve<sp/>the<sp/>graphical<sp/>and<sp/>network<sp/>functionality<sp/>of<sp/>the<sp/>game.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Dependencies</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Windows<sp/>10/MacOS/Linux</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>SFML<sp/>Library<sp/>Linked</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>time.h</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>string.h</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>sstream</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>vector</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Installing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>All<sp/>the<sp/>files<sp/>linked<sp/>in<sp/>the<sp/>GitHub<sp/>repository<sp/>are<sp/>needed<sp/>for<sp/>the<sp/>project<sp/>to<sp/>run<sp/>as<sp/>intended<sp/>&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>project<sp/>was<sp/>developed<sp/>on<sp/>Windows<sp/>10<sp/>using<sp/>Dev-C++<sp/>with<sp/>SFML<sp/>Library<sp/>Version<sp/>2.4.2<sp/>TDM.<sp/>The<sp/>files<sp/>for<sp/>this<sp/>particular<sp/>version<sp/>are<sp/>available<sp/>in<sp/>the<sp/>respoitory.<sp/>However,<sp/>it<sp/>should<sp/>be<sp/>made<sp/>sure<sp/>that<sp/>the<sp/>library<sp/>you<sp/>download<sp/>is<sp/>compatible<sp/>with<sp/>the<sp/>exact<sp/>version<sp/>of<sp/>the<sp/>C++<sp/>compiler<sp/>that<sp/>you<sp/>are<sp/>using.<sp/>In<sp/>this<sp/>case,<sp/>the<sp/>compiler<sp/>in<sp/>use<sp/>was<sp/>TDM-GCC<sp/>4.9.2<sp/>64-bit<sp/>Release.<sp/>For<sp/>more<sp/>information<sp/>and<sp/>download,<sp/>visit<sp/>https://www.sfml-dev.org/download.php</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Executing<sp/>program</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>How<sp/>to<sp/>run<sp/>the<sp/>program<sp/>&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">Once<sp/>all<sp/>the<sp/>files<sp/>have<sp/>been<sp/>downloaded<sp/>and<sp/>the<sp/>library<sp/>has<sp/>been<sp/>linked,<sp/>compile<sp/>and<sp/>run<sp/>chess.cpp.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">g++<sp/>-c<sp/>chess.cpp<sp/>-I<sp/>&lt;sfml-include&gt;</highlight></codeline>
+<codeline><highlight class="normal">g++<sp/>chess.o<sp/>-L<sp/>&lt;sfml-library&gt;<sp/>-static-libgcc<sp/>-DSFML_STATIC<sp/>-lsfml-graphics<sp/>-lsfml-window<sp/>-lsfml-system<sp/>-lsfml-network<sp/>-lsfml-audio</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;b&gt;Specific<sp/>Instructions<sp/>for<sp/>Executing<sp/>the<sp/>Project<sp/>on<sp/>Dev-C++&lt;/b&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>run<sp/>this<sp/>project<sp/>using<sp/>Dev-C++,<sp/>create<sp/>a<sp/>new<sp/>project<sp/>(either<sp/>console<sp/>or<sp/>GUI<sp/>-<sp/>console<sp/>is<sp/>required<sp/>for<sp/>debugging)<sp/>and<sp/>then<sp/>follow<sp/>the<sp/>instructions<sp/>in<sp/>this<sp/>video<sp/>by<sp/>Mike<sp/>Exc<sp/>(All<sp/>Rights<sp/>Reserved)<sp/>https://www.youtube.com/watch?v=uAd2jINKCxc</highlight></codeline>
+<codeline><highlight class="normal">When<sp/>done,<sp/>add<sp/>the<sp/>chess.cpp<sp/>file<sp/>to<sp/>the<sp/>project<sp/>and<sp/>press<sp/>F11<sp/>to<sp/>compile<sp/>and<sp/>run.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Gameplay</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Features</highlight></codeline>
+<codeline><highlight class="normal">Complete<sp/>functionality<sp/>of<sp/>chess<sp/>game<sp/>has<sp/>been<sp/>added<sp/>except<sp/>for<sp/>draw<sp/>conditions.<sp/>Only<sp/>one<sp/>draw<sp/>condition<sp/>is<sp/>implemented<sp/>up<sp/>till<sp/>now<sp/>which<sp/>will<sp/>occur<sp/>when<sp/>the<sp/>moving<sp/>side<sp/>is<sp/>not<sp/>in<sp/>check<sp/>and<sp/>has<sp/>no<sp/>moves<sp/>left.</highlight></codeline>
+<codeline><highlight class="normal">Special<sp/>Moves<sp/>Available:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>En<sp/>Passant</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;https://imgur.com/axSaVoF.gif?raw=true&quot;<sp/>width=&quot;300&quot;<sp/>height=&quot;300&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Short<sp/>Castling</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;https://imgur.com/Z2QLP7m.gif?raw=true&quot;<sp/>width=&quot;300&quot;<sp/>height=&quot;300&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Long<sp/>Castling</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;https://imgur.com/C5fQiNY.gif?raw=true&quot;<sp/>width=&quot;300&quot;<sp/>height=&quot;300&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Pawn<sp/>Promotion</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;https://imgur.com/CV0VKaJ.gif?raw=true&quot;<sp/>width=&quot;300&quot;<sp/>height=&quot;300&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Stalemate<sp/>by<sp/>no<sp/>legal<sp/>moves<sp/>left</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Movement</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Main<sp/>Menu</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>menu<sp/>works<sp/>with<sp/>a<sp/>KEYBOARD<sp/>only<sp/>and<sp/>up/down<sp/>arrow<sp/>keys<sp/>are<sp/>used<sp/>to<sp/>navigate<sp/>the<sp/>menu.<sp/>You<sp/>can<sp/>enter<sp/>the<sp/>IP<sp/>address<sp/>directly<sp/>by<sp/>typing<sp/>using<sp/>the<sp/>keyboard.</highlight></codeline>
+<codeline><highlight class="normal">Refer<sp/>to<sp/>help<sp/>menu<sp/>for<sp/>a<sp/>known<sp/>bug<sp/>regarding<sp/>the<sp/>Host<sp/>mode.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![](https://imgur.com/INeMw52.gif)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Offline/Online<sp/>Modes</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>make<sp/>a<sp/>move,<sp/>use<sp/>the<sp/>left<sp/>mouse<sp/>button<sp/>to<sp/>select<sp/>the<sp/>piece<sp/>you<sp/>want<sp/>to<sp/>move<sp/>and<sp/>right<sp/>mouse<sp/>button<sp/>at<sp/>the<sp/>desired<sp/>location<sp/>that<sp/>you<sp/>want<sp/>to<sp/>move<sp/>the<sp/>piece<sp/>to.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">IMPORTANT:<sp/>It<sp/>is<sp/>important<sp/>to<sp/>note<sp/>that<sp/>before<sp/>the<sp/>PROMOTION<sp/>move,<sp/>you<sp/>will<sp/>have<sp/>to<sp/>press<sp/>q(queen),<sp/>r(rook),<sp/>k(knight),<sp/>or<sp/>b(bishop)<sp/>on<sp/>the<sp/>keyboard<sp/>before<sp/>making<sp/>hitting<sp/>the<sp/>right<sp/>mouse<sp/>button.<sp/>By<sp/>default,<sp/>the<sp/>game<sp/>promotes<sp/>all<sp/>pawns<sp/>to<sp/>Queen.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![](https://imgur.com/ujhUFrn.gif)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Help/Known<sp/>Issues</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>Host<sp/>Functionality<sp/>in<sp/>the<sp/>program<sp/>is<sp/>bugged<sp/>due<sp/>to<sp/>an<sp/>issue<sp/>in<sp/>programming<sp/>the<sp/>main<sp/>event<sp/>loop<sp/>of<sp/>the<sp/>program.<sp/>It<sp/>will<sp/>go<sp/>to<sp/>not<sp/>responding<sp/>when<sp/>left<sp/>for<sp/>a<sp/>while,<sp/>the<sp/>only<sp/>options<sp/>are<sp/>to<sp/>connect<sp/>or<sp/>to<sp/>force<sp/>quit<sp/>it<sp/>if<sp/>that<sp/>happens.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Highlighting<sp/>possible<sp/>moves<sp/>is<sp/>only<sp/>available<sp/>for<sp/>non-special/generic<sp/>moves<sp/>as<sp/>of<sp/>now.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Author</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Muhammad<sp/>Zain<sp/>Ul<sp/>Abiddin&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">muhammadzain757@gmail.com&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal">[LinkedIn](https://www.linkedin.com/in/muhammad-zain-ul-abiddin-83194a201/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Acknowledgments</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[JohnPablock](https://opengameart.org/content/chess-pieces-and-board-squares)<sp/>for<sp/>Texture<sp/>Images</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Userstyles.org](https://userstyles.org/styles/113726/lichess-board-babinga)<sp/>for<sp/>Board<sp/>Background</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Online<sp/>Gameplay</highlight></codeline>
+<codeline><highlight class="normal">![](https://user-images.githubusercontent.com/68997634/119646585-c3f52100-be38-11eb-94fc-db266221e3cc.gif)</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

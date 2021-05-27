@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_gui" kind="class" language="C++" prot="public">
+    <compoundname>Gui</compoundname>
+    <includes refid="gui_8h" local="no">gui.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_gui_1af530c500add6077d669d58b00f42aa4a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_board" kindref="compound">Board</ref> *</type>
+        <definition>Board* Gui::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui.h" line="6" column="7" bodyfile="gui.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_gui_1a0bcd4717f1150c470bbcedce91f47d50" prot="private" static="no" mutable="no">
+        <type><ref refid="class_network" kindref="compound">Network</ref> *</type>
+        <definition>Network* Gui::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui.h" line="7" column="9" bodyfile="gui.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_gui_1a2410c29d9c6378523a99abf3884b2ee6" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="struct_detail" kindref="compound">Detail</ref> &gt;</type>
+        <definition>vector&lt;Detail&gt; Gui::dat</definition>
+        <argsstring></argsstring>
+        <name>dat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui.h" line="8" column="8" bodyfile="gui.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_gui_1a25609cfe0f8bd48824a334a4567b0860" prot="private" static="no" mutable="no">
+        <type><ref refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021" kindref="member">PieceType</ref></type>
+        <definition>PieceType Gui::promote</definition>
+        <argsstring></argsstring>
+        <name>promote</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui.h" line="9" column="11" bodyfile="gui.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_gui_1a9950f9ee92df24a69ceee00addded8fa" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="struct_moves" kindref="compound">Moves</ref> &gt;</type>
+        <definition>vector&lt;Moves&gt; Gui::available</definition>
+        <argsstring></argsstring>
+        <name>available</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui.h" line="10" column="8" bodyfile="gui.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_gui_1ab2655dbb6d3a91d7e90cb83dad6c0450" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gui::Gui</definition>
+        <argsstring>()</argsstring>
+        <name>Gui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui.h" line="12" column="1" bodyfile="gui.cpp" bodystart="368" bodyend="638"/>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841" compoundref="enums__data_8h" startline="7">bishop</references>
+        <references refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370" compoundref="enums__data_8h" startline="11">black</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790" compoundref="enums__data_8h" startline="7">king</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" compoundref="enums__data_8h" startline="7">knight</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" compoundref="enums__data_8h" startline="7">pawn</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51" compoundref="enums__data_8h" startline="7">queen</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f" compoundref="enums__data_8h" startline="7">rook</references>
+        <references refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9" compoundref="enums__data_8h" startline="11">white</references>
+        <references refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" compoundref="enums__data_8h" startline="27">Point::x</references>
+        <references refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" compoundref="enums__data_8h" startline="28">Point::y</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gui_1a643aa58792ef3bddd81272c28b2d4c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gui::Gui</definition>
+        <argsstring>(const ConnectionType type, string ip)</argsstring>
+        <name>Gui</name>
+        <param>
+          <type>const <ref refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f" kindref="member">ConnectionType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui.h" line="13" column="1" bodyfile="gui.cpp" bodystart="24" bodyend="367"/>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a1777a6c6eca5d45d0b2497cb81655841" compoundref="enums__data_8h" startline="7">bishop</references>
+        <references refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1ca775364fe1f3fffe99686bf6d572a7370" compoundref="enums__data_8h" startline="11">black</references>
+        <references refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81faa86f52c0660de0ba0e16c95501853106" compoundref="enums__data_8h" startline="19">client</references>
+        <references refid="enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81fae877e773e9c04524711efca1ab2fffe9" compoundref="enums__data_8h" startline="19">host</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021ad37cd21affc48f293839963387e0f790" compoundref="enums__data_8h" startline="7">king</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a62d98a2bce526c2c65df90a8632636c3" compoundref="enums__data_8h" startline="7">knight</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a366d07fc8b05bf575d5306795ace13a4" compoundref="enums__data_8h" startline="7">pawn</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a0a6497b92a62262a6001b788cf2a8a51" compoundref="enums__data_8h" startline="7">queen</references>
+        <references refid="enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021a86a1080ba85c6e5fb246d32259f5f16f" compoundref="enums__data_8h" startline="7">rook</references>
+        <references refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1cade7bfe6c82a2aaaee276f752cdadf3a9" compoundref="enums__data_8h" startline="11">white</references>
+        <references refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" compoundref="enums__data_8h" startline="27">Point::x</references>
+        <references refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" compoundref="enums__data_8h" startline="28">Point::y</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gui_1a4fd8485d226f9b8a2ac2d81d7f0f3598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gui::~Gui</definition>
+        <argsstring>()</argsstring>
+        <name>~Gui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui.h" line="14" column="1" bodyfile="gui.cpp" bodystart="639" bodyend="644"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="gui.h" line="4" column="1" bodyfile="gui.h" bodystart="4" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_gui_1a9950f9ee92df24a69ceee00addded8fa" prot="private" virt="non-virtual"><scope>Gui</scope><name>available</name></member>
+      <member refid="class_gui_1af530c500add6077d669d58b00f42aa4a" prot="private" virt="non-virtual"><scope>Gui</scope><name>b</name></member>
+      <member refid="class_gui_1a2410c29d9c6378523a99abf3884b2ee6" prot="private" virt="non-virtual"><scope>Gui</scope><name>dat</name></member>
+      <member refid="class_gui_1ab2655dbb6d3a91d7e90cb83dad6c0450" prot="public" virt="non-virtual"><scope>Gui</scope><name>Gui</name></member>
+      <member refid="class_gui_1a643aa58792ef3bddd81272c28b2d4c56" prot="public" virt="non-virtual"><scope>Gui</scope><name>Gui</name></member>
+      <member refid="class_gui_1a0bcd4717f1150c470bbcedce91f47d50" prot="private" virt="non-virtual"><scope>Gui</scope><name>n</name></member>
+      <member refid="class_gui_1a25609cfe0f8bd48824a334a4567b0860" prot="private" virt="non-virtual"><scope>Gui</scope><name>promote</name></member>
+      <member refid="class_gui_1a4fd8485d226f9b8a2ac2d81d7f0f3598" prot="public" virt="non-virtual"><scope>Gui</scope><name>~Gui</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,176 @@
+.TH "Piece" 3 "Thu May 27 2021" "Version 2.0" "Chess-OOP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Piece
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <piece\&.h>\fP
+.PP
+Inherited by \fBBishop\fP, \fBKing\fP, \fBKnight\fP, \fBPawn\fP, \fBQueen\fP, and \fBRook\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPiece\fP (\fBColor\fP m_color, \fBPieceType\fP \fBname\fP)"
+.br
+.ti -1c
+.RI "virtual \fBColor\fP \fBgetColor\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBPieceType\fP \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBPieceMoved\fP ()"
+.br
+.ti -1c
+.RI "virtual vector< \fBPoint\fP > \fBgetAvailableMoves\fP ()"
+.br
+.ti -1c
+.RI "int \fBinLimits\fP (\fBPoint\fP checkPos)"
+.br
+.ti -1c
+.RI "virtual void \fBgenerateMoves\fP (\fBPoint\fP currentPos)"
+.br
+.ti -1c
+.RI "virtual int \fBisMoveLegal\fP (\fBPoint\fP newPos)"
+.br
+.ti -1c
+.RI "virtual bool \fBisUnderAttack\fP (\fBPoint\fP currentPos)"
+.br
+.ti -1c
+.RI "virtual void \fBaddMove\fP (\fBPoint\fP pos)"
+.br
+.ti -1c
+.RI "virtual int \fBnumberMoves\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBgetCount\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBDirection\fP \fBgetPawnDirection\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBenPassant\fP (\fBPiece\fP *ptr)"
+.br
+.ti -1c
+.RI "virtual void \fBAddenPassant\fP (\fBPiece\fP *ptr)"
+.br
+.ti -1c
+.RI "vector< \fBPoint\fP > \fBgetPossibleMoves\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBsetCellArray\fP (\fBCell\fP *m_cell)"
+.br
+.ti -1c
+.RI "static vector< \fBPiece\fP * > \fBgetPieces\fP ()"
+.br
+.ti -1c
+.RI "static void \fBclearPieces\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBPieceType\fP \fBname\fP"
+.br
+.ti -1c
+.RI "const \fBColor\fP \fBcolor\fP"
+.br
+.ti -1c
+.RI "int \fBmoveCount\fP"
+.br
+.ti -1c
+.RI "vector< \fBPoint\fP > \fBmovesAvailable\fP"
+.br
+.ti -1c
+.RI "vector< \fBPiece\fP * > \fBpawnLocation\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBCell\fP * \fBcell\fP"
+.br
+.ti -1c
+.RI "static vector< \fBPiece\fP * > \fBpieces\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Piece::Piece (\fBColor\fP m_color, \fBPieceType\fP name)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Piece::AddenPassant (\fBPiece\fP * ptr)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPawn\fP\&.
+.SS "void Piece::addMove (\fBPoint\fP pos)\fC [virtual]\fP"
+
+.SS "void Piece::clearPieces ()\fC [static]\fP"
+
+.SS "bool Piece::enPassant (\fBPiece\fP * ptr)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPawn\fP\&.
+.SS "void Piece::generateMoves (\fBPoint\fP currentPos)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBRook\fP, \fBQueen\fP, \fBPawn\fP, \fBKnight\fP, \fBKing\fP, and \fBBishop\fP\&.
+.SS "vector< \fBPoint\fP > Piece::getAvailableMoves ()\fC [virtual]\fP"
+
+.SS "\fBColor\fP Piece::getColor ()\fC [virtual]\fP"
+
+.SS "int Piece::getCount ()\fC [virtual]\fP"
+
+.SS "\fBPieceType\fP Piece::getName ()\fC [virtual]\fP"
+
+.SS "\fBDirection\fP Piece::getPawnDirection ()\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPawn\fP\&.
+.SS "vector< \fBPiece\fP * > Piece::getPieces ()\fC [static]\fP"
+
+.SS "vector< \fBPoint\fP > Piece::getPossibleMoves ()"
+
+.SS "int Piece::inLimits (\fBPoint\fP checkPos)"
+
+.SS "int Piece::isMoveLegal (\fBPoint\fP newPos)\fC [virtual]\fP"
+
+.SS "bool Piece::isUnderAttack (\fBPoint\fP currentPos)\fC [virtual]\fP"
+
+.SS "int Piece::numberMoves ()\fC [virtual]\fP"
+
+.SS "void Piece::PieceMoved ()\fC [virtual]\fP"
+
+.SS "void Piece::setCellArray (\fBCell\fP * m_cell)\fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCell\fP * Piece::cell\fC [static]\fP, \fC [protected]\fP"
+
+.SS "const \fBColor\fP Piece::color\fC [protected]\fP"
+
+.SS "int Piece::moveCount\fC [protected]\fP"
+
+.SS "vector<\fBPoint\fP> Piece::movesAvailable\fC [protected]\fP"
+
+.SS "const \fBPieceType\fP Piece::name\fC [protected]\fP"
+
+.SS "vector<\fBPiece\fP*> Piece::pawnLocation\fC [protected]\fP"
+
+.SS "vector< \fBPiece\fP * > Piece::pieces\fC [static]\fP, \fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess-OOP from the source code\&.

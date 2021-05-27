@@ -1,0 +1,325 @@
+\hypertarget{class_piece}{}\doxysection{Piece Class Reference}
+\label{class_piece}\index{Piece@{Piece}}
+
+
+{\ttfamily \#include $<$piece.\+h$>$}
+
+
+
+Inheritance diagram for Piece\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_piece__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Piece\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{class_piece__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piece_a0879195c4d81bdac95aa4d57320eee10}{Piece}} (\mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} m\+\_\+color, \mbox{\hyperlink{enums__data_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} \mbox{\hyperlink{class_piece_ab866e2b78f08c3764feed43e43da25d0}{name}})
+\item 
+virtual \mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{class_piece_ad65707ed2f50e6d5fef41000395bc050}{get\+Color}} ()
+\item 
+virtual \mbox{\hyperlink{enums__data_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} \mbox{\hyperlink{class_piece_a38eb417c4df0cf957e4c60e990ac2177}{get\+Name}} ()
+\item 
+virtual void \mbox{\hyperlink{class_piece_ace8d7a830a4d419b5e3d997c1e2a12e9}{Piece\+Moved}} ()
+\item 
+virtual vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \mbox{\hyperlink{class_piece_aedad096a332cb6fe4abd799c503927f3}{get\+Available\+Moves}} ()
+\item 
+int \mbox{\hyperlink{class_piece_a0b4a7d639608664bc968062679def36c}{in\+Limits}} (\mbox{\hyperlink{struct_point}{Point}} check\+Pos)
+\item 
+virtual void \mbox{\hyperlink{class_piece_ae20a169ce6b98bd1e41125f1828ec541}{generate\+Moves}} (\mbox{\hyperlink{struct_point}{Point}} current\+Pos)
+\item 
+virtual int \mbox{\hyperlink{class_piece_a14b78dc6c3fad1a96d57040b6107d0e8}{is\+Move\+Legal}} (\mbox{\hyperlink{struct_point}{Point}} new\+Pos)
+\item 
+virtual bool \mbox{\hyperlink{class_piece_a1d592d6952b109b806428ae0b291e98e}{is\+Under\+Attack}} (\mbox{\hyperlink{struct_point}{Point}} current\+Pos)
+\item 
+virtual void \mbox{\hyperlink{class_piece_a2cbe16344ed80ccead6c8679be678078}{add\+Move}} (\mbox{\hyperlink{struct_point}{Point}} pos)
+\item 
+virtual int \mbox{\hyperlink{class_piece_ae49872b2812e4825f2d4a45c8a996539}{number\+Moves}} ()
+\item 
+virtual int \mbox{\hyperlink{class_piece_a5c4e8e2c03b49909ffd8f7ac16afebd6}{get\+Count}} ()
+\item 
+virtual \mbox{\hyperlink{enums__data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_piece_acf3ede4e8b3f1cd5fdefb42b322dd79d}{get\+Pawn\+Direction}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_piece_a0647321e482f692d3018db155158aea0}{en\+Passant}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$ptr)
+\item 
+virtual void \mbox{\hyperlink{class_piece_a88217066acc17caf4f200245abf54e05}{Adden\+Passant}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$ptr)
+\item 
+vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \mbox{\hyperlink{class_piece_a9bbdeaa655a2de61b6e7101ff89bf795}{get\+Possible\+Moves}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_piece_a851fad877ea6dd61d15cba614baa78c1}{set\+Cell\+Array}} (\mbox{\hyperlink{class_cell}{Cell}} $\ast$m\+\_\+cell)
+\item 
+static vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{class_piece_af9d46f546814e53bef385fa951b2579a}{get\+Pieces}} ()
+\item 
+static void \mbox{\hyperlink{class_piece_ae7d23e73e4591a7b671cc70e2c43cc67}{clear\+Pieces}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{enums__data_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} \mbox{\hyperlink{class_piece_ab866e2b78f08c3764feed43e43da25d0}{name}}
+\item 
+const \mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{class_piece_ac3951a11d91640b4a4c507e67bacee73}{color}}
+\item 
+int \mbox{\hyperlink{class_piece_a256212f96ea2ff8d6324d239b23b730d}{move\+Count}}
+\item 
+vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \mbox{\hyperlink{class_piece_a24fb75c3281e4c3c0e7b73c2e4f719b2}{moves\+Available}}
+\item 
+vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{class_piece_afedb258feac080da7def714398b92ce0}{pawn\+Location}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_cell}{Cell}} $\ast$ \mbox{\hyperlink{class_piece_abf0dcc424990fe8e17e72b846988e262}{cell}}
+\item 
+static vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{class_piece_a42d582696c1698b0c8b565c3e0d325d3}{pieces}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_piece_a0879195c4d81bdac95aa4d57320eee10}\label{class_piece_a0879195c4d81bdac95aa4d57320eee10}} 
+\index{Piece@{Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Piece()}{Piece()}}
+{\footnotesize\ttfamily Piece\+::\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{m\+\_\+color,  }\item[{\mbox{\hyperlink{enums__data_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}}}]{name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_piece_a88217066acc17caf4f200245abf54e05}\label{class_piece_a88217066acc17caf4f200245abf54e05}} 
+\index{Piece@{Piece}!AddenPassant@{AddenPassant}}
+\index{AddenPassant@{AddenPassant}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{AddenPassant()}{AddenPassant()}}
+{\footnotesize\ttfamily void Piece\+::\+Adden\+Passant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pawn_aad90613fd3f8cf57c589fb039a0bd78a}{Pawn}}.
+
+\mbox{\Hypertarget{class_piece_a2cbe16344ed80ccead6c8679be678078}\label{class_piece_a2cbe16344ed80ccead6c8679be678078}} 
+\index{Piece@{Piece}!addMove@{addMove}}
+\index{addMove@{addMove}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{addMove()}{addMove()}}
+{\footnotesize\ttfamily void Piece\+::add\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_piece_ae7d23e73e4591a7b671cc70e2c43cc67}\label{class_piece_ae7d23e73e4591a7b671cc70e2c43cc67}} 
+\index{Piece@{Piece}!clearPieces@{clearPieces}}
+\index{clearPieces@{clearPieces}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{clearPieces()}{clearPieces()}}
+{\footnotesize\ttfamily void Piece\+::clear\+Pieces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_piece_ae7d23e73e4591a7b671cc70e2c43cc67_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_piece_a0647321e482f692d3018db155158aea0}\label{class_piece_a0647321e482f692d3018db155158aea0}} 
+\index{Piece@{Piece}!enPassant@{enPassant}}
+\index{enPassant@{enPassant}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{enPassant()}{enPassant()}}
+{\footnotesize\ttfamily bool Piece\+::en\+Passant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pawn_a24d16bc3de3b869a2598624ba9686ef0}{Pawn}}.
+
+\mbox{\Hypertarget{class_piece_ae20a169ce6b98bd1e41125f1828ec541}\label{class_piece_ae20a169ce6b98bd1e41125f1828ec541}} 
+\index{Piece@{Piece}!generateMoves@{generateMoves}}
+\index{generateMoves@{generateMoves}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{generateMoves()}{generateMoves()}}
+{\footnotesize\ttfamily void Piece\+::generate\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{current\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_rook_a8bc7f85bd1cb169d1944871e3327d5e9}{Rook}}, \mbox{\hyperlink{class_queen_a276779894849d33832e841ee21286b99}{Queen}}, \mbox{\hyperlink{class_pawn_adda5fafc9fdca25766551811dce8ab99}{Pawn}}, \mbox{\hyperlink{class_knight_a8dc6fb637609a836174bd75c3da15769}{Knight}}, \mbox{\hyperlink{class_king_a1fb75c94e504d4fccb9595444331135d}{King}}, and \mbox{\hyperlink{class_bishop_a46906106996a8c68fb5c54130eb70d19}{Bishop}}.
+
+\mbox{\Hypertarget{class_piece_aedad096a332cb6fe4abd799c503927f3}\label{class_piece_aedad096a332cb6fe4abd799c503927f3}} 
+\index{Piece@{Piece}!getAvailableMoves@{getAvailableMoves}}
+\index{getAvailableMoves@{getAvailableMoves}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getAvailableMoves()}{getAvailableMoves()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ Piece\+::get\+Available\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_piece_ad65707ed2f50e6d5fef41000395bc050}\label{class_piece_ad65707ed2f50e6d5fef41000395bc050}} 
+\index{Piece@{Piece}!getColor@{getColor}}
+\index{getColor@{getColor}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} Piece\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_piece_a5c4e8e2c03b49909ffd8f7ac16afebd6}\label{class_piece_a5c4e8e2c03b49909ffd8f7ac16afebd6}} 
+\index{Piece@{Piece}!getCount@{getCount}}
+\index{getCount@{getCount}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily int Piece\+::get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_piece_a38eb417c4df0cf957e4c60e990ac2177}\label{class_piece_a38eb417c4df0cf957e4c60e990ac2177}} 
+\index{Piece@{Piece}!getName@{getName}}
+\index{getName@{getName}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enums__data_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} Piece\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_piece_acf3ede4e8b3f1cd5fdefb42b322dd79d}\label{class_piece_acf3ede4e8b3f1cd5fdefb42b322dd79d}} 
+\index{Piece@{Piece}!getPawnDirection@{getPawnDirection}}
+\index{getPawnDirection@{getPawnDirection}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getPawnDirection()}{getPawnDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enums__data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Piece\+::get\+Pawn\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pawn_a15b52722227cfaa8fcceb0ddf2344964}{Pawn}}.
+
+\mbox{\Hypertarget{class_piece_af9d46f546814e53bef385fa951b2579a}\label{class_piece_af9d46f546814e53bef385fa951b2579a}} 
+\index{Piece@{Piece}!getPieces@{getPieces}}
+\index{getPieces@{getPieces}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getPieces()}{getPieces()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ Piece\+::get\+Pieces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{class_piece_af9d46f546814e53bef385fa951b2579a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_piece_a9bbdeaa655a2de61b6e7101ff89bf795}\label{class_piece_a9bbdeaa655a2de61b6e7101ff89bf795}} 
+\index{Piece@{Piece}!getPossibleMoves@{getPossibleMoves}}
+\index{getPossibleMoves@{getPossibleMoves}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getPossibleMoves()}{getPossibleMoves()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ Piece\+::get\+Possible\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_piece_a0b4a7d639608664bc968062679def36c}\label{class_piece_a0b4a7d639608664bc968062679def36c}} 
+\index{Piece@{Piece}!inLimits@{inLimits}}
+\index{inLimits@{inLimits}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{inLimits()}{inLimits()}}
+{\footnotesize\ttfamily int Piece\+::in\+Limits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{check\+Pos }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_piece_a0b4a7d639608664bc968062679def36c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_piece_a14b78dc6c3fad1a96d57040b6107d0e8}\label{class_piece_a14b78dc6c3fad1a96d57040b6107d0e8}} 
+\index{Piece@{Piece}!isMoveLegal@{isMoveLegal}}
+\index{isMoveLegal@{isMoveLegal}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{isMoveLegal()}{isMoveLegal()}}
+{\footnotesize\ttfamily int Piece\+::is\+Move\+Legal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{new\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_piece_a1d592d6952b109b806428ae0b291e98e}\label{class_piece_a1d592d6952b109b806428ae0b291e98e}} 
+\index{Piece@{Piece}!isUnderAttack@{isUnderAttack}}
+\index{isUnderAttack@{isUnderAttack}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{isUnderAttack()}{isUnderAttack()}}
+{\footnotesize\ttfamily bool Piece\+::is\+Under\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{current\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_piece_a1d592d6952b109b806428ae0b291e98e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_piece_ae49872b2812e4825f2d4a45c8a996539}\label{class_piece_ae49872b2812e4825f2d4a45c8a996539}} 
+\index{Piece@{Piece}!numberMoves@{numberMoves}}
+\index{numberMoves@{numberMoves}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{numberMoves()}{numberMoves()}}
+{\footnotesize\ttfamily int Piece\+::number\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_piece_ace8d7a830a4d419b5e3d997c1e2a12e9}\label{class_piece_ace8d7a830a4d419b5e3d997c1e2a12e9}} 
+\index{Piece@{Piece}!PieceMoved@{PieceMoved}}
+\index{PieceMoved@{PieceMoved}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{PieceMoved()}{PieceMoved()}}
+{\footnotesize\ttfamily void Piece\+::\+Piece\+Moved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{class_piece_ace8d7a830a4d419b5e3d997c1e2a12e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_piece_a851fad877ea6dd61d15cba614baa78c1}\label{class_piece_a851fad877ea6dd61d15cba614baa78c1}} 
+\index{Piece@{Piece}!setCellArray@{setCellArray}}
+\index{setCellArray@{setCellArray}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{setCellArray()}{setCellArray()}}
+{\footnotesize\ttfamily void Piece\+::set\+Cell\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cell}{Cell}} $\ast$}]{m\+\_\+cell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_piece_a851fad877ea6dd61d15cba614baa78c1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_piece_abf0dcc424990fe8e17e72b846988e262}\label{class_piece_abf0dcc424990fe8e17e72b846988e262}} 
+\index{Piece@{Piece}!cell@{cell}}
+\index{cell@{cell}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{cell}{cell}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cell}{Cell}} $\ast$ Piece\+::cell\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_piece_ac3951a11d91640b4a4c507e67bacee73}\label{class_piece_ac3951a11d91640b4a4c507e67bacee73}} 
+\index{Piece@{Piece}!color@{color}}
+\index{color@{color}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} Piece\+::color\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_piece_a256212f96ea2ff8d6324d239b23b730d}\label{class_piece_a256212f96ea2ff8d6324d239b23b730d}} 
+\index{Piece@{Piece}!moveCount@{moveCount}}
+\index{moveCount@{moveCount}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{moveCount}{moveCount}}
+{\footnotesize\ttfamily int Piece\+::move\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_piece_a24fb75c3281e4c3c0e7b73c2e4f719b2}\label{class_piece_a24fb75c3281e4c3c0e7b73c2e4f719b2}} 
+\index{Piece@{Piece}!movesAvailable@{movesAvailable}}
+\index{movesAvailable@{movesAvailable}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{movesAvailable}{movesAvailable}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{struct_point}{Point}}$>$ Piece\+::moves\+Available\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_piece_ab866e2b78f08c3764feed43e43da25d0}\label{class_piece_ab866e2b78f08c3764feed43e43da25d0}} 
+\index{Piece@{Piece}!name@{name}}
+\index{name@{name}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{enums__data_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} Piece\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_piece_afedb258feac080da7def714398b92ce0}\label{class_piece_afedb258feac080da7def714398b92ce0}} 
+\index{Piece@{Piece}!pawnLocation@{pawnLocation}}
+\index{pawnLocation@{pawnLocation}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{pawnLocation}{pawnLocation}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_piece}{Piece}}$\ast$$>$ Piece\+::pawn\+Location\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_piece_a42d582696c1698b0c8b565c3e0d325d3}\label{class_piece_a42d582696c1698b0c8b565c3e0d325d3}} 
+\index{Piece@{Piece}!pieces@{pieces}}
+\index{pieces@{pieces}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{pieces}{pieces}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ Piece\+::pieces\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{piece_8h}{piece.\+h}}\item 
+\mbox{\hyperlink{piece_8cpp}{piece.\+cpp}}\end{DoxyCompactItemize}

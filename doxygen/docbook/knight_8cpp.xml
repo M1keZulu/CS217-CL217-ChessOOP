@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_knight_8cpp" xml:lang="en-US">
+<title>knight.cpp File Reference</title>
+<indexterm><primary>knight.cpp</primary></indexterm>
+<programlisting>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &quot;enums_data.h&quot;
+#include &quot;cell.h&quot;
+#include &quot;piece.h&quot;
+#include &quot;knight.h&quot;
+</programlisting>Include dependency graph for knight.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="knight_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_knight_8cpp_1ac389dbca21e58410d552988f3ec954c3">GRID</link>   8</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_knight_8cpp_1ac389dbca21e58410d552988f3ec954c3"/>    <section>
+    <title>GRID</title>
+<indexterm><primary>GRID</primary><secondary>knight.cpp</secondary></indexterm>
+<indexterm><primary>knight.cpp</primary><secondary>GRID</secondary></indexterm>
+<para><computeroutput>#define GRID   8</computeroutput></para></section>
+</section>
+</section>

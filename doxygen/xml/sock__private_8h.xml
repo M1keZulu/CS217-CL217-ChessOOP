@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="sock__private_8h" kind="file" language="C++">
+    <compoundname>sock_private.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sock__private_8h_1aec977eff8d77d9c22f46665015a6f239" prot="public" static="no">
+        <name>VER_STRING</name>
+        <initializer>&quot;1.0.0.0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="8" column="9" bodyfile="sock_private.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1ae9b0873c1004a01651f733d556db118c" prot="public" static="no">
+        <name>VER_MAJOR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="9" column="9" bodyfile="sock_private.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1ad78650efa42849c5f86d372f11f26403" prot="public" static="no">
+        <name>VER_MINOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="10" column="9" bodyfile="sock_private.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a3addb24971814c8e78cf3872dd643a48" prot="public" static="no">
+        <name>VER_RELEASE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="11" column="9" bodyfile="sock_private.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a7ce3a6824adeecbb4481086e2ba00fb8" prot="public" static="no">
+        <name>VER_BUILD</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="12" column="9" bodyfile="sock_private.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a9c76a8ad5fd75187ad154a79d392dfc2" prot="public" static="no">
+        <name>COMPANY_NAME</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="13" column="9" bodyfile="sock_private.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a78550c98b8cfa286587b618347dc3011" prot="public" static="no">
+        <name>FILE_VERSION</name>
+        <initializer>&quot;1.0.0.0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="14" column="9" bodyfile="sock_private.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a01192f4cf039acedc3ac603f80f59184" prot="public" static="no">
+        <name>FILE_DESCRIPTION</name>
+        <initializer>&quot;Developed using the Dev-C++ IDE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="15" column="9" bodyfile="sock_private.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a8a8c7bc542435504233c139db8466fa5" prot="public" static="no">
+        <name>INTERNAL_NAME</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="16" column="9" bodyfile="sock_private.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a8b95afde376bc69dc26a267786125074" prot="public" static="no">
+        <name>LEGAL_COPYRIGHT</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="17" column="9" bodyfile="sock_private.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1ae4fa88b4630b8cd07bc0bd4bd90ca816" prot="public" static="no">
+        <name>LEGAL_TRADEMARKS</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="18" column="9" bodyfile="sock_private.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a60d025b4ac9be9b1a924be9d15b2d4a3" prot="public" static="no">
+        <name>ORIGINAL_FILENAME</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="19" column="9" bodyfile="sock_private.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a2fd81ded1b6a151f629441182c358d5b" prot="public" static="no">
+        <name>PRODUCT_NAME</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="20" column="9" bodyfile="sock_private.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sock__private_8h_1a0ba1a85361118228096108c7d425f84b" prot="public" static="no">
+        <name>PRODUCT_VERSION</name>
+        <initializer>&quot;1.0.0.0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sock_private.h" line="21" column="9" bodyfile="sock_private.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>THIS<sp/>FILE<sp/>WILL<sp/>BE<sp/>OVERWRITTEN<sp/>BY<sp/>DEV-C++<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DO<sp/>NOT<sp/>EDIT<sp/>!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SOCK_PRIVATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SOCK_PRIVATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>VERSION<sp/>DEFINITIONS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="sock__private_8h_1aec977eff8d77d9c22f46665015a6f239" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VER_STRING<sp/><sp/>&quot;1.0.0.0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="sock__private_8h_1ae9b0873c1004a01651f733d556db118c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VER_MAJOR<sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="sock__private_8h_1ad78650efa42849c5f86d372f11f26403" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VER_MINOR<sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="sock__private_8h_1a3addb24971814c8e78cf3872dd643a48" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VER_RELEASE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="sock__private_8h_1a7ce3a6824adeecbb4481086e2ba00fb8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VER_BUILD<sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="sock__private_8h_1a9c76a8ad5fd75187ad154a79d392dfc2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COMPANY_NAME<sp/><sp/><sp/><sp/>&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="sock__private_8h_1a78550c98b8cfa286587b618347dc3011" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILE_VERSION<sp/><sp/><sp/><sp/>&quot;1.0.0.0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="sock__private_8h_1a01192f4cf039acedc3ac603f80f59184" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILE_DESCRIPTION<sp/><sp/><sp/><sp/>&quot;Developed<sp/>using<sp/>the<sp/>Dev-C++<sp/>IDE&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="sock__private_8h_1a8a8c7bc542435504233c139db8466fa5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_NAME<sp/><sp/><sp/>&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="sock__private_8h_1a8b95afde376bc69dc26a267786125074" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEGAL_COPYRIGHT<sp/>&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="sock__private_8h_1ae4fa88b4630b8cd07bc0bd4bd90ca816" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEGAL_TRADEMARKS<sp/><sp/><sp/><sp/>&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="sock__private_8h_1a60d025b4ac9be9b1a924be9d15b2d4a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ORIGINAL_FILENAME<sp/><sp/><sp/>&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="sock__private_8h_1a2fd81ded1b6a151f629441182c358d5b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRODUCT_NAME<sp/><sp/><sp/><sp/>&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="sock__private_8h_1a0ba1a85361118228096108c7d425f84b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRODUCT_VERSION<sp/>&quot;1.0.0.0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*SOCK_PRIVATE_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="sock_private.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,82 @@
+.TH "Board" 3 "Thu May 27 2021" "Version 2.0" "Chess-OOP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Board
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <board\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBoard\fP (\fBColor\fP c)"
+.br
+.ti -1c
+.RI "void \fBmovePiece\fP (\fBPoint\fP currentPos, \fBPoint\fP newPos)"
+.br
+.ti -1c
+.RI "void \fBdisplayBoard\fP ()"
+.br
+.ti -1c
+.RI "vector< \fBDetail\fP > \fBgetDetails\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisCheckMate\fP ()"
+.br
+.ti -1c
+.RI "\fBPoint\fP \fBgetKing\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisCheck\fP ()"
+.br
+.ti -1c
+.RI "\fBColor\fP \fBgetMove\fP ()"
+.br
+.ti -1c
+.RI "void \fBpromotePawn\fP (\fBPoint\fP currentPos, \fBPieceType\fP name)"
+.br
+.ti -1c
+.RI "bool \fBisStaleMate\fP ()"
+.br
+.ti -1c
+.RI "vector< \fBMoves\fP > \fBgetMoves\fP (\fBPoint\fP curPos)"
+.br
+.ti -1c
+.RI "\fB~Board\fP ()"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Board::Board (\fBColor\fP c)"
+
+.SS "Board::~Board ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Board::displayBoard ()"
+
+.SS "vector< \fBDetail\fP > Board::getDetails ()"
+
+.SS "\fBPoint\fP Board::getKing ()"
+
+.SS "\fBColor\fP Board::getMove ()"
+
+.SS "vector< \fBMoves\fP > Board::getMoves (\fBPoint\fP curPos)"
+
+.SS "bool Board::isCheck ()"
+
+.SS "bool Board::isCheckMate ()"
+
+.SS "bool Board::isStaleMate ()"
+
+.SS "void Board::movePiece (\fBPoint\fP currentPos, \fBPoint\fP newPos)"
+
+.SS "void Board::promotePawn (\fBPoint\fP currentPos, \fBPieceType\fP name)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess-OOP from the source code\&.

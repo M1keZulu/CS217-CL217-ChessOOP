@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_queen" kind="class" language="C++" prot="public">
+    <compoundname>Queen</compoundname>
+    <basecompoundref refid="class_piece" prot="public" virt="non-virtual">Piece</basecompoundref>
+    <includes refid="queen_8h" local="no">queen.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_queen_1aba37d0e5e187c24f61bbae136445c633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Queen::Queen</definition>
+        <argsstring>(Color m_color)</argsstring>
+        <name>Queen</name>
+        <param>
+          <type><ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>m_color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queen.h" line="6" column="1" bodyfile="queen.cpp" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_queen_1a276779894849d33832e841ee21286b99" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Queen::generateMoves</definition>
+        <argsstring>(Point currentPos)</argsstring>
+        <name>generateMoves</name>
+        <reimplements refid="class_piece_1ae20a169ce6b98bd1e41125f1828ec541">generateMoves</reimplements>
+        <param>
+          <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+          <declname>currentPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queen.h" line="7" column="6" bodyfile="queen.cpp" bodystart="12" bodyend="138"/>
+        <references refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" compoundref="piece_8h" startline="7">Piece::cell</references>
+        <references refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" compoundref="piece_8h" startline="8">Piece::color</references>
+        <references refid="queen_8cpp_1ac389dbca21e58410d552988f3ec954c3" compoundref="queen_8cpp" startline="3">GRID</references>
+        <references refid="class_piece_1a0b4a7d639608664bc968062679def36c" compoundref="piece_8cpp" startline="286" endline="293">Piece::inLimits</references>
+        <references refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" compoundref="piece_8h" startline="11">Piece::movesAvailable</references>
+        <references refid="struct_point_1a8c779e11e694b20e0946105a9f5de842" compoundref="enums__data_8h" startline="27">Point::x</references>
+        <references refid="struct_point_1a2e1b5fb2b2a83571f5c0bc0f66a73cf7" compoundref="enums__data_8h" startline="28">Point::y</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Queen</label>
+        <link refid="class_queen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Piece</label>
+        <link refid="class_piece"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Queen</label>
+        <link refid="class_queen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Cell</label>
+        <link refid="class_cell"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>piece</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Piece</label>
+        <link refid="class_piece"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>cell</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="queen.h" line="4" column="1" bodyfile="queen.h" bodystart="4" bodyend="8"/>
+    <listofallmembers>
+      <member refid="class_piece_1a88217066acc17caf4f200245abf54e05" prot="public" virt="virtual"><scope>Queen</scope><name>AddenPassant</name></member>
+      <member refid="class_piece_1a2cbe16344ed80ccead6c8679be678078" prot="public" virt="virtual"><scope>Queen</scope><name>addMove</name></member>
+      <member refid="class_piece_1abf0dcc424990fe8e17e72b846988e262" prot="protected" virt="non-virtual"><scope>Queen</scope><name>cell</name></member>
+      <member refid="class_piece_1ae7d23e73e4591a7b671cc70e2c43cc67" prot="public" virt="non-virtual"><scope>Queen</scope><name>clearPieces</name></member>
+      <member refid="class_piece_1ac3951a11d91640b4a4c507e67bacee73" prot="protected" virt="non-virtual"><scope>Queen</scope><name>color</name></member>
+      <member refid="class_piece_1a0647321e482f692d3018db155158aea0" prot="public" virt="virtual"><scope>Queen</scope><name>enPassant</name></member>
+      <member refid="class_queen_1a276779894849d33832e841ee21286b99" prot="public" virt="virtual"><scope>Queen</scope><name>generateMoves</name></member>
+      <member refid="class_piece_1aedad096a332cb6fe4abd799c503927f3" prot="public" virt="virtual"><scope>Queen</scope><name>getAvailableMoves</name></member>
+      <member refid="class_piece_1ad65707ed2f50e6d5fef41000395bc050" prot="public" virt="virtual"><scope>Queen</scope><name>getColor</name></member>
+      <member refid="class_piece_1a5c4e8e2c03b49909ffd8f7ac16afebd6" prot="public" virt="virtual"><scope>Queen</scope><name>getCount</name></member>
+      <member refid="class_piece_1a38eb417c4df0cf957e4c60e990ac2177" prot="public" virt="virtual"><scope>Queen</scope><name>getName</name></member>
+      <member refid="class_piece_1acf3ede4e8b3f1cd5fdefb42b322dd79d" prot="public" virt="virtual"><scope>Queen</scope><name>getPawnDirection</name></member>
+      <member refid="class_piece_1af9d46f546814e53bef385fa951b2579a" prot="public" virt="non-virtual"><scope>Queen</scope><name>getPieces</name></member>
+      <member refid="class_piece_1a9bbdeaa655a2de61b6e7101ff89bf795" prot="public" virt="non-virtual"><scope>Queen</scope><name>getPossibleMoves</name></member>
+      <member refid="class_piece_1a0b4a7d639608664bc968062679def36c" prot="public" virt="non-virtual"><scope>Queen</scope><name>inLimits</name></member>
+      <member refid="class_piece_1a14b78dc6c3fad1a96d57040b6107d0e8" prot="public" virt="virtual"><scope>Queen</scope><name>isMoveLegal</name></member>
+      <member refid="class_piece_1a1d592d6952b109b806428ae0b291e98e" prot="public" virt="virtual"><scope>Queen</scope><name>isUnderAttack</name></member>
+      <member refid="class_piece_1a256212f96ea2ff8d6324d239b23b730d" prot="protected" virt="non-virtual"><scope>Queen</scope><name>moveCount</name></member>
+      <member refid="class_piece_1a24fb75c3281e4c3c0e7b73c2e4f719b2" prot="protected" virt="non-virtual"><scope>Queen</scope><name>movesAvailable</name></member>
+      <member refid="class_piece_1ab866e2b78f08c3764feed43e43da25d0" prot="protected" virt="non-virtual"><scope>Queen</scope><name>name</name></member>
+      <member refid="class_piece_1ae49872b2812e4825f2d4a45c8a996539" prot="public" virt="virtual"><scope>Queen</scope><name>numberMoves</name></member>
+      <member refid="class_piece_1afedb258feac080da7def714398b92ce0" prot="protected" virt="non-virtual"><scope>Queen</scope><name>pawnLocation</name></member>
+      <member refid="class_piece_1a0879195c4d81bdac95aa4d57320eee10" prot="public" virt="non-virtual"><scope>Queen</scope><name>Piece</name></member>
+      <member refid="class_piece_1ace8d7a830a4d419b5e3d997c1e2a12e9" prot="public" virt="virtual"><scope>Queen</scope><name>PieceMoved</name></member>
+      <member refid="class_piece_1a42d582696c1698b0c8b565c3e0d325d3" prot="protected" virt="non-virtual"><scope>Queen</scope><name>pieces</name></member>
+      <member refid="class_queen_1aba37d0e5e187c24f61bbae136445c633" prot="public" virt="non-virtual"><scope>Queen</scope><name>Queen</name></member>
+      <member refid="class_piece_1a851fad877ea6dd61d15cba614baa78c1" prot="public" virt="non-virtual"><scope>Queen</scope><name>setCellArray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

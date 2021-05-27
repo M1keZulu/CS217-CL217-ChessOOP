@@ -1,0 +1,99 @@
+.TH "md__r_e_a_d_m_e" 3 "Thu May 27 2021" "Version 2.0" "Chess-OOP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__r_e_a_d_m_e \- CS217-CL217-ChessOOP 
+
+.PP
+Chess Game designed as a semester project for OOP course at FAST National University-NUCES, Karachi\&.
+.PP
+.SH "Description"
+.PP
+Object-Oriented Programming is an important programming paradigm\&. It is important that a programmer is well-versed with its principles to write code that makes development and maintenance of code easier and secure\&. Game Development relies on OOP more than any other form of development\&. It is, therefore, an effecient way to demonstrate skills that were picked up during the course\&. Chess is a game that is played worldwide and is a very good example of how different core objects of the game can be simulated virtually throught Object-Oriented Programming\&. This game is completely made from scratch and uses OOP principles to implement a completely functional game that can be played both Offline and Online over a LAN network or Public Internet using port-forwarding\&. Simple and Fast Multimedia Library (SFML) was used to achieve the graphical and network functionality of the game\&.
+.SH "Getting Started"
+.PP
+.SS "Dependencies"
+.IP "\(bu" 2
+Windows 10/MacOS/Linux
+.IP "\(bu" 2
+SFML Library Linked
+.IP "\(bu" 2
+time\&.h
+.IP "\(bu" 2
+string\&.h
+.IP "\(bu" 2
+sstream
+.IP "\(bu" 2
+vector
+.PP
+.SS "Installing"
+.IP "\(bu" 2
+All the files linked in the GitHub repository are needed for the project to run as intended 
+.br
+ This project was developed on Windows 10 using Dev-C++ with SFML Library Version 2\&.4\&.2 TDM\&. The files for this particular version are available in the respoitory\&. However, it should be made sure that the library you download is compatible with the exact version of the C++ compiler that you are using\&. In this case, the compiler in use was TDM-GCC 4\&.9\&.2 64-bit Release\&. For more information and download, visit https://www.sfml-dev.org/download.php
+.PP
+.SS "Executing program"
+.IP "\(bu" 2
+How to run the program 
+.br
+ Once all the files have been downloaded and the library has been linked, compile and run \fBchess\&.cpp\fP\&.
+.PP
+.PP
+.PP
+.nf
+g++ -c chess\&.cpp -I <sfml-include>
+g++ chess\&.o -L <sfml-library> -static-libgcc -DSFML_STATIC -lsfml-graphics -lsfml-window -lsfml-system -lsfml-network -lsfml-audio
+.fi
+.PP
+.PP
+\fBSpecific Instructions for Executing the Project on Dev-C++\fP
+.PP
+To run this project using Dev-C++, create a new project (either console or GUI - console is required for debugging) and then follow the instructions in this video by Mike Exc (All Rights Reserved) https://www.youtube.com/watch?v=uAd2jINKCxc When done, add the \fBchess\&.cpp\fP file to the project and press F11 to compile and run\&.
+.SH "Gameplay"
+.PP
+.SS "Features"
+Complete functionality of chess game has been added except for draw conditions\&. Only one draw condition is implemented up till now which will occur when the moving side is not in check and has no moves left\&. Special \fBMoves\fP Available:
+.IP "\(bu" 2
+En Passant 
+.IP "\(bu" 2
+Short Castling 
+.IP "\(bu" 2
+Long Castling 
+.IP "\(bu" 2
+\fBPawn\fP Promotion 
+.IP "\(bu" 2
+Stalemate by no legal moves left
+.PP
+.SS "Movement"
+.SS "Main Menu"
+The main menu works with a KEYBOARD only and up/down arrow keys are used to navigate the menu\&. You can enter the IP address directly by typing using the keyboard\&. Refer to help menu for a known bug regarding the Host mode\&.
+.PP
+.SS "Offline/Online Modes"
+To make a move, use the left mouse button to select the piece you want to move and right mouse button at the desired location that you want to move the piece to\&.
+.PP
+IMPORTANT: It is important to note that before the PROMOTION move, you will have to press q(queen), r(rook), k(knight), or b(bishop) on the keyboard before making hitting the right mouse button\&. By default, the game promotes all pawns to \fBQueen\fP\&.
+.PP
+.SH "Help/Known Issues"
+.PP
+.IP "\(bu" 2
+The Host Functionality in the program is bugged due to an issue in programming the main event loop of the program\&. It will go to not responding when left for a while, the only options are to connect or to force quit it if that happens\&.
+.IP "\(bu" 2
+Highlighting possible moves is only available for non-special/generic moves as of now\&.
+.PP
+.SH "Author"
+.PP
+Muhammad Zain Ul Abiddin
+.br
+ muhammadzain757@gmail.com
+.br
+ \fCLinkedIn\fP
+.SH "Acknowledgments"
+.PP
+.IP "\(bu" 2
+\fCJohnPablock\fP for Texture Images
+.IP "\(bu" 2
+\fCUserstyles\&.org\fP for \fBBoard\fP Background
+.PP
+.SH "Online Gameplay"
+.PP
+ 

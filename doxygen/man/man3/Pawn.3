@@ -1,0 +1,58 @@
+.TH "Pawn" 3 "Thu May 27 2021" "Version 2.0" "Chess-OOP" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Pawn
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pawn\&.h>\fP
+.PP
+Inherits \fBPiece\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPawn\fP (\fBColor\fP m_color, \fBDirection\fP d)"
+.br
+.ti -1c
+.RI "void \fBgenerateMoves\fP (\fBPoint\fP currentPos)"
+.br
+.ti -1c
+.RI "\fBDirection\fP \fBgetPawnDirection\fP ()"
+.br
+.ti -1c
+.RI "bool \fBenPassant\fP (\fBPiece\fP *ptr)"
+.br
+.ti -1c
+.RI "void \fBAddenPassant\fP (\fBPiece\fP *ptr)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Pawn::Pawn (\fBColor\fP m_color, \fBDirection\fP d)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Pawn::AddenPassant (\fBPiece\fP * ptr)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPiece\fP\&.
+.SS "bool Pawn::enPassant (\fBPiece\fP * ptr)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPiece\fP\&.
+.SS "void Pawn::generateMoves (\fBPoint\fP currentPos)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPiece\fP\&.
+.SS "\fBDirection\fP Pawn::getPawnDirection ()\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPiece\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess-OOP from the source code\&.

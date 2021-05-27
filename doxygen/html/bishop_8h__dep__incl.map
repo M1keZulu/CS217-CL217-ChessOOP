@@ -1,0 +1,6 @@
+<map id="bishop.h" name="bishop.h">
+<area shape="rect" id="node1" title=" " alt="" coords="119,5,190,32"/>
+<area shape="rect" id="node2" href="$bishop_8cpp.html" title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node3" href="$board_8cpp.html" title=" " alt="" coords="115,80,194,107"/>
+<area shape="rect" id="node4" href="$gui_8cpp.html" title=" " alt="" coords="219,80,283,107"/>
+</map>

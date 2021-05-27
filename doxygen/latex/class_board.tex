@@ -1,0 +1,141 @@
+\hypertarget{class_board}{}\doxysection{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+
+
+{\ttfamily \#include $<$board.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_afd0e96a4b1485d2ce70581d7102df864}{Board}} (\mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} c)
+\item 
+void \mbox{\hyperlink{class_board_ad9ce3a07c2b9095da897ce094085c8ea}{move\+Piece}} (\mbox{\hyperlink{struct_point}{Point}} current\+Pos, \mbox{\hyperlink{struct_point}{Point}} new\+Pos)
+\item 
+void \mbox{\hyperlink{class_board_a4d4b5f673cf95ad76097d918d865e7fa}{display\+Board}} ()
+\item 
+vector$<$ \mbox{\hyperlink{struct_detail}{Detail}} $>$ \mbox{\hyperlink{class_board_a7180d96a5ce90796554f694e1be82896}{get\+Details}} ()
+\item 
+bool \mbox{\hyperlink{class_board_a1e46ab35e12821b87f6f29e972df003f}{is\+Check\+Mate}} ()
+\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{class_board_afc3695932418d576a95256c42e441f4f}{get\+King}} ()
+\item 
+bool \mbox{\hyperlink{class_board_ad4c89c0cdf47f0555106cb69ac5a4927}{is\+Check}} ()
+\item 
+\mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{class_board_a108c8edee1a51d946371984192eb25ef}{get\+Move}} ()
+\item 
+void \mbox{\hyperlink{class_board_adccdcc38662977fb8a8bb8227e6af223}{promote\+Pawn}} (\mbox{\hyperlink{struct_point}{Point}} current\+Pos, \mbox{\hyperlink{enums__data_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}} name)
+\item 
+bool \mbox{\hyperlink{class_board_a02fbaf695549cd0a63f874e137e7fe38}{is\+Stale\+Mate}} ()
+\item 
+vector$<$ \mbox{\hyperlink{struct_moves}{Moves}} $>$ \mbox{\hyperlink{class_board_a37d5024864df4bc263e26b8cbd6bbaec}{get\+Moves}} (\mbox{\hyperlink{struct_point}{Point}} cur\+Pos)
+\item 
+\mbox{\hyperlink{class_board_af73f45730119a1fd8f6670f53f959e68}{$\sim$\+Board}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_board_afd0e96a4b1485d2ce70581d7102df864}\label{class_board_afd0e96a4b1485d2ce70581d7102df864}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_board_afd0e96a4b1485d2ce70581d7102df864_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_af73f45730119a1fd8f6670f53f959e68}\label{class_board_af73f45730119a1fd8f6670f53f959e68}} 
+\index{Board@{Board}!````~Board@{$\sim$Board}}
+\index{````~Board@{$\sim$Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{$\sim$Board()}{~Board()}}
+{\footnotesize\ttfamily Board\+::$\sim$\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_board_af73f45730119a1fd8f6670f53f959e68_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_a4d4b5f673cf95ad76097d918d865e7fa}\label{class_board_a4d4b5f673cf95ad76097d918d865e7fa}} 
+\index{Board@{Board}!displayBoard@{displayBoard}}
+\index{displayBoard@{displayBoard}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{displayBoard()}{displayBoard()}}
+{\footnotesize\ttfamily void Board\+::display\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_a7180d96a5ce90796554f694e1be82896}\label{class_board_a7180d96a5ce90796554f694e1be82896}} 
+\index{Board@{Board}!getDetails@{getDetails}}
+\index{getDetails@{getDetails}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getDetails()}{getDetails()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{struct_detail}{Detail}} $>$ Board\+::get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_afc3695932418d576a95256c42e441f4f}\label{class_board_afc3695932418d576a95256c42e441f4f}} 
+\index{Board@{Board}!getKing@{getKing}}
+\index{getKing@{getKing}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getKing()}{getKing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_point}{Point}} Board\+::get\+King (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_a108c8edee1a51d946371984192eb25ef}\label{class_board_a108c8edee1a51d946371984192eb25ef}} 
+\index{Board@{Board}!getMove@{getMove}}
+\index{getMove@{getMove}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getMove()}{getMove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enums__data_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} Board\+::get\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_a37d5024864df4bc263e26b8cbd6bbaec}\label{class_board_a37d5024864df4bc263e26b8cbd6bbaec}} 
+\index{Board@{Board}!getMoves@{getMoves}}
+\index{getMoves@{getMoves}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getMoves()}{getMoves()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{struct_moves}{Moves}} $>$ Board\+::get\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{cur\+Pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_ad4c89c0cdf47f0555106cb69ac5a4927}\label{class_board_ad4c89c0cdf47f0555106cb69ac5a4927}} 
+\index{Board@{Board}!isCheck@{isCheck}}
+\index{isCheck@{isCheck}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{isCheck()}{isCheck()}}
+{\footnotesize\ttfamily bool Board\+::is\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_a1e46ab35e12821b87f6f29e972df003f}\label{class_board_a1e46ab35e12821b87f6f29e972df003f}} 
+\index{Board@{Board}!isCheckMate@{isCheckMate}}
+\index{isCheckMate@{isCheckMate}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{isCheckMate()}{isCheckMate()}}
+{\footnotesize\ttfamily bool Board\+::is\+Check\+Mate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_a02fbaf695549cd0a63f874e137e7fe38}\label{class_board_a02fbaf695549cd0a63f874e137e7fe38}} 
+\index{Board@{Board}!isStaleMate@{isStaleMate}}
+\index{isStaleMate@{isStaleMate}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{isStaleMate()}{isStaleMate()}}
+{\footnotesize\ttfamily bool Board\+::is\+Stale\+Mate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_ad9ce3a07c2b9095da897ce094085c8ea}\label{class_board_ad9ce3a07c2b9095da897ce094085c8ea}} 
+\index{Board@{Board}!movePiece@{movePiece}}
+\index{movePiece@{movePiece}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
+{\footnotesize\ttfamily void Board\+::move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{current\+Pos,  }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{new\+Pos }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{class_board_ad9ce3a07c2b9095da897ce094085c8ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_adccdcc38662977fb8a8bb8227e6af223}\label{class_board_adccdcc38662977fb8a8bb8227e6af223}} 
+\index{Board@{Board}!promotePawn@{promotePawn}}
+\index{promotePawn@{promotePawn}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{promotePawn()}{promotePawn()}}
+{\footnotesize\ttfamily void Board\+::promote\+Pawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{current\+Pos,  }\item[{\mbox{\hyperlink{enums__data_8h_a12ed9719bbdf7bc596ff7a6f4bf3f021}{Piece\+Type}}}]{name }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{board_8h}{board.\+h}}\item 
+\mbox{\hyperlink{board_8cpp}{board.\+cpp}}\end{DoxyCompactItemize}

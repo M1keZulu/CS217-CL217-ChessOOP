@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_knight" xml:lang="en-US">
+<title>Knight Class Reference</title>
+<indexterm><primary>Knight</primary></indexterm>
+<para>
+<computeroutput>#include &lt;knight.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Knight:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_knight__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Knight:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_knight__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_knight_1a1567b822a6eac89ab6873eedc8ff5ad6">Knight</link> (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_knight_1a8dc6fb637609a836174bd75c3da15769">generateMoves</link> (<link linkend="_struct_point">Point</link> currentPos)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_knight_1a1567b822a6eac89ab6873eedc8ff5ad6"/>    <section>
+    <title>Knight()</title>
+<indexterm><primary>Knight</primary><secondary>Knight</secondary></indexterm>
+<indexterm><primary>Knight</primary><secondary>Knight</secondary></indexterm>
+<para><computeroutput>Knight::Knight (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> m_color)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_knight_1a8dc6fb637609a836174bd75c3da15769"/>    <section>
+    <title>generateMoves()</title>
+<indexterm><primary>generateMoves</primary><secondary>Knight</secondary></indexterm>
+<indexterm><primary>Knight</primary><secondary>generateMoves</secondary></indexterm>
+<para><computeroutput>void Knight::generateMoves (<link linkend="_struct_point">Point</link> currentPos)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_piece_1ae20a169ce6b98bd1e41125f1828ec541">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_knight_a8dc6fb637609a836174bd75c3da15769_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_knight_8h">knight.h</link><link linkend="_knight_8cpp">knight.cpp</link></section>
+</section>

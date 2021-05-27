@@ -1,0 +1,6 @@
+<map id="queen.h" name="queen.h">
+<area shape="rect" id="node1" title=" " alt="" coords="107,5,175,32"/>
+<area shape="rect" id="node2" href="$board_8cpp.html" title=" " alt="" coords="5,80,84,107"/>
+<area shape="rect" id="node3" href="$gui_8cpp.html" title=" " alt="" coords="109,80,173,107"/>
+<area shape="rect" id="node4" href="$queen_8cpp.html" title=" " alt="" coords="197,80,279,107"/>
+</map>

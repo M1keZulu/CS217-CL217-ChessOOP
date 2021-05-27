@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_moves" kind="struct" language="C++" prot="public">
+    <compoundname>Moves</compoundname>
+    <includes refid="enums__data_8h" local="no">enums_data.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_moves_1a09fbe6b26d2897221a7a682f9d573b50" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_point" kindref="compound">Point</ref></type>
+        <definition>Point Moves::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="39" column="7" bodyfile="enums_data.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_moves_1a2a304254395478d6a2a6f8eebfb59591" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Moves::cell</definition>
+        <argsstring></argsstring>
+        <name>cell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="enums_data.h" line="40" column="8" bodyfile="enums_data.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Point</label>
+        <link refid="struct_point"/>
+      </node>
+      <node id="1">
+        <label>Moves</label>
+        <link refid="struct_moves"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="enums_data.h" line="38" column="1" bodyfile="enums_data.h" bodystart="38" bodyend="41"/>
+    <listofallmembers>
+      <member refid="struct_moves_1a2a304254395478d6a2a6f8eebfb59591" prot="public" virt="non-virtual"><scope>Moves</scope><name>cell</name></member>
+      <member refid="struct_moves_1a09fbe6b26d2897221a7a682f9d573b50" prot="public" virt="non-virtual"><scope>Moves</scope><name>p</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

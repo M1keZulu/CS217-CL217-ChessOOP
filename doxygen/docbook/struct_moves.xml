@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_moves" xml:lang="en-US">
+<title>Moves Struct Reference</title>
+<indexterm><primary>Moves</primary></indexterm>
+<para>
+<computeroutput>#include &lt;enums_data.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Moves:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_moves__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_point">Point</link> <link linkend="_struct_moves_1a09fbe6b26d2897221a7a682f9d573b50">p</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_moves_1a2a304254395478d6a2a6f8eebfb59591">cell</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_moves_1a2a304254395478d6a2a6f8eebfb59591"/>    <section>
+    <title>cell</title>
+<indexterm><primary>cell</primary><secondary>Moves</secondary></indexterm>
+<indexterm><primary>Moves</primary><secondary>cell</secondary></indexterm>
+<para><computeroutput>string Moves::cell</computeroutput></para>    </section><anchor xml:id="_struct_moves_1a09fbe6b26d2897221a7a682f9d573b50"/>    <section>
+    <title>p</title>
+<indexterm><primary>p</primary><secondary>Moves</secondary></indexterm>
+<indexterm><primary>Moves</primary><secondary>p</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_point">Point</link> Moves::p</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_enums__data_8h">enums_data.h</link></section>
+</section>

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_board" xml:lang="en-US">
+<title>Board Class Reference</title>
+<indexterm><primary>Board</primary></indexterm>
+<para>
+<computeroutput>#include &lt;board.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_board_1afd0e96a4b1485d2ce70581d7102df864">Board</link> (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_board_1ad9ce3a07c2b9095da897ce094085c8ea">movePiece</link> (<link linkend="_struct_point">Point</link> currentPos, <link linkend="_struct_point">Point</link> newPos)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_board_1a4d4b5f673cf95ad76097d918d865e7fa">displayBoard</link> ()</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_struct_detail">Detail</link> &gt; <link linkend="_class_board_1a7180d96a5ce90796554f694e1be82896">getDetails</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_board_1a1e46ab35e12821b87f6f29e972df003f">isCheckMate</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_struct_point">Point</link> <link linkend="_class_board_1afc3695932418d576a95256c42e441f4f">getKing</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_board_1ad4c89c0cdf47f0555106cb69ac5a4927">isCheck</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> <link linkend="_class_board_1a108c8edee1a51d946371984192eb25ef">getMove</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_board_1adccdcc38662977fb8a8bb8227e6af223">promotePawn</link> (<link linkend="_struct_point">Point</link> currentPos, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> name)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_board_1a02fbaf695549cd0a63f874e137e7fe38">isStaleMate</link> ()</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_struct_moves">Moves</link> &gt; <link linkend="_class_board_1a37d5024864df4bc263e26b8cbd6bbaec">getMoves</link> (<link linkend="_struct_point">Point</link> curPos)</para>
+</listitem>
+            <listitem><para><link linkend="_class_board_1af73f45730119a1fd8f6670f53f959e68">~Board</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_board_1afd0e96a4b1485d2ce70581d7102df864"/>    <section>
+    <title>Board()</title>
+<indexterm><primary>Board</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>Board</secondary></indexterm>
+<para><computeroutput>Board::Board (<link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> c)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_board_afd0e96a4b1485d2ce70581d7102df864_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_board_1af73f45730119a1fd8f6670f53f959e68"/>    <section>
+    <title>~Board()</title>
+<indexterm><primary>~Board</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>~Board</secondary></indexterm>
+<para><computeroutput>Board::~Board ( )</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_board_af73f45730119a1fd8f6670f53f959e68_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_board_1a4d4b5f673cf95ad76097d918d865e7fa"/>    <section>
+    <title>displayBoard()</title>
+<indexterm><primary>displayBoard</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>displayBoard</secondary></indexterm>
+<para><computeroutput>void Board::displayBoard ( )</computeroutput></para>    </section><anchor xml:id="_class_board_1a7180d96a5ce90796554f694e1be82896"/>    <section>
+    <title>getDetails()</title>
+<indexterm><primary>getDetails</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>getDetails</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_struct_detail">Detail</link> &gt; Board::getDetails ( )</computeroutput></para>    </section><anchor xml:id="_class_board_1afc3695932418d576a95256c42e441f4f"/>    <section>
+    <title>getKing()</title>
+<indexterm><primary>getKing</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>getKing</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_point">Point</link> Board::getKing ( )</computeroutput></para>    </section><anchor xml:id="_class_board_1a108c8edee1a51d946371984192eb25ef"/>    <section>
+    <title>getMove()</title>
+<indexterm><primary>getMove</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>getMove</secondary></indexterm>
+<para><computeroutput><link linkend="_enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> Board::getMove ( )</computeroutput></para>    </section><anchor xml:id="_class_board_1a37d5024864df4bc263e26b8cbd6bbaec"/>    <section>
+    <title>getMoves()</title>
+<indexterm><primary>getMoves</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>getMoves</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_struct_moves">Moves</link> &gt; Board::getMoves (<link linkend="_struct_point">Point</link> curPos)</computeroutput></para>    </section><anchor xml:id="_class_board_1ad4c89c0cdf47f0555106cb69ac5a4927"/>    <section>
+    <title>isCheck()</title>
+<indexterm><primary>isCheck</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>isCheck</secondary></indexterm>
+<para><computeroutput>bool Board::isCheck ( )</computeroutput></para>    </section><anchor xml:id="_class_board_1a1e46ab35e12821b87f6f29e972df003f"/>    <section>
+    <title>isCheckMate()</title>
+<indexterm><primary>isCheckMate</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>isCheckMate</secondary></indexterm>
+<para><computeroutput>bool Board::isCheckMate ( )</computeroutput></para>    </section><anchor xml:id="_class_board_1a02fbaf695549cd0a63f874e137e7fe38"/>    <section>
+    <title>isStaleMate()</title>
+<indexterm><primary>isStaleMate</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>isStaleMate</secondary></indexterm>
+<para><computeroutput>bool Board::isStaleMate ( )</computeroutput></para>    </section><anchor xml:id="_class_board_1ad9ce3a07c2b9095da897ce094085c8ea"/>    <section>
+    <title>movePiece()</title>
+<indexterm><primary>movePiece</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>movePiece</secondary></indexterm>
+<para><computeroutput>void Board::movePiece (<link linkend="_struct_point">Point</link> currentPos, <link linkend="_struct_point">Point</link> newPos)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_board_ad9ce3a07c2b9095da897ce094085c8ea_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_board_1adccdcc38662977fb8a8bb8227e6af223"/>    <section>
+    <title>promotePawn()</title>
+<indexterm><primary>promotePawn</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>promotePawn</secondary></indexterm>
+<para><computeroutput>void Board::promotePawn (<link linkend="_struct_point">Point</link> currentPos, <link linkend="_enums__data_8h_1a12ed9719bbdf7bc596ff7a6f4bf3f021">PieceType</link> name)</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_board_8h">board.h</link><link linkend="_board_8cpp">board.cpp</link></section>
+</section>

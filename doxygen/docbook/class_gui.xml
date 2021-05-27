@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_gui" xml:lang="en-US">
+<title>Gui Class Reference</title>
+<indexterm><primary>Gui</primary></indexterm>
+<para>
+<computeroutput>#include &lt;gui.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_gui_1ab2655dbb6d3a91d7e90cb83dad6c0450">Gui</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_gui_1a643aa58792ef3bddd81272c28b2d4c56">Gui</link> (const <link linkend="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</link> type, string ip)</para>
+</listitem>
+            <listitem><para><link linkend="_class_gui_1a4fd8485d226f9b8a2ac2d81d7f0f3598">~Gui</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_gui_1ab2655dbb6d3a91d7e90cb83dad6c0450"/>    <section>
+    <title>Gui()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Gui</primary><secondary>Gui</secondary></indexterm>
+<indexterm><primary>Gui</primary><secondary>Gui</secondary></indexterm>
+<para><computeroutput>Gui::Gui ( )</computeroutput></para>    </section><anchor xml:id="_class_gui_1a643aa58792ef3bddd81272c28b2d4c56"/>    <section>
+    <title>Gui()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Gui</primary><secondary>Gui</secondary></indexterm>
+<indexterm><primary>Gui</primary><secondary>Gui</secondary></indexterm>
+<para><computeroutput>Gui::Gui (const <link linkend="_enums__data_8h_1aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</link> type, string ip)</computeroutput></para>    </section><anchor xml:id="_class_gui_1a4fd8485d226f9b8a2ac2d81d7f0f3598"/>    <section>
+    <title>~Gui()</title>
+<indexterm><primary>~Gui</primary><secondary>Gui</secondary></indexterm>
+<indexterm><primary>Gui</primary><secondary>~Gui</secondary></indexterm>
+<para><computeroutput>Gui::~Gui ( )</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_gui_8h">gui.h</link><link linkend="_gui_8cpp">gui.cpp</link></section>
+</section>

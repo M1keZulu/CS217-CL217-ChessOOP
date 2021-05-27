@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="king_8h" kind="file" language="C++">
+    <compoundname>king.h</compoundname>
+    <includedby refid="board_8cpp" local="yes">board.cpp</includedby>
+    <includedby refid="gui_8cpp" local="yes">gui.cpp</includedby>
+    <includedby refid="king_8cpp" local="yes">king.cpp</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>king.cpp</label>
+        <link refid="king_8cpp"/>
+      </node>
+      <node id="3">
+        <label>gui.cpp</label>
+        <link refid="gui_8cpp"/>
+      </node>
+      <node id="1">
+        <label>king.h</label>
+        <link refid="king_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>board.cpp</label>
+        <link refid="board_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_king" prot="public">King</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>KING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_king" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_king" kindref="compound">King</ref>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_piece" kindref="compound">Piece</ref>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_king_1a2c74bdbc87706c0f0688cd19b5d92b37" kindref="member">King</ref>(<ref refid="enums__data_8h_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref><sp/>m_color);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_king_1a1fb75c94e504d4fccb9595444331135d" kindref="member">generateMoves</ref>(<ref refid="struct_point" kindref="compound">Point</ref><sp/>currentPos);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="king.h"/>
+  </compounddef>
+</doxygen>

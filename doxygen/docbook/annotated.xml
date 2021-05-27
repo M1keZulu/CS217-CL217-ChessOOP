@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_bishop">Bishop</link><link linkend="_class_board">Board</link><link linkend="_class_cell">Cell</link><link linkend="_struct_detail">Detail</link><link linkend="_class_gui">Gui</link><link linkend="_class_king">King</link><link linkend="_class_knight">Knight</link><link linkend="_struct_moves">Moves</link><link linkend="_class_network">Network</link><link linkend="_class_pawn">Pawn</link><link linkend="_class_piece">Piece</link><link linkend="_struct_point">Point</link><link linkend="_class_queen">Queen</link><link linkend="_class_rook">Rook</link></section>
