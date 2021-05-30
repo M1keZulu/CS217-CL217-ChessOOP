@@ -73,7 +73,7 @@ IMPORTANT: It is important to note that before the PROMOTION move, you will have
 ## Help/Known Issues
 
 * The Host Functionality in the program is bugged due to an issue in programming the main event loop of the program. It will go to not responding when left for a while, the only options are to connect or to force quit it if that happens.
-* Highlighting possible moves is only available for non-special/generic moves as of now.
+* <strike>Highlighting possible moves is only available for non-special/generic moves as of now.</strike> (Fixed)
 
 
 ## Author
